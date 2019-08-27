@@ -59,19 +59,6 @@
  91.1880  = dsqrt_q2fact1    ! fixed fact scale for pdf1
  91.1880  = dsqrt_q2fact2    ! fixed fact scale for pdf2
  1        = scalefact        ! scale factor for event-by-event scales
- #***********************************************************************
- # Reweight flags to get scale dependence and PDF uncertainty           *
- # For scale dependence: factor rw_scale_up/down around central scale   *
- # For PDF uncertainty: use LHAPDF with supported set                   *
- #***********************************************************************
-  .true.   = reweight_scale   ! reweight to get scale dependence
-   0.5     = rw_Rscale_down   ! lower bound for ren scale variations
-   2.0     = rw_Rscale_up     ! upper bound for ren scale variations
-   0.5     = rw_Fscale_down   ! lower bound for fact scale variations
-   2.0     = rw_Fscale_up     ! upper bound for fact scale variations
-  .true.  = reweight_PDF     ! reweight to get PDF uncertainty
-  262001   = PDF_set_min      ! First of the error PDF sets
-  262100   = PDF_set_max      ! Last of the error PDF sets
 #*********************************************************************
 # Matching - Warning! ickkw > 1 is still beta
 #*********************************************************************
@@ -98,17 +85,6 @@
 # BW cutoff (M+/-bwcutoff*Gamma)
 #**********************************
   15  = bwcutoff      ! (M+/-bwcutoff*Gamma)
-#***********************************************************************
-# Cuts on the jets                                                     *
-# Jet clustering is performed by FastJet.
-# When matching to a parton shower, these generation cuts should be    *
-# considerably softer than the analysis cuts.                          *
-# (more specific cuts can be specified in SubProcesses/cuts.f)         *
-#***********************************************************************
-  -1  = jetalgo   ! FastJet jet algorithm (1=kT, 0=C/A, -1=anti-kT)
- 0.4  = jetradius ! The radius parameter for the jet algorithm
-   0  = ptj       ! Min jet transverse momentum
-  -1  = etaj      ! Max jet abs(pseudo-rap) (a value .lt.0 means no cut)
 #**********************************************************
 # Apply pt/E/eta/dr/mij cuts on decay products or not
 # (note that etmiss/ptll/ptheavy/ht/sorted cuts always apply)

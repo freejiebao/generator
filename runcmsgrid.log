@@ -1,0 +1,184 @@
+%MSG-MG5 number of events requested = 10
+%MSG-MG5 random seed used for the run = 1
+%MSG-MG5 number of cpus = 1
+%MSG-MG5 SCRAM_ARCH version = slc6_amd64_gcc630
+%MSG-MG5 CMSSW version = CMSSW_9_3_8
+No module named madgraph
+INFO: ************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D G R A P H 5           *
+*                       a M C @ N L O                      *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 5.2.6.0               20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*                 http://amcatnlo.cern.ch                  *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /home/jiexiao/tmp/process/Cards/amcatnlo_configuration.txt
+INFO: load configuration from /home/jiexiao/tmp/mgbasedir/input/mg5_configuration.txt
+INFO: load configuration from /home/jiexiao/tmp/process/Cards/amcatnlo_configuration.txt
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid web browser found. Please set in ./input/mg5_configuration.txt
+launch -ox -n cmsgrid
+INFO: Enter mode value: noshower. Go to the related mode
+The following switches determine which operations are executed:
+ 1 Perturbative order of the calculation:                               order=NLO
+ 2 Fixed order (no event generation and no MC@[N]LO matching):    fixed_order=OFF
+ 3 Shower the generated events:                                        shower=OFF
+ 4 Decay particles with the MadSpin module:                           madspin=ON
+ 5 Add weights to the events based on changing model parameters:     reweight=OFF
+ 6 Run MadAnalysis5 on the events generated:                     madanalysis5=Not installed
+  Either type the switch number (1 to 6) to change its default setting,
+  or set any switch explicitly (e.g. type 'order=LO' at the prompt)
+  Type '0', 'auto', 'done' or just press enter when you are done.
+ [0, 1, 2, 3, 4, 5, auto, done, order=LO, ... ][60s to answer]
+>The following switches determine which operations are executed:
+ 1 Perturbative order of the calculation:                               order=NLO
+ 2 Fixed order (no event generation and no MC@[N]LO matching):    fixed_order=OFF
+ 3 Shower the generated events:                                        shower=OFF
+ 4 Decay particles with the MadSpin module:                           madspin=ON
+ 5 Add weights to the events based on changing model parameters:     reweight=OFF
+ 6 Run MadAnalysis5 on the events generated:                     madanalysis5=Not installed
+  Either type the switch number (1 to 6) to change its default setting,
+  or set any switch explicitly (e.g. type 'order=LO' at the prompt)
+  Type '0', 'auto', 'done' or just press enter when you are done.
+ [0, 1, 2, 3, 4, 5, auto, done, order=LO, ... ][60s to answer]
+>INFO: will run in mode: noshower
+WARNING: You have chosen not to run a parton shower. NLO events without showering are NOT physical.
+Please, shower the Les Houches events before using them for physics analyses.
+For consistency in the FxFx merging, 'jetradius' has been set to 1.0
+For consistency in the FxFx merging, 'jetalgo' has been set to 1.0
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  1. param   : param_card.dat                               |
+|  2. run     : run_card.dat                                 |
+|  3. madspin : madspin_card.dat                             |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [0, done, 1, param, 2, run, 3, madspin, enter path][90s to answer]
+>INFO: modify parameter nevents of the run_card.dat to 10
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  1. param   : param_card.dat                               |
+|  2. run     : run_card.dat                                 |
+|  3. madspin : madspin_card.dat                             |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [0, done, 1, param, 2, run, 3, madspin, enter path]
+>INFO: modify parameter iseed of the run_card.dat to 1
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  1. param   : param_card.dat                               |
+|  2. run     : run_card.dat                                 |
+|  3. madspin : madspin_card.dat                             |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [0, done, 1, param, 2, run, 3, madspin, enter path]
+>INFO: modify parameter nevt_job of the run_card.dat to 10
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  1. param   : param_card.dat                               |
+|  2. run     : run_card.dat                                 |
+|  3. madspin : madspin_card.dat                             |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [0, done, 1, param, 2, run, 3, madspin, enter path]
+>INFO: Update the dependent parameter of the param_card.dat
+WARNING: You are running with FxFx merging enabled.  To be able to merge
+    samples of various multiplicities without double counting, you
+    have to remove some events after showering 'by hand'.  Please
+    read http://amcatnlo.cern.ch/FxFx_merging.htm for more details.
+INFO: Starting run
+INFO: Compiling the code
+WARNING: Support of LHAPDF 6.2.x is still in beta phase. Consider to use LHAPDF 6.1.x in case of problem.
+WARNING: Support of LHAPDF 6.2.x is still in beta phase. Consider to use LHAPDF 6.1.x in case of problem.
+INFO: Starting run
+INFO: Using 1 cores
+INFO: Generating events without running the shower.
+Error detected in "launch -ox -n cmsgrid"
+write debug file /home/jiexiao/tmp/process/cmsgrid_tag_1_debug.log
+If you need help with this issue please contact us on https://answers.launchpad.net/mg5amcnlo
+aMCatNLOError : Cannot reconstruct saved job status in /home/jiexiao/tmp/process/SubProcesses/job_status.pkl
+quit
+INFO:
+
+launch in debug mode
+INFO: ************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D G R A P H 5           *
+*                       a M C @ N L O                      *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 5.2.6.0               20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*                 http://amcatnlo.cern.ch                  *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /home/jiexiao/tmp/process/Cards/amcatnlo_configuration.txt
+INFO: load configuration from /home/jiexiao/tmp/mgbasedir/input/mg5_configuration.txt
+INFO: load configuration from /home/jiexiao/tmp/process/Cards/amcatnlo_configuration.txt
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid web browser found. Please set in ./input/mg5_configuration.txt
+process>WARNING: Support of LHAPDF 6.2.x is still in beta phase. Consider to use LHAPDF 6.1.x in case of problem.
+INFO: Running Systematics computation
+Command "systematics cmsgrid_decayed_1 --remove_wgts=all --start_id=1001 --pdf=306000,322500@0,322700@0,322900@0,323100@0,323300@0,323500@0,323700@0,323900@0,305800,13000,13065@0,13069@0,13100,13163@0,13167@0,13200@0,25200,25300,25000@0,42780,90200,91200,90400,91400,61100,61130,61200,61230,13400,82200,292200,292600@0,315000@0,315200@0,262000@0,263000@0 --mur=1,2,0.5 --muf=1,2,0.5 --together=muf,mur --dyn=-1" interrupted with error:
+InvalidCmd : Invalid run name. Please retry
+process>INFO:
+
+cp: cannot stat `./Events/cmsgrid_decayed_1/events.lhe.gz': No such file or directory
+gzip: cmsgrid_final.lhe.gz: No such file or directory
+sed: can't read cmsgrid_final.lhe: No such file or directory
+total 761724
+drwxr-xr-x 16 jiexiao users      4096 Aug 27 04:58 CMSSW_9_3_8
+drwxr-xr-x  2 jiexiao users       153 Aug 26 12:13 InputCards
+drwxr-xr-x  3 jiexiao users        33 May 21 11:40 cmssw-tmp
+-rw-r--r--  1 jiexiao users    256542 Aug 26 12:13 gridpack_generation.log
+-rw-r--r--  1 jiexiao users   1480510 Aug 26 12:13 gridpack_generation_codegen.log
+drwxr-xr-x 16 jiexiao users      4096 Aug 26 06:20 mgbasedir
+drwxr-xr-x 12 jiexiao users      4096 Aug 27 04:58 process
+-rwxr-xr-x  1 jiexiao users      4614 Aug 26 12:10 runcmsgrid.sh
+-rw-r--r--  1 jiexiao users  12112176 May 21 11:35 sandbox-CMSSW_9_3_15-6432891.tar.bz2
+-rw-r--r--  1 jiexiao users 765578392 Aug 27 04:50 wellnu012j_5f_NLO_FXFX_slc6_amd64_gcc630_CMSSW_9_3_8_tarball.tar.xz
