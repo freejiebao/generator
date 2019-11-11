@@ -1,0 +1,62 @@
+(run){
+  % general setting
+  EVENTS 1000; ERROR 0.99;
+
+  % scales, tags for scale variations
+  FSF:=1.; RSF:=1.; QSF:=1.;
+  SCALES METS{FSF*MU_F2}{RSF*MU_R2}{QSF*MU_Q2};
+
+  % tags for process setup
+  NJET:=1; LJET:=0; QCUT:=30.;
+
+  % me generator settings
+  ME_SIGNAL_GENERATOR Comix LOOPGEN;
+  LOOPGEN:=OpenLoops;
+
+  % particle properties (ME widths need to be zero if external)
+  WIDTH[24] 0;
+  MASS[25] 125.5; WIDTH[25] 0;
+  STABLE[15] 0; MASSIVE[15] 1;
+
+  % define custom particle container for easy process declaration
+  PARTICLE_CONTAINER 900 W 24 -24;
+  PARTICLE_CONTAINER 901 lightflavs 1 -1 2 -2 3 -3 4 -4 21;
+  NLO_CSS_DISALLOW_FLAVOUR 5;
+  % PARTICLE_CONTAINER 910 NeuP 12 14;
+  % PARTICLE_CONTAINER 930 LepP -11 -13;
+
+  % scale on-the-fly variations
+  SCALE_VARIATIONS 0.25,0.25 0.25,1.00 1.00,0.25 1.00,4.00 4.00,1.00 4.00,4.00 1.0,1.0;
+  CSS_REWEIGHT 1;
+  REWEIGHT_SPLITTING_ALPHAS_SCALES 1;
+  REWEIGHT_SPLITTING_PDF_SCALES 1;
+  CSS_REWEIGHT_SCALE_CUTOFF 5;
+  HEPMC_INCLUDE_ME_ONLY_VARIATIONS 1;
+  HEPMC_USE_NAMED_WEIGHTS=1;
+
+  % collider setup
+  BEAM_1 2212; BEAM_ENERGY_1 = 6500.;
+  BEAM_2 2212; BEAM_ENERGY_2 = 6500.;
+}(run)
+
+(processes){
+  Process 901 901 -> 900[a] 25[b] 901{NJET};
+  Decay 900[a] -> 90 91;
+  Decay 25[b] -> 900[c] 900[d];
+  DecayOS 900[c] -> 90 91;
+  Decay 900[d] -> 93 93;
+  Order (*,2); CKKW sqr(QCUT/E_CMS);
+  NLO_QCD_Mode MC@NLO {LJET};
+  ME_Generator Amegic {LJET};
+  RS_ME_Generator Comix {LJET};
+  Loop_Generator LOOPGEN {LJET};
+  Print_Graphs Process;
+  End process;
+}(processes)
+
+%(selector){
+%  Mass 11 -12 1. E_CMS
+%  Mass 13 -14 1. E_CMS
+%  Mass -11 12 1. E_CMS
+%  Mass -13 14 1. E_CMS
+%}(selector)

@@ -1,0 +1,524 @@
+Mon Sep 23 12:38:40 EDT 2019
+XXX: mpirun
+  -> SHERPA path: '/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/sherpa/2.2.6-pafccj3'
+  -> SHERPA run path: '/home/cmsdas/testuser01/sherpa/CMSSW_10_6_0/src/MY/PROJECT/python/SHERPATMP_WHWW_4Channel'
+  -> PROCESS name: 'WHWW_4Channel'
+  -> Library & cross section otions: 'LBCR'
+  -> include path: '/home/cmsdas/testuser01/sherpa/CMSSW_10_6_0/src/MY/PROJECT/python'
+  -> custom data card file name: ''
+  -> custom library file name: ''
+  -> custom cross section file name: ''
+  -> output path: '/home/cmsdas/testuser01/sherpa/CMSSW_10_6_0/src/MY/PROJECT/python'
+  -> MPI running command: 'mpirun'
+  -> additional MPI options: '-n 70 '
+  -> No. of events: '0'
+ <I> multiple CPU cores detected: 73-1
+ path '/home/cmsdas/testuser01/sherpa/CMSSW_10_6_0/src/MY/PROJECT/python/SHERPATMP_WHWW_4Channel/TMP' does not exist,
+  -> creating path '/home/cmsdas/testuser01/sherpa/CMSSW_10_6_0/src/MY/PROJECT/python/SHERPATMP_WHWW_4Channel/TMP'
+ <I> using COMIX/internal ME generator
+ <I> using OpenLoops as loop generator
+ <I> NO OL_PREFIX specified in RunCard.
+ <I> Will use OL_PREFIX=/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/openloops/2.0.0
+ 'Process' subdirectory does not exist and will be created
+ 'Result' subdirectory does not exist and will be created
+ <I> Sherpa executable is /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/sherpa/2.2.6-pafccj3/bin/Sherpa
+ <I> creating library code...
+     ...Logs stored in /home/cmsdas/testuser01/sherpa/CMSSW_10_6_0/src/MY/PROJECT/python/SHERPATMP_WHWW_4Channel/sherpa_WHWW_4Channel_passLBCR.out and /home/cmsdas/testuser01/sherpa/CMSSW_10_6_0/src/MY/PROJECT/python/SHERPATMP_WHWW_4Channel/sherpa_WHWW_4Channel_passLBCR.err.
+Welcome to Sherpa, . Initialization of framework underway.
+The local time is Mon Sep 23 12:38:42 2019.
+Run_Parameter::Init(): Seed mode '*'
+Run_Parameter::Init(): Setting memory limit to 125.54 GB.
+Random::SetSeed(): Seed set to 1234
+-----------------------------------------------------------------------------
+-----------    Event generation run with SHERPA started .......   -----------
+-----------------------------------------------------------------------------
+................................................ |       +                   
+................................................ ||  |       +  +            
+...................................        ....  | |         /   +           
+................. ................   _,_ |  ....  ||         +|  +  +        
+...............................  __.'  ,\|  ...  ||    /    +|          +    
+.............................. (  \    \   ...  | |  |   + + \         +   
+.............................  (    \   -/  .... ||       +    |          +  
+........ ...................  <S   /()))))~~~~~~~~##     +     /\    +       
+............................ (!H   (~~)))))~~~~~~#/     +  +    |  +         
+................ ........... (!E   (~~~)))))     /|/    +         +          
+............................ (!R   (~~~)))))   |||   + +            +        
+..... ...................... (!P    (~~~~)))   /|  + +          +            
+............................ (!A>    (~~~~~~~~~##        + +        +        
+............................. ~~(!    '~~~~~~~ \       +     + +      +      
+...............................  `~~~QQQQQDb //   |         + + +        +   
+........................ ..........   IDDDDP||     \  + + + + +             +
+....................................  IDDDI||       \                      + 
+.................................... IHD HD||         \ + +  + + + + +      +
+...................................  IHD ##|            :-) + +\          +  
+......... ............... ......... IHI ## /      /   +  + + + +\       +    
+................................... IHI/ /       /      + + + +        +     
+................................... ## | | /    / + +      + + /      +      
+....................... /TT\ .....  ##/ ///  / + + + + + + +/       +        
+......................./TTT/T\ ... /TT\/\\\ / + + + + + + +/   \         +   
+....................../TTT/TTTT\...|TT/T\\\/   +    ++  + /              
+-----------------------------------------------------------------------------
+
+     SHERPA version 2.2.6 (Cho Oyu)
+                                                                             
+     Authors:        Enrico Bothmann, Stefan Hoeche, Frank Krauss,           
+                     Silvan Kuttimalai, Marek Schoenherr, Holger Schulz,     
+                     Steffen Schumann, Frank Siegert, Korinna Zapp           
+     Former Authors: Timo Fischer, Tanju Gleisberg, Hendrik Hoeth,           
+                     Ralf Kuhn, Thomas Laubrich, Andreas Schaelicke,         
+                     Jan Winter                                              
+                                                                             
+     This program uses a lot of genuine and original research work           
+     by other people. Users are encouraged to refer to                       
+     the various original publications.                                      
+                                                                             
+     Users are kindly asked to refer to the documentation                    
+     published under JHEP 02(2009)007                                        
+                                                                             
+     Please visit also our homepage                                          
+                                                                             
+       http://sherpa.hepforge.org                                            
+                                                                             
+     for news, bugreports, updates and new releases.                         
+                                                                             
+-----------------------------------------------------------------------------
+
+WARNING: You are using an unsupported development branch.
+Git branch HEAD, revision fd864aed414907e1f7fd5c1b61bf1f7c746b6272.
+
+Model_Base::CustomContainerInit(): Changing ve sort priority: 1 -> 0
+Model_Base::CustomContainerInit(): Changing vmu sort priority: 1 -> 0
+Model_Base::CustomContainerInit(): Changing e+ sort priority: 2 -> 0
+Model_Base::CustomContainerInit(): Changing mu+ sort priority: 2 -> 0
+Beam_Spectra_Handler : 
+   type = Monochromatic*Monochromatic
+   for    P+  ((6500,0,0,6500))
+   and    P+  ((6500,0,0,-6500))
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+PDF set 'NNPDF30NNLO' loaded for beam 1 (P+).
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+PDF set 'NNPDF30NNLO' loaded for beam 2 (P+).
+Initialized the ISR: (SF)*(SF)
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+ List of Particle Data 
+  IDName     kfc  MASS[<kfc>]   WIDTH[<kfc>]  STABLE[<kfc>] MASSIVE[<kfc>]  ACTIVE[<kfc>]  YUKAWA[<kfc>]
+       d       1         0.01              0              1              0              1              0
+       u       2        0.005              0              1              0              1              0
+       s       3          0.2              0              1              0              1              0
+       c       4         1.42              0              1              0              1              0
+       b       5          4.8              0              1              0              1              0
+       t       6       173.21              2              0              1              1         173.21
+      e-      11     0.000511              0              1              0              1              0
+      ve      12            0              0              1              0              1              0
+     mu-      13        0.105              0              1              0              1              0
+     vmu      14            0              0              1              0              1              0
+    tau-      15        1.777    2.26735e-12              0              1              1          1.777
+    vtau      16            0              0              1              0              1              0
+       G      21            0              0              1              0              1              0
+       P      22            0              0              1              0              1              0
+       Z      23      91.1876         2.4952              0              1              1        91.1876
+      W+      24       80.385              0              0              1              1         80.385
+      h0      25        125.5              0              0              1              1          125.5
+
+ List of Particle Containers 
+    IDName     kfc     Constituents
+         l      90     {e-,e+,mu-,mu+}
+         v      91     {ve,veb,vmu,vmub,vtau,vtaub}
+         j      93     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         Q      94     {d,db,u,ub,s,sb,c,cb,b,bb}
+         r      99     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         W     900     {W+,W-}
+lightflavs     901     {d,db,u,ub,s,sb,c,cb,G}
+      NeuP     910     {ve,vmu}
+      LepP     930     {e+,mu+}
+
+Initialized the Fragmentation_Handler.
+Initialized the Soft_Collision_Handler.
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set color setter mode 0
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set color setter mode 0
+Initialized the Shower_Handler.
+ME_Generators::ME_Generators(): Try loading 'OpenLoops' from 'libSherpaOpenLoops'.
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Comix: (c,cb,b,bb,e-,e+,mu-,mu+)
++----------------------------------+
+|                                  |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mMM[0m [34mMM[0m I  [33mX[0m [33mX[0m      |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m [34mM[0m [34mM[0m I   [33mX[0m       |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m   [34mM[0m I  [33mX[0m [33mX[0m      |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|                                  |
++==================================+
+|  Color dressed  Matrix Elements  |
+|     http://comix.freacafe.de     |
+|   please cite  JHEP12(2008)039   |
++----------------------------------+
+Initialising OpenLoops generator from /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/openloops/2.0.0
+####################################################################
+#        ___  ___  ____  _  _       __   __  ___   __    ___       #
+#       /   \ |__| |__   |\ |  |   /  \ /  \ |__| /__    __/       #
+#       \___/ |    |___  | \|  |__ \__/ \__/ |    __/   /__        #
+#       You are using OpenLoops 2 to evaluate loop amplitudes      #
+#        F. Buccioni, J.-N. Lang, J. Lindert, P. Maierhoefer,      #
+#               S. Pozzorini, M. Zoller, H. Zhang                  #
+#                Eur.Phys.J. C78 (2018) no.1, 70                   #
+####################################################################
+Matrix_Element_Handler::BuildProcesses(): Looking for processes  done ( 22 MB, 1s / 1s ).
+[1mSherpa: [0m[34mMatrix_Element_Handler::InitializeProcesses[0m throws [1m[31mnormal exit[0m[1m: 
+   [0m[31mNo hard process found[0m
+WARNING: You are using an unsupported development branch.
+------------------------------------------------------------------------
+[1mPlease cite the publications listed in '[31mSherpa_References.tex[0m[1m'.[0m
+  Extract the bibtex list by running 'get_bibtex Sherpa_References.tex'
+  or email the file to 'slaclib2@slac.stanford.edu', subject 'generate'.
+------------------------------------------------------------------------
+ <I> calculating cross sections... Logs stored in /home/cmsdas/testuser01/sherpa/CMSSW_10_6_0/src/MY/PROJECT/python/SHERPATMP_WHWW_4Channel/sherpa_WHWW_4Channel_passLBCR.out and /home/cmsdas/testuser01/sherpa/CMSSW_10_6_0/src/MY/PROJECT/python/SHERPATMP_WHWW_4Channel/sherpa_WHWW_4Channel_passLBCR.err.
+ <I> ...using MPI
+Welcome to Sherpa, . Initialization of framework underway.
+The local time is Mon Sep 23 12:38:45 2019.
+Run_Parameter::Init(): Seed mode '*'
+Run_Parameter::Init(): Setting memory limit to 125.54 GB.
+Random::SetSeed(): Seed set to 1234
+My_MPI::SetUpSendRecv(): Running on 70 ranks.
+-----------------------------------------------------------------------------
+-----------    Event generation run with SHERPA started .......   -----------
+-----------------------------------------------------------------------------
+................................................ |       +                   
+................................................ ||  |       +  +            
+...................................        ....  | |         /   +           
+................. ................   _,_ |  ....  ||         +|  +  +        
+...............................  __.'  ,\|  ...  ||    /    +|          +    
+.............................. (  \    \   ...  | |  |   + + \         +   
+.............................  (    \   -/  .... ||       +    |          +  
+........ ...................  <S   /()))))~~~~~~~~##     +     /\    +       
+............................ (!H   (~~)))))~~~~~~#/     +  +    |  +         
+................ ........... (!E   (~~~)))))     /|/    +         +          
+............................ (!R   (~~~)))))   |||   + +            +        
+..... ...................... (!P    (~~~~)))   /|  + +          +            
+............................ (!A>    (~~~~~~~~~##        + +        +        
+............................. ~~(!    '~~~~~~~ \       +     + +      +      
+...............................  `~~~QQQQQDb //   |         + + +        +   
+........................ ..........   IDDDDP||     \  + + + + +             +
+....................................  IDDDI||       \                      + 
+.................................... IHD HD||         \ + +  + + + + +      +
+...................................  IHD ##|            :-) + +\          +  
+......... ............... ......... IHI ## /      /   +  + + + +\       +    
+................................... IHI/ /       /      + + + +        +     
+................................... ## | | /    / + +      + + /      +      
+....................... /TT\ .....  ##/ ///  / + + + + + + +/       +        
+......................./TTT/T\ ... /TT\/\\\ / + + + + + + +/   \         +   
+....................../TTT/TTTT\...|TT/T\\\/   +    ++  + /              
+-----------------------------------------------------------------------------
+
+     SHERPA version 2.2.6 (Cho Oyu)
+                                                                             
+     Authors:        Enrico Bothmann, Stefan Hoeche, Frank Krauss,           
+                     Silvan Kuttimalai, Marek Schoenherr, Holger Schulz,     
+                     Steffen Schumann, Frank Siegert, Korinna Zapp           
+     Former Authors: Timo Fischer, Tanju Gleisberg, Hendrik Hoeth,           
+                     Ralf Kuhn, Thomas Laubrich, Andreas Schaelicke,         
+                     Jan Winter                                              
+                                                                             
+     This program uses a lot of genuine and original research work           
+     by other people. Users are encouraged to refer to                       
+     the various original publications.                                      
+                                                                             
+     Users are kindly asked to refer to the documentation                    
+     published under JHEP 02(2009)007                                        
+                                                                             
+     Please visit also our homepage                                          
+                                                                             
+       http://sherpa.hepforge.org                                            
+                                                                             
+     for news, bugreports, updates and new releases.                         
+                                                                             
+-----------------------------------------------------------------------------
+
+WARNING: You are using an unsupported development branch.
+Git branch HEAD, revision fd864aed414907e1f7fd5c1b61bf1f7c746b6272.
+
+Model_Base::CustomContainerInit(): Changing ve sort priority: 1 -> 0
+Model_Base::CustomContainerInit(): Changing vmu sort priority: 1 -> 0
+Model_Base::CustomContainerInit(): Changing e+ sort priority: 2 -> 0
+Model_Base::CustomContainerInit(): Changing mu+ sort priority: 2 -> 0
+Beam_Spectra_Handler : 
+   type = Monochromatic*Monochromatic
+   for    P+  ((6500,0,0,6500))
+   and    P+  ((6500,0,0,-6500))
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+PDF set 'NNPDF30NNLO' loaded for beam 1 (P+).
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+PDF set 'NNPDF30NNLO' loaded for beam 2 (P+).
+Initialized the ISR: (SF)*(SF)
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+ List of Particle Data 
+  IDName     kfc  MASS[<kfc>]   WIDTH[<kfc>]  STABLE[<kfc>] MASSIVE[<kfc>]  ACTIVE[<kfc>]  YUKAWA[<kfc>]
+       d       1         0.01              0              1              0              1              0
+       u       2        0.005              0              1              0              1              0
+       s       3          0.2              0              1              0              1              0
+       c       4         1.42              0              1              0              1              0
+       b       5          4.8              0              1              0              1              0
+       t       6       173.21              2              0              1              1         173.21
+      e-      11     0.000511              0              1              0              1              0
+      ve      12            0              0              1              0              1              0
+     mu-      13        0.105              0              1              0              1              0
+     vmu      14            0              0              1              0              1              0
+    tau-      15        1.777    2.26735e-12              0              1              1          1.777
+    vtau      16            0              0              1              0              1              0
+       G      21            0              0              1              0              1              0
+       P      22            0              0              1              0              1              0
+       Z      23      91.1876         2.4952              0              1              1        91.1876
+      W+      24       80.385              0              0              1              1         80.385
+      h0      25        125.5              0              0              1              1          125.5
+
+ List of Particle Containers 
+    IDName     kfc     Constituents
+         l      90     {e-,e+,mu-,mu+}
+         v      91     {ve,veb,vmu,vmub,vtau,vtaub}
+         j      93     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         Q      94     {d,db,u,ub,s,sb,c,cb,b,bb}
+         r      99     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         W     900     {W+,W-}
+lightflavs     901     {d,db,u,ub,s,sb,c,cb,G}
+      NeuP     910     {ve,vmu}
+      LepP     930     {e+,mu+}
+
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set color setter mode 0
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set color setter mode 0
+Initialized the Shower_Handler.
+ME_Generators::ME_Generators(): Try loading 'OpenLoops' from 'libSherpaOpenLoops'.
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Comix: (c,cb,b,bb,e-,e+,mu-,mu+)
++----------------------------------+
+|                                  |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mMM[0m [34mMM[0m I  [33mX[0m [33mX[0m      |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m [34mM[0m [34mM[0m I   [33mX[0m       |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m   [34mM[0m I  [33mX[0m [33mX[0m      |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|                                  |
++==================================+
+|  Color dressed  Matrix Elements  |
+|     http://comix.freacafe.de     |
+|   please cite  JHEP12(2008)039   |
++----------------------------------+
+Initialising OpenLoops generator from /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/openloops/2.0.0
+####################################################################
+#        ___  ___  ____  _  _       __   __  ___   __    ___       #
+#       /   \ |__| |__   |\ |  |   /  \ /  \ |__| /__    __/       #
+#       \___/ |    |___  | \|  |__ \__/ \__/ |    __/   /__        #
+#       You are using OpenLoops 2 to evaluate loop amplitudes      #
+#        F. Buccioni, J.-N. Lang, J. Lindert, P. Maierhoefer,      #
+#               S. Pozzorini, M. Zoller, H. Zhang                  #
+#                Eur.Phys.J. C78 (2018) no.1, 70                   #
+####################################################################
+Matrix_Element_Handler::BuildProcesses(): Looking for processes -------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+
+[1mException_Handler::SignalHandler: [0m[34mSignal [0m[1m([31m15[0m[1m)[0m[34m caught. [0m
+[0m   Cannot continue.[0m
+WARNING: You are using an unsupported development branch.
+------------------------------------------------------------------------
+[1mPlease cite the publications listed in '[31mSherpa_References.tex[0m[1m'.[0m
+  Extract the bibtex list by running 'get_bibtex Sherpa_References.tex'
+  or email the file to 'slaclib2@slac.stanford.edu', subject 'generate'.
+------------------------------------------------------------------------
+[1mException_Handler::Exit: [0m[34mExiting Sherpa with code [0m[1m([31m2[0m[1m)[0m[?25h
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[16655,1],28]
+  Exit code:    1
+--------------------------------------------------------------------------
+<I> ...generating events without MPI
+Welcome to Sherpa, . Initialization of framework underway.
+The local time is Mon Sep 23 12:38:49 2019.
+Run_Parameter::Init(): Seed mode '*'
+Run_Parameter::Init(): Setting memory limit to 125.54 GB.
+Random::SetSeed(): Seed set to 1234
+-----------------------------------------------------------------------------
+-----------    Event generation run with SHERPA started .......   -----------
+-----------------------------------------------------------------------------
+................................................ |       +                   
+................................................ ||  |       +  +            
+...................................        ....  | |         /   +           
+................. ................   _,_ |  ....  ||         +|  +  +        
+...............................  __.'  ,\|  ...  ||    /    +|          +    
+.............................. (  \    \   ...  | |  |   + + \         +   
+.............................  (    \   -/  .... ||       +    |          +  
+........ ...................  <S   /()))))~~~~~~~~##     +     /\    +       
+............................ (!H   (~~)))))~~~~~~#/     +  +    |  +         
+................ ........... (!E   (~~~)))))     /|/    +         +          
+............................ (!R   (~~~)))))   |||   + +            +        
+..... ...................... (!P    (~~~~)))   /|  + +          +            
+............................ (!A>    (~~~~~~~~~##        + +        +        
+............................. ~~(!    '~~~~~~~ \       +     + +      +      
+...............................  `~~~QQQQQDb //   |         + + +        +   
+........................ ..........   IDDDDP||     \  + + + + +             +
+....................................  IDDDI||       \                      + 
+.................................... IHD HD||         \ + +  + + + + +      +
+...................................  IHD ##|            :-) + +\          +  
+......... ............... ......... IHI ## /      /   +  + + + +\       +    
+................................... IHI/ /       /      + + + +        +     
+................................... ## | | /    / + +      + + /      +      
+....................... /TT\ .....  ##/ ///  / + + + + + + +/       +        
+......................./TTT/T\ ... /TT\/\\\ / + + + + + + +/   \         +   
+....................../TTT/TTTT\...|TT/T\\\/   +    ++  + /              
+-----------------------------------------------------------------------------
+
+     SHERPA version 2.2.6 (Cho Oyu)
+                                                                             
+     Authors:        Enrico Bothmann, Stefan Hoeche, Frank Krauss,           
+                     Silvan Kuttimalai, Marek Schoenherr, Holger Schulz,     
+                     Steffen Schumann, Frank Siegert, Korinna Zapp           
+     Former Authors: Timo Fischer, Tanju Gleisberg, Hendrik Hoeth,           
+                     Ralf Kuhn, Thomas Laubrich, Andreas Schaelicke,         
+                     Jan Winter                                              
+                                                                             
+     This program uses a lot of genuine and original research work           
+     by other people. Users are encouraged to refer to                       
+     the various original publications.                                      
+                                                                             
+     Users are kindly asked to refer to the documentation                    
+     published under JHEP 02(2009)007                                        
+                                                                             
+     Please visit also our homepage                                          
+                                                                             
+       http://sherpa.hepforge.org                                            
+                                                                             
+     for news, bugreports, updates and new releases.                         
+                                                                             
+-----------------------------------------------------------------------------
+
+WARNING: You are using an unsupported development branch.
+Git branch HEAD, revision fd864aed414907e1f7fd5c1b61bf1f7c746b6272.
+
+Model_Base::CustomContainerInit(): Changing ve sort priority: 1 -> 0
+Model_Base::CustomContainerInit(): Changing vmu sort priority: 1 -> 0
+Model_Base::CustomContainerInit(): Changing e+ sort priority: 2 -> 0
+Model_Base::CustomContainerInit(): Changing mu+ sort priority: 2 -> 0
+Beam_Spectra_Handler : 
+   type = Monochromatic*Monochromatic
+   for    P+  ((6500,0,0,6500))
+   and    P+  ((6500,0,0,-6500))
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+PDF set 'NNPDF30NNLO' loaded for beam 1 (P+).
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+PDF set 'NNPDF30NNLO' loaded for beam 2 (P+).
+Initialized the ISR: (SF)*(SF)
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+WARNING: M_TOP=0  replacing with SHERPA top mass: M_TOP=173.21
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+ List of Particle Data 
+  IDName     kfc  MASS[<kfc>]   WIDTH[<kfc>]  STABLE[<kfc>] MASSIVE[<kfc>]  ACTIVE[<kfc>]  YUKAWA[<kfc>]
+       d       1         0.01              0              1              0              1              0
+       u       2        0.005              0              1              0              1              0
+       s       3          0.2              0              1              0              1              0
+       c       4         1.42              0              1              0              1              0
+       b       5          4.8              0              1              0              1              0
+       t       6       173.21              2              0              1              1         173.21
+      e-      11     0.000511              0              1              0              1              0
+      ve      12            0              0              1              0              1              0
+     mu-      13        0.105              0              1              0              1              0
+     vmu      14            0              0              1              0              1              0
+    tau-      15        1.777    2.26735e-12              0              1              1          1.777
+    vtau      16            0              0              1              0              1              0
+       G      21            0              0              1              0              1              0
+       P      22            0              0              1              0              1              0
+       Z      23      91.1876         2.4952              0              1              1        91.1876
+      W+      24       80.385              0              0              1              1         80.385
+      h0      25        125.5              0              0              1              1          125.5
+
+ List of Particle Containers 
+    IDName     kfc     Constituents
+         l      90     {e-,e+,mu-,mu+}
+         v      91     {ve,veb,vmu,vmub,vtau,vtaub}
+         j      93     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         Q      94     {d,db,u,ub,s,sb,c,cb,b,bb}
+         r      99     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         W     900     {W+,W-}
+lightflavs     901     {d,db,u,ub,s,sb,c,cb,G}
+      NeuP     910     {ve,vmu}
+      LepP     930     {e+,mu+}
+
+Hadron_Init::Init(): Initializing kf table for hadrons.
+Initialized the Fragmentation_Handler.
+Initialized the Soft_Collision_Handler.
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set color setter mode 0
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set color setter mode 0
+Initialized the Shower_Handler.
+ME_Generators::ME_Generators(): Try loading 'OpenLoops' from 'libSherpaOpenLoops'.
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Comix: (c,cb,b,bb,e-,e+,mu-,mu+)
++----------------------------------+
+|                                  |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mMM[0m [34mMM[0m I  [33mX[0m [33mX[0m      |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m [34mM[0m [34mM[0m I   [33mX[0m       |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m   [34mM[0m I  [33mX[0m [33mX[0m      |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|                                  |
++==================================+
+|  Color dressed  Matrix Elements  |
+|     http://comix.freacafe.de     |
+|   please cite  JHEP12(2008)039   |
++----------------------------------+
+Initialising OpenLoops generator from /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/openloops/2.0.0
+####################################################################
+#        ___  ___  ____  _  _       __   __  ___   __    ___       #
+#       /   \ |__| |__   |\ |  |   /  \ /  \ |__| /__    __/       #
+#       \___/ |    |___  | \|  |__ \__/ \__/ |    __/   /__        #
+#       You are using OpenLoops 2 to evaluate loop amplitudes      #
+#        F. Buccioni, J.-N. Lang, J. Lindert, P. Maierhoefer,      #
+#               S. Pozzorini, M. Zoller, H. Zhang                  #
+#                Eur.Phys.J. C78 (2018) no.1, 70                   #
+####################################################################
+Matrix_Element_Handler::BuildProcesses(): Looking for processes  done ( 24 MB, 1s / 1s ).
+[1mSherpa: [0m[34mMatrix_Element_Handler::InitializeProcesses[0m throws [1m[31mnormal exit[0m[1m: 
+   [0m[31mNo hard process found[0m
+WARNING: You are using an unsupported development branch.
+------------------------------------------------------------------------
+[1mPlease cite the publications listed in '[31mSherpa_References.tex[0m[1m'.[0m
+  Extract the bibtex list by running 'get_bibtex Sherpa_References.tex'
+  or email the file to 'slaclib2@slac.stanford.edu', subject 'generate'.
+------------------------------------------------------------------------
+ <I> MPI (mult. part. int.) grid located in 
+ <I> MPI (mult. part. int.) file found: 
+Mon Sep 23 12:38:51 EDT 2019
