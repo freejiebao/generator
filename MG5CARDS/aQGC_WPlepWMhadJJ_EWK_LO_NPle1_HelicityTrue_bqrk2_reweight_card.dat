@@ -1,0 +1,34 @@
+change helicity False
+change rwgt_dir rwgt
+
+
+#************	cW	***************************
+launch --rwgt_name=cW_0p1
+        set frblock 21 0.1
+#************	cW	***************************
+launch --rwgt_name=cW_0p2
+        set frblock 21 0.2
+#************	cW	***************************
+launch --rwgt_name=cW_0p3
+        set frblock 21 0.3
+#************	cW	***************************
+launch --rwgt_name=cW_0p4
+        set frblock 21 0.4
+#************	cW	***************************
+launch --rwgt_name=cW_0p5
+        set frblock 21 0.5
+#************	cW	***************************
+launch --rwgt_name=cW_0p6
+        set frblock 21 0.6
+#************	cW	***************************
+launch --rwgt_name=cW_0p7
+        set frblock 21 0.7
+#************	cW	***************************
+launch --rwgt_name=cW_0p8
+        set frblock 21 0.8
+#************	cW	***************************
+launch --rwgt_name=cW_0p9
+        set frblock 21 0.9
+#************	cW	***************************
+launch --rwgt_name=cW_1
+        set frblock 21 1.0
