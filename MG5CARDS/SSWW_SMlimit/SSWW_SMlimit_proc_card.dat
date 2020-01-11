@@ -2,7 +2,7 @@ set group_subprocesses Auto
 set ignore_six_quark_processes False
 set loop_optimized_output True
 set complex_mass_scheme False
-import model SMEFTsim_A_U35_MwScheme_UFO_v2_1-SSWW_cW_massless
+import model SMEFTsim_A_U35_MwScheme_UFO_v2_1-cW_massless
 define p = g u c d s b u~ c~ d~ s~ b~
 define j = p
 define l+ = e+ mu+ ta+
