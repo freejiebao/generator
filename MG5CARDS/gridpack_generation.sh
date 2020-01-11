@@ -204,8 +204,8 @@ make_gridpack () {
               tar xavf ../$model
             else 
               echo "A BSM model is specified but it is not in a standard archive (.zip or .tar)"
-            cp $CARDSDIR/${name}_restrict_cW_massless.dat $model/restrict_cW_massless.dat
             fi
+            cp $CARDSDIR/${name}_restrict_cW_massless.dat SMEFTsim_A_U35_MwScheme_UFO_v2_1/restrict_cW_massless.dat
             cd ..
           fi
         done
