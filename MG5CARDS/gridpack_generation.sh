@@ -205,7 +205,11 @@ make_gridpack () {
             else 
               echo "A BSM model is specified but it is not in a standard archive (.zip or .tar)"
             fi
-            cp $CARDSDIR/${name}_restrict_cW_massless.dat SMEFTsim_A_U35_MwScheme_UFO_v2_1/restrict_cW_massless.dat
+            pushd SMEFTsim_A_U35_MwScheme_UFO_v2_1
+            svn checkout https://github.com/UniMiBAnalyses/D6EFTStudies/trunk/madgraph_model
+            mv madgraph_model/* .
+            rm -rf madgraph_model
+            popd
             cd ..
           fi
         done
