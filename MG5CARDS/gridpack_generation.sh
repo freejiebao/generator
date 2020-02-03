@@ -206,9 +206,9 @@ make_gridpack () {
               echo "A BSM model is specified but it is not in a standard archive (.zip or .tar)"
             fi
             pushd SMEFTsim_A_U35_MwScheme_UFO_v2_1
-            svn checkout https://github.com/UniMiBAnalyses/D6EFTStudies/trunk/madgraph_model
-            mv madgraph_model/* .
-            rm -rf madgraph_model
+            git clone https://github.com/UniMiBAnalyses/D6EFTStudies.git
+            mv D6EFTStudies/madgraph_model/* .
+            rm -rf D6EFTStudies
             popd
             cd ..
           fi
