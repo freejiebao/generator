@@ -181,6 +181,15 @@ fillHistos (LHEF::Reader & reader, histos & Histos, int max = -1)
       // loop over particles in the event
       for (int iPart = 2 ; iPart < reader.hepeup.IDUP.size (); ++iPart) 
         {
+          // weight info
+          map<string, int>::iterator iter;
+          auto _map=reader.heprup.weightmap;
+          auto _weights=reader.hepeup.weights;
+          iter=_map.begin();
+          while(iter!=_map.end()){
+            cout<<iter->first<<"\t"<<iter->second<<"\t"<<_weights->at(iter->second)<<endl;
+            iter++;
+          }
           // outgoing particles          
           if (reader.hepeup.ISTUP.at (iPart) == 1)
             {
