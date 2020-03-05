@@ -63,7 +63,7 @@ if __name__ == "__main__":
             outfile.write(extramodels_content)
         with open(process+'/'+process+'_proc_card.dat','w') as outfile:
             outfile.write(proc_card_0)
-            outfile.write('import model SMEFTsim_A_U35_MwScheme_UFO_v3-'+params[ipar][1]+ '_massless\n')
+            outfile.write('import model SMEFTsim_A_U35_MwScheme_UFO_v3_1-'+params[ipar][1]+ '_massless\n')
             outfile.write(proc_card_1)
             outfile.write("generate p p > l+ l+ vl vl j j QCD=0 SMHLOOP=0 NP=1 NP^2==2\n")
             outfile.write("add process p p > l- l- vl~ vl~ j j QCD=0 SMHLOOP=0 NP=1 NP^2==2\n")
@@ -78,7 +78,7 @@ if __name__ == "__main__":
                 outfile.write(extramodels_content)
             with open(process+'/'+process+'_proc_card.dat','w') as outfile:
                 outfile.write(proc_card_0)
-                outfile.write('import model SMEFTsim_A_U35_MwScheme_UFO_v3-'+params[ipar][1] + '_' + params[jpar][1]+ '_massless\n')
+                outfile.write('import model SMEFTsim_A_U35_MwScheme_UFO_v3_1-'+params[ipar][1] + '_' + params[jpar][1]+ '_massless\n')
                 outfile.write(proc_card_1)
                 outfile.write("generate p p > l+ l+ vl vl j j QCD=0 SMHLOOP=0 NP=1 NP"+params[ipar][1]+"^2==1 NP"+params[jpar][1]+"^2==1\n")
                 outfile.write("add process p p > l- l- vl~ vl~ j j QCD=0 SMHLOOP=0 NP=1 NP"+params[ipar][1]+"^2==1 NP"+params[jpar][1]+"^2==1\n")
