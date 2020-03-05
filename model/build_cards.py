@@ -46,8 +46,6 @@ if __name__ == "__main__":
     proc_card_1+="define vl = ve vm vt\n"
     proc_card_1+="define vl~ = ve~ vm~ vt~\n"
     proc_card_1+="\n"
-    with open('../../../../../run_card.dat','r') as runfile:
-        run_content=runfile.read()
     # loop over parameters to be restricted
     for ipar,param in enumerate(params):
         # 1D cards
@@ -63,9 +61,8 @@ if __name__ == "__main__":
             outfile.write("generate p p > l+ l+ vl vl j j QCD=0 SMHLOOP=0 NP=1 NP^2==1\n")
             outfile.write("add process p p > l- l- vl~ vl~ j j QCD=0 SMHLOOP=0 NP=1 NP^2==1\n")
             outfile.write("output "+process)
-        with open(process+'/'+process+'_run_card.dat','w') as outfile:
-            outfile.write(run_content)
-
+        os.system("wget http://stash.osgconnect.net/+jiexiao/run_card.dat -o "+process+'/'+process+'_run_card.dat')
+        
         # bsm
         process='VBS_SSWW_'+ params[ipar][1]+'_bsm'
         os.makedirs(process)
@@ -78,11 +75,10 @@ if __name__ == "__main__":
             outfile.write("generate p p > l+ l+ vl vl j j QCD=0 SMHLOOP=0 NP=1 NP^2==2\n")
             outfile.write("add process p p > l- l- vl~ vl~ j j QCD=0 SMHLOOP=0 NP=1 NP^2==2\n")
             outfile.write("output "+process)
-        with open(process+'/'+process+'_run_card.dat','w') as outfile:
-            outfile.write(run_content)
+        os.system("wget http://stash.osgconnect.net/+jiexiao/run_card.dat -o "+process+'/'+process+'_run_card.dat')
 
+        # 2D cards
         for jpar in range(ipar+1,len(params)):
-            # 2D cards
             process='VBS_SSWW_'+ params[ipar][1] + '_' + params[jpar][1]
             os.makedirs(process)
             with open(process+'/'+process+'_extramodels.dat','w') as outfile:
@@ -94,5 +90,4 @@ if __name__ == "__main__":
                 outfile.write("generate p p > l+ l+ vl vl j j QCD=0 SMHLOOP=0 NP=1 NP"+params[ipar][1]+"^2==1 NP"+params[jpar][1]+"^2==1\n")
                 outfile.write("add process p p > l- l- vl~ vl~ j j QCD=0 SMHLOOP=0 NP=1 NP"+params[ipar][1]+"^2==1 NP"+params[jpar][1]+"^2==1\n")
                 outfile.write("output "+process)
-            with open(process+'/'+process+'_run_card.dat','w') as outfile:
-                outfile.write(run_content)
+            os.system("curl -s http://stash.osgconnect.net/+jiexiao/run_card.dat -o "+process+'/'+process+'_run_card.dat')
