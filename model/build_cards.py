@@ -22,13 +22,6 @@ if __name__ == "__main__":
         ('58', 'cqq31'),
     ]
 
-    f_before = open ('restrict_before.txt', 'r')
-    contents_before = f_before.read ()
-    f_before.close ()
-    f_after  = open ('restrict_after.txt', 'r') 
-    contents_after = f_after.read ()
-    f_after.close ()
-
     extramodels_content=""
     extramodels_content+="# customized model for EWdim6 EFT in 5f\n"
     extramodels_content+="SMEFTsim_A_U35_MwScheme_UFO_v3.tar.gz"
