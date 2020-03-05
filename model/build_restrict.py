@@ -21,13 +21,6 @@ if __name__ == "__main__":
         ('58', 'cqq31'),
     ]
 
-    f_before = open ('restrict_before.txt', 'r')
-    contents_before = f_before.read ()
-    f_before.close ()
-    f_after  = open ('restrict_after.txt', 'r') 
-    contents_after = f_after.read ()
-    f_after.close ()
-
     # loop over parameters to be restricted
     for ipar,param in enumerate(params):
         # get 1st operator for cross term
