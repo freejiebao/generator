@@ -10,5 +10,8 @@ cd genproductions/bin/MadGraph5_aMCatNLO
 sed -i "s/^.*cms-project-generators\/\$model.*$/            wget --no-check-certificate http:\/\/stash.osgconnect.net\/+jiexiao\/\$model/" gridpack_generation.sh
 mkdir cards/eft
 pushd cards/eft
-python $START/build_cards.py
+wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_cards.py
+python build_cards.py
+rm build_cards.py
+popd
 ```
