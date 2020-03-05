@@ -54,7 +54,7 @@ if __name__ == "__main__":
             outfile.write("generate p p > l+ l+ vl vl j j QCD=0 SMHLOOP=0 NP=1 NP^2==1\n")
             outfile.write("add process p p > l- l- vl~ vl~ j j QCD=0 SMHLOOP=0 NP=1 NP^2==1\n")
             outfile.write("output "+process)
-        os.system("wget http://stash.osgconnect.net/+jiexiao/run_card.dat -o "+process+'/'+process+'_run_card.dat')
+        os.system("curl http://stash.osgconnect.net/+jiexiao/run_card.dat -o "+process+'/'+process+'_run_card.dat')
         
         # bsm
         process='VBS_SSWW_'+ params[ipar][1]+'_bsm'
@@ -68,7 +68,7 @@ if __name__ == "__main__":
             outfile.write("generate p p > l+ l+ vl vl j j QCD=0 SMHLOOP=0 NP=1 NP^2==2\n")
             outfile.write("add process p p > l- l- vl~ vl~ j j QCD=0 SMHLOOP=0 NP=1 NP^2==2\n")
             outfile.write("output "+process)
-        os.system("wget http://stash.osgconnect.net/+jiexiao/run_card.dat -o "+process+'/'+process+'_run_card.dat')
+        os.system("curl http://stash.osgconnect.net/+jiexiao/run_card.dat -o "+process+'/'+process+'_run_card.dat')
 
         # 2D cards
         for jpar in range(ipar+1,len(params)):
