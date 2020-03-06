@@ -16,7 +16,6 @@ popd
 ```
 ### To buile condor scripts
 ```
-voms-proxy-init --voms cms --valid 192:00
 mkdir eft
 cd eft
 mkdir log
@@ -26,6 +25,7 @@ rm build_cards.py
 ```
 ### To submit jobs
 ```
+voms-proxy-init --voms cms --valid 192:00
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/submit_jobs.py
 python submit_jobs.py
 rm submit_jobs.py
