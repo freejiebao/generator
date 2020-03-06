@@ -21,7 +21,7 @@ cd eft
 mkdir log
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_submit.py
 python build_submit.py
-rm build_cards.py
+rm build_submit.py
 ```
 ### To submit jobs
 ```

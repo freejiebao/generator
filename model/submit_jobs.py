@@ -27,12 +27,12 @@ if __name__ == "__main__":
         # 1D cards
         # int
         process='submit_'+ params[ipar][1]+'_int.jdl'
-        os.system('condor_submit {}'.format(process))
+        os.system('condor_submit {0}'.format(process))
         # bsm
         process='submit_'+ params[ipar][1]+'_bsm.jdl'
-        os.system('condor_submit {}'.format(process))
+        os.system('condor_submit {0}'.format(process))
         
         # 2D cards
         for jpar in range(ipar+1,len(params)):
             process='submit_'+ params[ipar][1] + '_' + params[jpar][1]+'.jdl'
-            os.system('condor_submit {}'.format(process))
+            os.system('condor_submit {0}'.format(process))
