@@ -27,7 +27,7 @@ if __name__ == "__main__":
         single_opt=params[ipar][1]
         # int
         int_process=single_opt+"_int"
-        with open('submit_{0}.sh'.format(int_process),'w') as outfile:
+        with open('submit_{0}.jdl'.format(int_process),'w') as outfile:
             outfile.write("Universe = vanilla\n")
             outfile.write("Executable = wrapper_{0}.sh\n".format(int_process))
             outfile.write("arguments = \"{0}\"\n".format(int_process))
@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
         # bsm    
         bsm_process=single_opt+"_bsm"
-        with open('submit_{0}.sh'.format(bsm_process),'w') as outfile:
+        with open('submit_{0}.jdl'.format(bsm_process),'w') as outfile:
             outfile.write("Universe = vanilla\n")
             outfile.write("Executable = wrapper_{0}.sh\n".format(bsm_process))
             outfile.write("arguments = \"{0}\"\n".format(bsm_process))
@@ -58,7 +58,7 @@ if __name__ == "__main__":
         # 2D
         for jpar in range(ipar+1,len(params)):
             d2_process=params[ipar][1] + '_' + params[jpar][1]
-            with open('submit_{0}.sh'.format(d2_process),'w') as outfile:
+            with open('submit_{0}.jdl'.format(d2_process),'w') as outfile:
                 outfile.write("Universe = vanilla\n")
                 outfile.write("Executable = wrapper_{0}.sh\n".format(d2_process))
                 outfile.write("arguments = \"{0}\"\n".format(d2_process))
