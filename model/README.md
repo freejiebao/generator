@@ -31,3 +31,9 @@ wget https://raw.githubusercontent.com/freejiebao/generator/master/model/submit_
 python submit_jobs.py
 rm submit_jobs.py
 ```
+### To get cross section
+```
+wget https://raw.githubusercontent.com/freejiebao/generator/master/model/get_xs.py
+python get_xs.py
+rm get_xs.py
+```
