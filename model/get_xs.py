@@ -1,6 +1,6 @@
+from __future__ import print_function
 import os
 import glob
-from __future__ import print_function
 
 if __name__ == "__main__":
     params = [('21', 'cW'),
@@ -58,7 +58,7 @@ if __name__ == "__main__":
             for line in outfile:
                 if '     Cross-section' in line:
                     xs=line.replace('     Cross-section :','')
-                    xs.strip()
+                    xs=xs.strip()
                     print(ipair+'\t'+xs)
                     break
             if xs=='':
@@ -67,6 +67,7 @@ if __name__ == "__main__":
     print('have error, please check')
     for i in process_list_failed:
         print(i,end=' ')
+    print()
     print('not out, might be idle')
     for i in process_list_idle:
         print(i,end=' ')
