@@ -1,5 +1,6 @@
 import os
 import glob
+from __future__ import print_function
 
 if __name__ == "__main__":
     params = [('21', 'cW'),
