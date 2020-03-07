@@ -59,7 +59,7 @@ if __name__ == "__main__":
                 if '     Cross-section' in line:
                     xs=line.replace('     Cross-section :','')
                     xs=xs.strip()
-                    print(ipair+'\t'+xs)
+                    print("{0:15}{1}".format(ipair,xs))
                     break
             if xs=='':
                 process_list_failed.append(ipair)
