@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
     print('have error, please check')
     for i in process_list_failed:
-        print(i)
+        print(i,end=' ')
     print('not out, might be idle')
     for i in process_list_idle:
-        print(i)
+        print(i,end=' ')
