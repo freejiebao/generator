@@ -42,8 +42,8 @@ if __name__ == "__main__":
     process_list_idle=process_list
     process_list_failed=[]
     log_list=glob.glob("log/*out*")
-    for iprocess in process_list:
-        for ilog in log_list:
+    for ilog in log_list:
+        for iprocess in process_list:
             if iprocess+'.out' in ilog:
                 process_log_pair[iprocess]=ilog
                 process_list_idle.remove(iprocess)
@@ -57,7 +57,7 @@ if __name__ == "__main__":
             for line in outfile:
                 if '     Cross-section' in line:
                     xs=line.replace('     Cross-section :','')
-                    xs=xs.replace('\n','')
+                    xs.strip()
                     print(ipair+'\t'+xs)
                     break
             if xs=='':
