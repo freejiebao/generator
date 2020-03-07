@@ -14,7 +14,6 @@ Block SMINPUTS
 ## INFORMATION FOR MASS
 ###################################
 Block MASS 
-Block MASS 
 #    1 1.000000e-99 # MD 
 #    2 1.000000e-99 # MU 
 #    3 1.000000e-99 # MS 
@@ -100,7 +99,7 @@ Block CKMBLOCK
 ###################################
 ## INFORMATION FOR FRBLOCK
 ###################################
-Block FRBlock 
+Block FRBlock
     1 0 # ceWPh
     2 0 # ceBPh
     3 0 # cuGPh

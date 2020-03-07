@@ -14,7 +14,6 @@ Block SMINPUTS
 ## INFORMATION FOR MASS
 ###################################
 Block MASS 
-Block MASS 
 #    1 1.000000e-99 # MD 
 #    2 1.000000e-99 # MU 
 #    3 1.000000e-99 # MS 
@@ -100,12 +99,50 @@ Block CKMBLOCK
 ###################################
 ## INFORMATION FOR FRBLOCK
 ###################################
-Block FRBlock    21 9.999999e-01 # cW
+Block FRBlock
+    1 0 # ceWPh
+    2 0 # ceBPh
+    3 0 # cuGPh
+    4 0 # cuWPh
+    5 0 # cuBPh
+    6 0 # cdGPh
+    7 0 # cdWPh
+    8 0 # cdBPh
+    9 0 # cHudPh
+   10 0 # ceHPh
+   11 0 # cuHPh
+   12 0 # cdHPh
+   13 0 # cledqPh
+   14 0 # cquqd1Ph
+   15 0 # cquqd8Ph
+   16 0 # clequ1Ph
+   17 0 # clequ3Ph
+   19 0 # cG
+   20 0 # cGtil
+   21 9.999999e-01 # cW
+   22 0 # cWtil
+   23 0 # cH
    24 0 # cHbox
    25 0 # cHDD
+   26 0 # cHG
+   27 0 # cHGtil
    28 0 # cHW
+   29 0 # cHWtil
    30 0 # cHB
+   31 0 # cHBtil
    32 0 # cHWB
+   33 0 # cHWBtil
+   34 0 # ceHAbs
+   35 0 # cuHAbs
+   36 0 # cdHAbs
+   37 0 # ceWAbs
+   38 0 # ceBAbs
+   39 0 # cuGAbs
+   40 0 # cuWAbs
+   41 0 # cuBAbs
+   42 0 # cdGAbs
+   43 0 # cdWAbs
+   44 0 # cdBAbs
    45 0 # cHl1
    46 0 # cHl3
    47 0 # cHe
@@ -113,11 +150,37 @@ Block FRBlock    21 9.999999e-01 # cW
    49 0 # cHq3
    50 0 # cHu
    51 0 # cHd
+   52 0 # cHudAbs
+   53 0 # cll
    54 0 # cll1
    55 0 # cqq1
    56 0 # cqq11
    57 0 # cqq3
    58 9.999999e-01 # cqq31
+   59 0 # clq1
+   60 0 # clq3
+   61 0 # cee
+   62 0 # cuu
+   63 0 # cuu1
+   64 0 # cdd
+   65 0 # cdd1
+   66 0 # ceu
+   67 0 # ced
+   68 0 # cud1
+   69 0 # cud8
+   70 0 # cle
+   71 0 # clu
+   72 0 # cld
+   73 0 # cqe
+   74 0 # cqu1
+   75 0 # cqu8
+   76 0 # cqd1
+   77 0 # cqd8
+   78 0 # cledqAbs
+   79 0 # cquqd1Abs
+   80 0 # cquqd8Abs
+   81 0 # clequ1Abs
+   82 0 # clequ3Abs
    18 1.000000e+03 # LambdaSMEFT 
 
 ###################################

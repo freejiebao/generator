@@ -13,6 +13,7 @@ wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_c
 python build_cards.py
 rm build_cards.py
 popd
+tar zcvf genproductions.tar.gz genproductions
 ```
 ### To buile condor scripts
 ```
