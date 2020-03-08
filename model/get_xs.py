@@ -71,3 +71,4 @@ if __name__ == "__main__":
     print('not out, might be idle')
     for i in process_list_idle:
         print(i,end=' ')
+    print()

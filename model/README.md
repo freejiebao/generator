@@ -37,3 +37,13 @@ wget https://raw.githubusercontent.com/freejiebao/generator/master/model/get_xs.
 python get_xs.py
 rm get_xs.py
 ```
+### To generate events
+```
+voms-proxy-init --voms cms --valid 192:00
+mkdir events
+cd events
+mkdir log
+wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_submit_events.py
+python build_submit_events.py
+rm build_submit_events.py
+```
