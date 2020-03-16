@@ -30,7 +30,7 @@ if __name__ == "__main__":
         with open('submit_{0}.jdl'.format(int_process),'w') as outfile:
             outfile.write("Universe = vanilla\n")
             outfile.write("Executable = wrapper_{0}.sh\n".format(int_process))
-            outfile.write("arguments = \"{0}\" $(Process)\n".format(int_process))
+            outfile.write("arguments = {0} $(Process)\n".format(int_process))
             outfile.write("RequestCpus = 4\n")
             outfile.write("should_transfer_files = YES\n")
             outfile.write("Error = log/{0}.err_$(Cluster)-$(Process)\n".format(int_process))
@@ -46,7 +46,7 @@ if __name__ == "__main__":
         with open('submit_{0}.jdl'.format(bsm_process),'w') as outfile:
             outfile.write("Universe = vanilla\n")
             outfile.write("Executable = wrapper_{0}.sh\n".format(bsm_process))
-            outfile.write("arguments = \"{0}\" $(Process)\n".format(bsm_process))
+            outfile.write("arguments = {0} $(Process)\n".format(bsm_process))
             outfile.write("RequestCpus = 4\n")
             outfile.write("should_transfer_files = YES\n")
             outfile.write("Error = log/{0}.err_$(Cluster)-$(Process)\n".format(bsm_process))
@@ -63,7 +63,7 @@ if __name__ == "__main__":
             with open('submit_{0}.jdl'.format(d2_process),'w') as outfile:
                 outfile.write("Universe = vanilla\n")
                 outfile.write("Executable = wrapper_{0}.sh\n".format(d2_process))
-                outfile.write("arguments = \"{0}\" $(Process)\n".format(d2_process))
+                outfile.write("arguments = {0} $(Process)\n".format(d2_process))
                 outfile.write("RequestCpus = 4\n")
                 outfile.write("should_transfer_files = YES\n")
                 outfile.write("Error = log/{0}.err_$(Cluster)-$(Process)\n".format(d2_process))

@@ -47,3 +47,8 @@ wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_s
 python build_submit_events.py
 rm build_submit_events.py
 ```
+### To merge lhe files
+```
+wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_merge.py
+python build_merge.py
+```
