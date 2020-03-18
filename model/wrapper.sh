@@ -30,10 +30,10 @@ sandbox_name2="sandbox-CMSSW_10_2_18-441666a.tar.bz2"
 wget --no-check-certificate --progress=bar "http://stash.osgconnect.net/+jiexiao/2018_reco/${sandbox_name1}" || exit_on_error $? 150 "Could not download sandbox1."
 wget --no-check-certificate --progress=bar "http://stash.osgconnect.net/+jiexiao/2018_reco/${sandbox_name2}" || exit_on_error $? 150 "Could not download sandbox2."
 
-INIT_PATH=$PWD
+pushd .
 # Setup framework from sandbox
 cmssw_setup $sandbox_name1 || exit_on_error $? 151 "Could not unpack sandbox"
-cd $INIT_PATH
+popd
 sandbox_name="VBS_SSWW_$1_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
 wget --no-check-certificate --progress=bar "http://stash.osgconnect.net/+jiexiao/eft/${sandbox_name}" || exit_on_error $? 150 "Could not download sandbox."
 cmsRun SMP-RunIIFall18wmLHEGS-00059_1_cfg.py
@@ -46,8 +46,9 @@ cmsRun SMP-RunIIAutumn18MiniAOD-00048_1_cfg.py
 rm SMP-RunIIAutumn18DRPremix-00048.root
 rm -rf cmssw-tmp
 # Setup framework from sandbox
+pushd .
 cmssw_setup $sandbox_name2 || exit_on_error $? 151 "Could not unpack sandbox"
-cd $INIT_PATH
+popd
 cmsRun SMP-RunIIAutumn18NanoAODv6-00019_1_cfg.py
 rm SMP-RunIIAutumn18MiniAOD-00048.root
 # clean
