@@ -52,3 +52,8 @@ rm build_submit_events.py
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_merge.py
 python build_merge.py
 ```
+### To build reco submit files
+```
+wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_submit_reco.py
+python build_submit_reco.py
+```
