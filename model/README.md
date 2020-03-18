@@ -58,4 +58,5 @@ wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_s
 python build_submit_reco.py
 mkdir log
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/wrapper.sh
+chmod 777 wrapper.sh
 ```
