@@ -56,5 +56,6 @@ python build_merge.py
 ```
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_submit_reco.py
 python build_submit_reco.py
+mkdir log
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/wrapper.sh
 ```
