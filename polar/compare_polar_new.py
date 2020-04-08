@@ -17,6 +17,9 @@ variables={
     'costheta22':{'name':'cos(#theta_{W_{2}})','rebin':1},
     'm_detajj':{'name':'#Delta#eta_{jj}','rebin':1},
     'm_dphijj':{'name':'#Delta#phi_{jj}','rebin':1},
+    'm_dphijj_2':{'name':'#Delta#phi_{jj}','rebin':1},
+    'm_dphill':{'name':'#Delta#phi_{ll}','rebin':1},
+    'm_dphill_2':{'name':'#Delta#phi_{ll}','rebin':1},
     'm_met':{'name':'p_{T}^{miss} [GeV]','rebin':1},
     'm_met_2':{'name':'p_{T}^{miss} [GeV]','rebin':1},
     'm_mjj':{'name':'m_{jj} [GeV]','rebin':1},
@@ -90,7 +93,7 @@ def createPlot(ivar,i,name,samples,scale):
     f2=ROOT.TFile.Open('polar_samples/polar.root')
     h1=f2.Get(ivar+'_SSWW')
     h1.Sumw2()
-    #h1.Scale(0.984729304924904)
+    h1.Scale(0.984729304924904)
     h1.Rebin(variables[ivar]['rebin'])
     hs=ROOT.THStack("hs","")
     htotal=h1.Clone()
@@ -103,7 +106,7 @@ def createPlot(ivar,i,name,samples,scale):
         h2=f2.Get(ivar+'_'+isample)
         print(ivar+'_'+isample,h2.Integral())
         h2.Sumw2()
-        #h2.Scale(scale[idx])
+        h2.Scale(scale[idx])
         #h2.Rebin(variables[ivar]['rebin'])
         h2.SetFillColor(colorful[idx+1])
         h2.SetLineWidth(0)

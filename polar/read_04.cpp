@@ -49,6 +49,9 @@ struct histos
     {
     makeHisto ("m_detajj","#Delta#eta_{jj}[GeV]","Events", 6,2.5,9) ;
     makeHisto ("m_dphijj","#Delta#phi_{jj}[GeV]","Events", 6,0,3.14) ;
+    makeHisto ("m_dphijj_2","#Delta#phi_{jj}[GeV]","Events", 12,0,3.14) ;
+    makeHisto ("m_dphill","#Delta#phi_{ll}[GeV]","Events", 6,0,3.14) ;
+    makeHisto ("m_dphill_2","#Delta#phi_{ll}[GeV]","Events", 12,0,3.14) ;
     float tmp1[]={30,60,90,120,150,180,220,260,300,350,450};
     makeHisto ("m_met","p_{t}^{miss}[GeV]","Events", 10,tmp1) ;
     float tmp2[]={30,90,150,220,300,450};
@@ -322,6 +325,9 @@ fillHistos (LHEF::Reader & reader, histos & Histos, int max = -1)
       Histos.fill ("m_mll_2", v_ll.M (), weight) ;
       Histos.fill ("m_mll_3", v_ll.M (), weight) ;
       Histos.fill ("m_dphijj", j1.DeltaPhi(j2), weight) ;
+      Histos.fill ("m_dphijj_2", j1.DeltaPhi(j2), weight) ;
+      Histos.fill ("m_dphill", l1.DeltaPhi(l2), weight) ;
+      Histos.fill ("m_dphill_2", l1.DeltaPhi(l2), weight) ;
 
       float ptl1 = v_f_leptons.at (0).Pt () ;
       float ptl2 = v_f_leptons.at (1).Pt () ;
