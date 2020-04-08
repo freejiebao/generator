@@ -1,0 +1,18 @@
+getenv     = True
+Universe = vanilla
+
+Executable = read_04
+arguments = /home/pku/xiaoj/polar/merge/MG5_aMC_v2_7_0/vbs_ssww_ll/bin/internal/cfg/$(Item).cfg -1
++AcctGroup ="pku"
++AcctGroupUser  = "xiaoj"
+
+should_transfer_files = YES
+#transfer_input_files = sherpa_13TeV_WJets_NLO_MASTER_cff_py_GEN.py,sherpa_13TeV_WJets_NLO_MASTER.tar,sherpa_13TeV_WJets_NLO_MASTER.tgz
+
+Error = log/$(Item).err_$(Cluster)-$(Process)
+Output = log/$(Item).out_$(Cluster)-$(Process)
+Log = log/$(Item).log_$(Cluster)
+
+when_to_transfer_output = ON_EXIT
+
+Queue Item in (SSWW,SSWW_LL,SSWW_TL,SSWW_TT)
