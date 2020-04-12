@@ -57,6 +57,8 @@ python build_merge.py
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_submit_reco.py
 python build_submit_reco.py
 mkdir log
-wget https://raw.githubusercontent.com/freejiebao/generator/master/model/wrapper.sh
-chmod 777 wrapper.sh
+wget https://raw.githubusercontent.com/freejiebao/generator/master/model/wrapper2016.sh
+wget https://raw.githubusercontent.com/freejiebao/generator/master/model/wrapper2017.sh
+wget https://raw.githubusercontent.com/freejiebao/generator/master/model/wrapper2018.sh
+chmod 777 wrapper*.sh
 ```

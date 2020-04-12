@@ -1,6 +1,8 @@
 import os
 
 if __name__ == "__main__":
+    wrapper_version='wrapper2018.sh'
+
     params = [('21', 'cW'),
         ('24', 'cHbox'),
         ('25', 'cHDD'),
@@ -20,7 +22,10 @@ if __name__ == "__main__":
         ('56', 'cqq11'),
         ('57', 'cqq3'),
         ('58', 'cqq31'),
-    ]
+        ('120', 'LL_WW_rf'),
+        ('114', 'TL_WW_rf'),
+        ('119', 'TT_WW_rf'),
+        ]
 
     for ipar,param in enumerate(params):
         # 1D cards
@@ -29,7 +34,7 @@ if __name__ == "__main__":
         int_process=single_opt+"_int"
         with open('submit_{0}.jdl'.format(int_process),'w') as outfile:
             outfile.write("Universe = vanilla\n")
-            outfile.write("Executable = wrapper.sh\n")
+            outfile.write("Executable = {0}\n".format(wrapper_version))
             outfile.write("arguments = {0}\n".format(int_process))
             outfile.write("request_cpus = 4\n")
             outfile.write("request_memory = 6 Gb\n")
@@ -49,7 +54,7 @@ if __name__ == "__main__":
         bsm_process=single_opt+"_bsm"
         with open('submit_{0}.jdl'.format(bsm_process),'w') as outfile:
             outfile.write("Universe = vanilla\n")
-            outfile.write("Executable = wrapper.sh\n")
+            outfile.write("Executable = {0}\n".format(wrapper_version))
             outfile.write("arguments = {0}\n".format(bsm_process))
             outfile.write("request_cpus = 4\n")
             outfile.write("request_memory = 6 Gb\n")
@@ -70,7 +75,7 @@ if __name__ == "__main__":
             d2_process=params[ipar][1] + '_' + params[jpar][1]
             with open('submit_{0}.jdl'.format(d2_process),'w') as outfile:
                 outfile.write("Universe = vanilla\n")
-                outfile.write("Executable = wrapper.sh\n")
+                outfile.write("Executable = {0}\n".format(wrapper_version))
                 outfile.write("arguments = {0}\n".format(d2_process))
                 outfile.write("request_cpus = 4\n")
                 outfile.write("request_memory = 6 Gb\n")
