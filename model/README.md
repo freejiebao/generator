@@ -55,7 +55,9 @@ python build_merge.py
 ### To build reco submit files
 ```
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_submit_reco.py
+wget https://raw.githubusercontent.com/freejiebao/generator/master/model/build_submit_polar_reco.py
 python build_submit_reco.py
+python build_submit_polar_reco.py
 mkdir log
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/wrapper2016.sh
 wget https://raw.githubusercontent.com/freejiebao/generator/master/model/wrapper2017.sh

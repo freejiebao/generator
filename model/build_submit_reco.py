@@ -56,7 +56,7 @@ if __name__ == "__main__":
         bsm_process=single_opt+"_bsm"
         with open('submit_{0}.jdl'.format(bsm_process),'w') as outfile:
             outfile.write("Universe = vanilla\n")
-            outfile.write("Executable = {0}\n".format(wrapper_version))
+            outfile.write("Executable = {0}\n".format(_year))
             outfile.write("arguments = {0}\n".format(bsm_process))
             outfile.write("request_cpus = 4\n")
             outfile.write("request_memory = 6 Gb\n")
@@ -77,7 +77,7 @@ if __name__ == "__main__":
             d2_process=params[ipar][1] + '_' + params[jpar][1]
             with open('submit_{0}.jdl'.format(d2_process),'w') as outfile:
                 outfile.write("Universe = vanilla\n")
-                outfile.write("Executable = {0}\n".format(wrapper_version))
+                outfile.write("Executable = {0}\n".format(_year))
                 outfile.write("arguments = {0}\n".format(d2_process))
                 outfile.write("request_cpus = 4\n")
                 outfile.write("request_memory = 6 Gb\n")
