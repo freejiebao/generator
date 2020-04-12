@@ -38,7 +38,7 @@ cmssw_setup $sandbox_name1 || exit_on_error $? 151 "Could not unpack sandbox"
 popd
 sandbox_name="VBS_SSWW_$1_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
 xrdcp root://eosuser.cern.ch//eos/user/j/jixiao/eft/gridpack/$sandbox_name .
-sed -i "s/^.*tarball.tar.xz.*$/     args = cms.vstring(\'..\/$sandbox_name\')/" -i SMP-RunIIFall17wmLHEGS-00046_1_cfg.py
+sed -i "s/^.*tarball.tar.xz.*$/     args = cms.vstring(\'..\/$sandbox_name\'),/" -i SMP-RunIIFall17wmLHEGS-00046_1_cfg.py
 
 cmsRun SMP-RunIIFall17wmLHEGS-00046_1_cfg.py
 rm $sandbox_name
