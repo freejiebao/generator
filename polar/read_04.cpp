@@ -41,67 +41,75 @@ struct histos
   // needed for the histograms normalisation
   double m_norm ;
   
-  histos (TString name, double XS, double lumi = 59.74) : 
+  histos (TString name, double XS, double lumi = 1) : 
     m_name (name), 
     m_XS (XS),
     m_lumi (lumi),
     m_norm (0.)
     {
-    makeHisto ("m_detajj","#Delta#eta_{jj}[GeV]","Events", 6,2.5,9) ;
-    makeHisto ("m_dphijj","#Delta#phi_{jj}[GeV]","Events", 6,0,3.14) ;
-    makeHisto ("m_dphijj_2","#Delta#phi_{jj}[GeV]","Events", 12,0,3.14) ;
-    makeHisto ("m_dphill","#Delta#phi_{ll}[GeV]","Events", 6,0,3.14) ;
-    makeHisto ("m_dphill_2","#Delta#phi_{ll}[GeV]","Events", 12,0,3.14) ;
+    makeHisto ("no_shape","count","", 1,0,1) ;
+    makeHisto ("zepp1","Z^{*}_{l1}","", 10,0,1) ;
+    makeHisto ("zepp2","Z^{*}_{l2}","", 10,0,1) ;
+    makeHisto ("m_detajj","#Delta#eta_{jj}","", 6,2.5,9) ;
+    makeHisto ("m_dphijj","#Delta#phi_{jj}","", 6,0,3.14) ;
+    makeHisto ("m_dphijj_2","#Delta#phi_{jj}","", 12,0,3.14) ;
+    makeHisto ("m_dphill","#Delta#phi_{ll}","", 6,0,3.14) ;
+    makeHisto ("m_dphill_2","#Delta#phi_{ll}","", 12,0,3.14) ;
     float tmp1[]={30,60,90,120,150,180,220,260,300,350,450};
-    makeHisto ("m_met","p_{t}^{miss}[GeV]","Events", 10,tmp1) ;
+    makeHisto ("m_met","p_{t}^{miss}[GeV]","", 10,tmp1) ;
     float tmp2[]={30,90,150,220,300,450};
-    makeHisto ("m_met_2","p_{t}^{miss}[GeV]","Events", 5,tmp2) ;
+    makeHisto ("m_met_2","p_{t}^{miss}[GeV]","", 5,tmp2) ;
     float tmp3[]={500,1000,1500,2000,2700,3500,5000};
-    makeHisto ("m_mjj","m_{jj}[GeV]","Events", 6,tmp3) ;
+    makeHisto ("m_mjj","m_{jj}[GeV]","", 6,tmp3) ;
     float tmp4[]={500,1000,1500,2000,2700,3500};
-    makeHisto ("m_mjj_2","m_{jj}[GeV]","Events", 5,tmp4) ;
+    makeHisto ("m_mjj_2","m_{jj}[GeV]","", 5,tmp4) ;
     float tmp5[]={500,1000,1500,2000,3500};
-    makeHisto ("m_mjj_3","m_{jj}[GeV]","Events", 4,tmp5) ;
+    makeHisto ("m_mjj_3","m_{jj}[GeV]","", 4,tmp5) ;
     float tmp6[]={20,80,140,200,260,320,400,500,800};
-    makeHisto ("m_mll","m_{ll}[GeV]","Events", 8,tmp6) ;
+    makeHisto ("m_mll","m_{ll}[GeV]","", 8,tmp6) ;
     float tmp7[]={20,50,80,110,140,170,200,230,260,290,320,360,400,450,500,650,800};
-    makeHisto ("m_mll_2","m_{ll}[GeV]","Events", 16,tmp7) ;
-    float tmp8[]={20,80,140,200,260,320,400,500,800};
-    makeHisto ("m_mll_3","m_{ll}[GeV]","Events", 8,tmp8) ;
+    makeHisto ("m_mll_2","m_{ll}[GeV]","", 16,tmp7) ;
+    makeHisto ("m_mll_3","m_{ll}[GeV]","", 3, 20. ,500) ;
     float tmp9[]={25,50,80,120,160,200,250,300,370,450};
-    makeHisto ("m_ptl1","p_{t}^{l1}[GeV]","Events", 9,tmp9) ;
+    makeHisto ("m_ptl1","p_{t}^{l1}[GeV]","", 9,tmp9) ;
     float tmp10[]={20,35,50,70,90,120,150,180,210,250};
-    makeHisto ("m_ptl2","p_{t}^{l2}[GeV]","Events", 9,tmp10) ;
+    makeHisto ("m_ptl2","p_{t}^{l2}[GeV]","", 9,tmp10) ;
     float tmp11[]={20,35,50,70,90,120,180,250};
-    makeHisto ("m_ptl2_2","p_{t}^{l2}[GeV]","Events", 7,tmp11) ;
+    makeHisto ("m_ptl2_2","p_{t}^{l2}[GeV]","", 7,tmp11) ;
     float tmp12[]={30,100,180,260,340,420,500,700,900};
-    makeHisto ("m_ptj1","p_{t}^{j1}[GeV]","Events", 8,tmp12) ;
+    makeHisto ("m_ptj1","p_{t}^{j1}[GeV]","", 8,tmp12) ;
     float tmp13[]={30,100,180,260,340,420,500};
-    makeHisto ("m_ptj1_2","p_{t}^{j1}[GeV]","Events", 6,tmp13) ;
+    makeHisto ("m_ptj1_2","p_{t}^{j1}[GeV]","", 6,tmp13) ;
     float tmp14[]={30,50,80,120,160,200,240,280,380,500};
-    makeHisto ("m_ptj2","p_{t}^{j2}[GeV]","Events", 9,tmp14) ;
+    makeHisto ("m_ptj2","p_{t}^{j2}[GeV]","", 9,tmp14) ;
     float tmp15[]={30,50,80,120,160,200,240,280,380};
-    makeHisto ("m_ptj2_2","p_{t}^{j2}[GeV]","Events", 8,tmp15) ;
-    makeHisto ("costheta1","cos#theta1","Events", 10,-1,1) ;
-    makeHisto ("costheta2","cos#theta2","Events", 10,-1,1) ;
-    makeHisto ("costheta11","cos#theta1","Events", 10,-1,1) ;
-    makeHisto ("costheta22","cos#theta2","Events", 10,-1,1) ;
-    makeHisto ("m_mlvlv","m_{lvlv}[GeV]","Events", 30,100,400) ;
+    makeHisto ("m_ptj2_2","p_{t}^{j2}[GeV]","", 8,tmp15) ;
+    makeHisto ("costheta1","cos#theta1","", 10,-1,1) ;
+    makeHisto ("costheta2","cos#theta2","", 10,-1,1) ;
+    makeHisto ("costheta11","cos#theta1","", 10,-1,1) ;
+    makeHisto ("costheta22","cos#theta2","", 10,-1,1) ;
+    makeHisto ("costheta13","cos(#theta_{l1,W2})","", 10,-1,1) ;
+    makeHisto ("costheta23","cos(#theta_{l2,W1})","", 10,-1,1) ;
+    makeHisto ("m_mlvlv","m_{lvlv}[GeV]","", 8,150,950) ;
+    makeHisto ("etaj1","#eta_{j1}","", 20,-5,5) ;
+    makeHisto ("etaj2","#eta_{j2}","", 20,-5,5) ;
+    makeHisto ("etal1","#eta_{l1}","", 20,-2.5,2.5) ;
+    makeHisto ("etal2","#eta_{l2}","", 20,-2.5,2.5) ;
     
     /*
-    makeHisto ("m_mjj","m_{jj}[GeV]","Events", 30,500,2000) ;
-    makeHisto ("m_mll","m_{ll}[GeV]","Events", 40,20,400) ;
-    makeHisto ("m_ptl1","p_{t}^{l1}[GeV]","Events", 33,25,355) ;
-    makeHisto ("m_ptl2","p_{t}^{l2}[GeV]","Events", 33,20,350) ;
-    makeHisto ("m_ptj1","p_{t}^{j1}[GeV]","Events", 32,30,350) ;
-    makeHisto ("m_ptj2","p_{t}^{j2}[GeV]","Events", 32,30,350) ;
-    makeHisto ("m_met","p_{t}^{miss}[GeV]","Events", 40,30,400) ;
-    makeHisto ("m_detajj","#Delta#eta_{jj}[GeV]","Events", 15,2.5,10) ;
-    makeHisto ("m_mlvlv","m_{lvlv}[GeV]","Events", 30,100,400) ;
-    makeHisto ("costheta1","cos#theta1","Events", 10,-1,1) ;
-    makeHisto ("costheta2","cos#theta2","Events", 10,-1,1) ;
-    makeHisto ("costheta11","cos#theta1","Events", 10,-1,1) ;
-    makeHisto ("costheta22","cos#theta2","Events", 10,-1,1) ;
+    makeHisto ("m_mjj","m_{jj}[GeV]","", 30,500,2000) ;
+    makeHisto ("m_mll","m_{ll}[GeV]","", 40,20,400) ;
+    makeHisto ("m_ptl1","p_{t}^{l1}[GeV]","", 33,25,355) ;
+    makeHisto ("m_ptl2","p_{t}^{l2}[GeV]","", 33,20,350) ;
+    makeHisto ("m_ptj1","p_{t}^{j1}[GeV]","", 32,30,350) ;
+    makeHisto ("m_ptj2","p_{t}^{j2}[GeV]","", 32,30,350) ;
+    makeHisto ("m_met","p_{t}^{miss}[GeV]","", 40,30,400) ;
+    makeHisto ("m_detajj","#Delta#eta_{jj}[GeV]","", 15,2.5,10) ;
+    makeHisto ("m_mlvlv","m_{lvlv}[GeV]","", 30,100,400) ;
+    makeHisto ("costheta1","cos#theta1","", 10,-1,1) ;
+    makeHisto ("costheta2","cos#theta2","", 10,-1,1) ;
+    makeHisto ("costheta11","cos#theta1","", 10,-1,1) ;
+    makeHisto ("costheta22","cos#theta2","", 10,-1,1) ;
     */
     }
   double increaseNorm (double step = 1.) 
@@ -234,7 +242,7 @@ fillHistos (LHEF::Reader & reader, histos & Histos, int max = -1)
       vector<TLorentzVector> v_f_quarks ;
       vector<TLorentzVector> v_f_leptons ;
       vector<TLorentzVector> v_f_neutrinos ;
-
+      vector<int> idx_Ws;
       // loop over particles in the event
       for (int iPart = 0 ; iPart < reader.hepeup.IDUP.size (); ++iPart) 
         {
@@ -252,6 +260,7 @@ fillHistos (LHEF::Reader & reader, histos & Histos, int max = -1)
                        abs (reader.hepeup.IDUP.at (iPart)) == 15)
                 {
                   v_f_leptons.push_back (dummy) ;
+                  idx_Ws.push_back(reader.hepeup.MOTHUP.at (iPart).first);
                 }
               else if (abs (reader.hepeup.IDUP.at (iPart)) == 12 ||
                        abs (reader.hepeup.IDUP.at (iPart)) == 14 ||
@@ -261,7 +270,6 @@ fillHistos (LHEF::Reader & reader, histos & Histos, int max = -1)
                 }
             } // outgoing particles
         } // loop over particles in the event
-
       int warnNum = 0 ;
       if (v_f_quarks.size () < 2)
         {
@@ -280,6 +288,7 @@ fillHistos (LHEF::Reader & reader, histos & Histos, int max = -1)
         }
       if (warnNum > 0) continue ;
 
+      
       //PG apply basic selections
       //PG ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
 
@@ -289,6 +298,10 @@ fillHistos (LHEF::Reader & reader, histos & Histos, int max = -1)
       auto n2=v_f_neutrinos.at(1);
       auto j1=v_f_quarks.at(0);
       auto j2=v_f_quarks.at(1);
+      auto W1 = buildLP (reader, idx_Ws.at (0)-1) ;
+      auto _W1= buildLP (reader, idx_Ws.at (0)-1) ;    
+      auto W2 = buildLP (reader, idx_Ws.at (1)-1) ;
+      auto _W2 = buildLP (reader, idx_Ws.at (1)-1) ;
 
       float weight = reader.hepeup.XWGTUP ;
       Histos.increaseNorm (weight) ;
@@ -298,36 +311,48 @@ fillHistos (LHEF::Reader & reader, histos & Histos, int max = -1)
 
       if (v_f_leptons.at (0).Pt () < 25) continue ;
       if (v_f_leptons.at (1).Pt () < 20) continue ;
+      if (fabs (v_f_leptons.at (0).Eta ())>2.5) continue;
+      if (fabs (v_f_leptons.at (1).Eta ())>2.5) continue;
 
       TLorentzVector ME = v_f_neutrinos.at (0) + v_f_neutrinos.at (1) ;
       if (ME.Pt () < 30) continue ;
 
       TLorentzVector v_jj = v_f_quarks.at (0) + v_f_quarks.at (1) ;
-      if (fabs (v_f_quarks.at (0).Eta ()>5)) continue;
-      if (fabs (v_f_quarks.at (1).Eta ()>5)) continue;
+      if (fabs (v_f_quarks.at (0).Eta ())>5) continue;
+      if (fabs (v_f_quarks.at (1).Eta ())>5) continue;
       if (fabs (v_f_quarks.at (0).Eta () - v_f_quarks.at (1).Eta ()) < 2.5 ) continue ;
       if (v_jj.M () < 500) continue ;
-
+      
       TLorentzVector v_ll = v_f_leptons.at (0) + v_f_leptons.at (1) ;
       if (v_ll.M () < 20) continue ;
-      if (fabs (zetaStar (v_f_quarks.at (0).Eta (), v_f_quarks.at (1).Eta (), v_f_leptons.at (0).Eta ())) > 0.75) continue ;
-      if (fabs (zetaStar (v_f_quarks.at (0).Eta (), v_f_quarks.at (1).Eta (), v_f_leptons.at (1).Eta ())) > 0.75) continue ;
+      //if (fabs (zetaStar (v_f_quarks.at (0).Eta (), v_f_quarks.at (1).Eta (), v_f_leptons.at (0).Eta ())) > 0.75) continue ;
+      //if (fabs (zetaStar (v_f_quarks.at (0).Eta (), v_f_quarks.at (1).Eta (), v_f_leptons.at (1).Eta ())) > 0.75) continue ;
       
       //PG fill histograms
       //PG ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
       
 //      Histos.m_mjj->Fill (v_jj.M (), reader.hepeup.XWGTUP) ;
 //      Histos.m_mll->Fill (v_ll.M (), reader.hepeup.XWGTUP) ;
+      float zepp1=fabs((l1.Eta()-(j1.Eta()+j2.Eta()))/(j1.Eta()-j2.Eta()));
+      float zepp2=fabs((l2.Eta()-(j1.Eta()+j2.Eta()))/(j1.Eta()-j2.Eta()));
+      Histos.fill ("no_shape", 0.5, weight) ;
+      Histos.fill ("zepp1", zepp1, weight) ;
+      Histos.fill ("zepp2", zepp2, weight) ;
+      Histos.fill ("etaj1", j1.Eta(), weight) ;
+      Histos.fill ("etaj2", j2.Eta(), weight) ;
+      Histos.fill ("etal1", l1.Eta(), weight) ;
+      Histos.fill ("etal2", l1.Eta(), weight) ;
+
       Histos.fill ("m_mjj", v_jj.M (), weight) ;
       Histos.fill ("m_mjj_2", v_jj.M (), weight) ;
       Histos.fill ("m_mjj_3", v_jj.M (), weight) ;
       Histos.fill ("m_mll", v_ll.M (), weight) ;
       Histos.fill ("m_mll_2", v_ll.M (), weight) ;
       Histos.fill ("m_mll_3", v_ll.M (), weight) ;
-      Histos.fill ("m_dphijj", j1.DeltaPhi(j2), weight) ;
-      Histos.fill ("m_dphijj_2", j1.DeltaPhi(j2), weight) ;
-      Histos.fill ("m_dphill", l1.DeltaPhi(l2), weight) ;
-      Histos.fill ("m_dphill_2", l1.DeltaPhi(l2), weight) ;
+      Histos.fill ("m_dphijj", fabs(j1.DeltaPhi(j2)), weight) ;
+      Histos.fill ("m_dphijj_2", fabs(j1.DeltaPhi(j2)), weight) ;
+      Histos.fill ("m_dphill", fabs(l1.DeltaPhi(l2)), weight) ;
+      Histos.fill ("m_dphill_2", fabs(l1.DeltaPhi(l2)), weight) ;
 
       float ptl1 = v_f_leptons.at (0).Pt () ;
       float ptl2 = v_f_leptons.at (1).Pt () ;
@@ -352,6 +377,20 @@ fillHistos (LHEF::Reader & reader, histos & Histos, int max = -1)
       Histos.fill ("m_ptj2", ptj2, weight) ;
       Histos.fill ("m_ptj2_2", ptj2, weight) ;
       Histos.fill ("m_detajj", abs(j1.Eta()-j2.Eta()), weight) ;
+
+
+
+      auto _l1=l1;
+      auto _l2=l2;
+      auto Wboost1=W1.BoostVector();
+      W2.Boost(-Wboost1);
+      _l1.Boost(-Wboost1);
+      Histos.fill ("costheta13", cos(_l1.Angle(-W2.Vect())), weight) ;
+
+      auto Wboost2=_W2.BoostVector();
+      _W1.Boost(-Wboost2);
+      _l2.Boost(-Wboost2);
+      Histos.fill ("costheta23", cos(_l2.Angle(-_W1.Vect())), weight) ;
 
       auto l1_1=l1;
       auto l2_1=l2;
