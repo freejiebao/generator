@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo 'Beginning of the script'
+
+observablelist="azimuthal_angle_separation_epmu invariant_mass_mjj12 rapidity_positron transverse_momentum_j1 cosine_angle_separation_epmu invariant_mass_truth_4l_100 rapidity_separation_j1j2 transverse_momentum_j2 distance_djj12 invariant_mass_truth_4l rapidity_separation_pomu transverse_momentum_jj12 distance_dpom invariant_mass_truth_cms_energy total_transverse_energy_htg transverse_momentum_mupo invariant_mass_all rapidity_antimuon total_transverse_energy_htnog transverse_momentum_positron invariant_mass_epmu rapidity_j1j2 transverse_mass_tepmu transverse_momentum_truth_missing invariant_mass_jjep rapidity_j1 transverse_momentum_antimuon invariant_mass_mjj12 rapidity_j2 transverse_momentum_j1"
+
+# Born files
+####################################################
+
+btype=born
+mtype=born
+
+
+for obs in $observablelist
+do
+
+echo $obs
+
+bfile=histogram\_$obs\_born\.dat
+mfile=histogram\_$obs\_nlo\.dat
+bfilo=histogram\_$obs\_born\_mm\.dat
+mfilo=histogram\_$obs\_nlo\_mm\.dat
+echo "B file" $bfile
+echo "M file" $mfile
+cp $bfile $bfilo
+cp $mfile $mfilo
+
+done;
+

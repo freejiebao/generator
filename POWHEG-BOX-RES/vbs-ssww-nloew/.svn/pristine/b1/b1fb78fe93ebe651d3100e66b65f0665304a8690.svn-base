@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+mkdir temp
+
+mv runpar.sh temp
+mv powheg.input temp
+mv powheg.input-save temp
+mv pwgseeds.dat temp
+
+rm fort.12
+rm allborn_equiv
+rm DetailedFlavList.txt
+
+rm *.dat
+rm p*
+rm run-*
+rm FlavRegList
+rm Timings.txt
+
+cd temp
+
+mv runpar.sh ../
+mv powheg.input ../
+mv powheg.input-save ../
+mv pwgseeds.dat ../
+
+cd ..
+
+rm -r temp

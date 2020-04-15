@@ -1,0 +1,64 @@
+
+In compilazione:
+
+gfortran -O2 -ffixed-line-length-132  -c crossing.f
+crossing.f: In function ‘crossing’:
+crossing.f:84:0: warning: iteration 9 invokes undefined behavior [-Waggressive-loop-optimizations]
+             if (iline(i) .eq. icode(j)) nq=nq+1
+ ^
+crossing.f:83:0: note: containing loop
+          do j=1,11
+ ^
+g
+
+*****************************************
+
+In V2: aggiungere maxalr a nlegborn.h
+Act on ./MadGraph_POWHEG/Template/SubProcesses/write_proc_labels.f,
+line 370.
+
+Aggiungere:
+
+
+      integer maxalr
+      parameter (maxalr=maxprocreal*nlegreal*(nlegreal-1)/2)
+c      parameter (maxalr=600)
+
+in V2.
+
+
+*****************************************
+
+When copying the MadLoop5_resources directory do:
+
+
+
+cp -a -L ~/Pheno/2.2.0/MadLoop5Library/SubProcesses/MadLoop5_resources .
+
+
+to follow the links.
+
+******************************************
+
+Implemented W- production;
+
+error at runtime:
+########################################################################
+#                                                                      #
+#                      You are using OneLOop-3.4                       #
+#                                                                      #
+# for the evaluation of 1-loop scalar 1-, 2-, 3- and 4-point functions #
+#                                                                      #
+# author: Andreas van Hameren <hamerenREMOVETHIS@ifj.edu.pl>           #
+#   date: 02-01-2014                                                   #
+#                                                                      #
+# Please cite                                                          #
+#    A. van Hameren,                                                   #
+#      Comput.Phys.Commun. 182 (2011) 2427-2438, arXiv:1007.4716       #
+#    A. van Hameren, C.G. Papadopoulos and R. Pittau,                  #
+#      JHEP 0909:106,2009, arXiv:0903.4665                             #
+# in publications with results obtained with the help of this program. #
+#                                                                      #
+########################################################################
+ energy is not conserved    4.6552748884790818     
+STOP energy is not conserved

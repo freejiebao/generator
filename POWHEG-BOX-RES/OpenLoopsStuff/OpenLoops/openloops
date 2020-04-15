@@ -1,0 +1,258 @@
+#!/bin/bash
+
+#############
+# set paths #
+#############
+
+# Python 2 executable: if "python2" doesn't exist, use "python"
+command -v python2 > /dev/null && PYTHON="python2" || PYTHON="python"
+# SCons executable: prefer the user's installation and use scons-local as fallback
+command -v scons > /dev/null && SCONS="scons -Q" || SCONS="./scons -Q"
+# but if the user's version is not 2.x>2.0 use scons-local anyway
+if [ "$SCONS" == "scons -Q" ]; then
+  if [ `$SCONS -v | grep -c "engine: v2.[^0]"` == "0" ]; then
+    SCONS="./scons -Q"
+  fi
+fi
+
+# directory for generic libraries
+LIBDIR="lib"
+# directory for process libraries
+PROCLIBDIR="proclib"
+# directory for Python programs
+PYOLBINDIR="pyol/bin"
+# directories for Python modules
+PYOLMODDIR="pyol/tools"
+
+if [ -z $BASH_VERSION ]; then
+  # the script is sourced from a shell which is not Bash
+  export LIBRARY_PATH=$LIBRARY_PATH:"$LIBDIR":"$PROCLIBDIR"
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$LIBDIR":"$PROCLIBDIR"
+  export PYTHONPATH=$PYTHONPATH:"$PYOLMODDIR"
+
+  echo "Relative paths set, i.e. programs must be run from the OpenLoops directory."
+  echo "Use Bash if you need absolute paths."
+  # exit
+  return 0
+
+else
+
+  # Determine the absolute path to the directory in which the script lies (resolving symlinks).
+  # By using BASH_SOURCE[0] instead of $0 this also works when the script is sourced.
+  SOURCE="${BASH_SOURCE[0]}"
+  # resolve $SOURCE until the file is no longer a symlink
+  while [ -h "$SOURCE" ]; do
+    BASEDIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+    SOURCE="$(readlink "$SOURCE")"
+    # if $SOURCE is a relative symlink, resolve it relative to the path where the symlink is located
+    [[ $SOURCE != /* ]] && SOURCE="$BASEDIR/$SOURCE"
+  done
+  BASEDIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+  LIBDIR="$BASEDIR/$LIBDIR"
+  PROCLIBDIR="$BASEDIR/$PROCLIBDIR"
+  PYOLBINDIR="$BASEDIR/$PYOLBINDIR"
+  PYOLMODDIR="$BASEDIR/$PYOLMODDIR"
+
+  export LIBRARY_PATH=$LIBRARY_PATH:"$LIBDIR":"$PROCLIBDIR"
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$LIBDIR":"$PROCLIBDIR"
+  export PYTHONPATH=$PYTHONPATH:"$PYOLMODDIR"
+
+  if [ "${BASH_SOURCE[0]}" != "$0" ]; then
+    # if the script is sourced
+    echo "Paths set."
+    # exit
+    return 0
+  fi
+
+fi
+
+#####################
+# start actual work #
+#####################
+
+case "$1" in
+
+  "")
+    echo "Type '`basename $0` help' for usage."
+    exit 0;;
+
+  "help")
+    echo ""
+    echo "Usage: `basename $0` <mode> [options]"
+    echo ""
+    echo "Available modes:"
+    echo "  help                   -- display help message and exit."
+    echo "  info                   -- show the process info file."
+    echo "  interactive(int)       -- open a Python interpreter with the openloops"
+    echo "                            module loaded and paths set;"
+    echo "                            options are passed to Python."
+    echo "  update                 -- update OpenLoops and installed processes"
+    echo "                            (only if installed from SVN)."
+    echo "  update --processes     -- update installed processes."
+    echo "  libinstall <process(es)> -- download and compile process libraries."
+    echo "  run                    -- calculate matrix elements for a given process."
+    echo "                            see '`basename $0` run --help' for more information."
+    echo "  stabilityplot          -- create stability histograms"
+    echo "                            (data is created during runs with stability_log>0)"
+    echo "                            see '`basename $0` stabilityplot --help' for more information."
+    echo "  clean <process(es)>    -- remove object code and libraries of specified processes."
+    echo "  clean --all            -- remove object code and libraries of all processes."
+    echo "  rm <process(es)>       -- remove source, object code and libraries of specified processes."
+    echo "  rm --all               -- remove source, object code and libraries of all processes."
+    echo "  check(chk) <file/proc> -- create/validate process test data for the process <proc>"
+    echo "                            or as defined in the file <file>."
+    echo "  execute(exe) <script>  -- run the Python script following 'execute';"
+    echo "                            options are passed to Python."
+    echo "  show <file/proc>       -- show the content of a test data file."
+    echo "  upload [opt] <procs>   -- upload processes to the process repository."
+    echo ""
+    exit 0;;
+
+  "info")
+    shift
+    cat "proclib/libopenloops_${1}_"*".info";;
+
+  "interactive"|"int")
+    shift
+    $PYTHON -i "$PYOLBINDIR/interactive_legacy.py" "$@";;
+
+  "run")
+    shift
+    $PYTHON "$PYOLBINDIR/run.py" "$@";;
+
+  "runold")
+    shift
+    to_run="$1"
+    if [ -n "$to_run" ]; then
+      shift
+      $PYTHON "$PYOLBINDIR/run_legacy.py" "$to_run" "$@"
+    else
+      echo "A process must be specified."
+      exit 1
+    fi;;
+
+  "check"|"chk")
+    shift
+    to_run="$1"
+    if [ -n "$to_run" ]; then
+      shift
+      $PYTHON "$PYOLBINDIR/run_legacy.py" "--check" "$to_run" "$@"
+    else
+      echo "A process or a process check definition file must be specified."
+      exit 1
+    fi;;
+
+  "execute"|"exe")
+    shift
+    to_run="$1"
+    if [ -f "$to_run" ]; then
+      shift
+      $PYTHON "$to_run" "$@"
+    else
+      echo "'$to_run' is not a file."
+      exit 1
+    fi;;
+
+  "show")
+    shift
+    to_show="$1"
+    if [ -n "$to_show" ]; then
+      shift
+      $PYTHON "$PYOLBINDIR/show.py" "$to_show" "$@"
+    else
+      echo "A process or test data file must be specified."
+      exit 1
+    fi;;
+
+  "upload")
+    shift
+    $PYTHON "$PYOLBINDIR/upload_process.py" "$@";;
+
+  "update")
+    shift
+    svn up
+    if [ "$?" == "0" ]; then
+      if [ "$1" == "--processes" -o "$1" == "-p" ]; then
+        shift
+      fi
+      $SCONS process_update=1 compile=2 "$@"
+    else
+      if [ "$1" == "--processes" -o "$1" == "-p" ]; then
+        shift
+        $SCONS process_update=1 compile=2 "$@"
+      else
+        echo "[OpenLoops] Automatic update is only supported for installations from SVN."
+        echo "Too keep the installed OpenLoops version and update the installed"
+        echo "processes only, run"
+        echo "$ ./openloops update --processes"
+        exit 1
+      fi
+    fi
+    ;;
+
+  "libinstall"|"lib")
+    shift
+    options=""
+    processes=""
+    for arg in "$@"; do
+      if [[ "$arg" == "-"* || "$arg" == *"="* ]]; then
+        options="$options $arg"
+      else
+        processes="$processes $arg"
+      fi
+    done
+    $SCONS auto="$processes" $options
+    ;;
+
+  "rm")
+    shift
+    if [ "$1" == "--all" -o "$1" == "-a" ]; then
+      rm -fr process_src
+      rm -fr process_obj
+      rm -fr proclib
+    else
+      for arg in "$@"; do
+        if [[ "$arg" != "-"* && "$arg" != *"="* ]]; then
+          rm -fr process_src/$arg
+          rm -fr process_obj/$arg
+          find proclib -type f -regex "proclib/libopenloops_${arg}_[^_]*" -delete
+        fi
+      done
+    fi
+    ;;
+
+  "clean")
+    shift
+    if [ "$1" == "--all" -o "$1" == "-a" ]; then
+      rm -fr process_obj
+      rm -fr proclib
+    else
+      for arg in "$@"; do
+        if [[ "$arg" != "-"* && "$arg" != *"="* ]]; then
+          rm -fr process_obj/$arg
+          find proclib -type f -regex "proclib/libopenloops_${arg}_[^_]*" -delete
+        fi
+      done
+    fi
+    ;;
+
+  "stabilityplot")
+    shift
+    $PYTHON "$PYOLBINDIR/plot_stability.py" "$@";;
+
+  "--libdir")
+    shift
+    echo $LIBDIR;;
+
+  "--ldflags")
+    shift
+    echo "-lopenloops";;
+
+
+  *)
+    echo "Unknown mode: $1"
+    echo "Type '`basename $0` help' for usage."
+    exit 1;;
+
+esac

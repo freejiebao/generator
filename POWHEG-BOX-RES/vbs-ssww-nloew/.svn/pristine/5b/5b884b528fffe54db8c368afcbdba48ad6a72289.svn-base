@@ -1,0 +1,64 @@
+#!/bin/bash
+
+
+list=$(ls pwgcounters-st4-????.dat)
+
+# #echo $list
+# counter=0
+
+# for file in $list
+# do
+    
+#     echo $file
+#     counter=`echo "$counter + 1" | bc`
+#     echo $counter
+    
+    
+#     python FindReweightFromCounters.py $file > rwgt-pwgcounters-st4-$counter.dat
+    
+#     #echo $file >> input$counter
+#     #echo 
+    
+#     #      cp $file pwgevents.lhe
+#     #      /archive/mpellen/Programs/POWHEG_box/POWHEG-BOX-RES-updated/POWHEG-BOX-RES/vbs-powheg-res/lhef_analysis
+    
+#     #echo $file | /archive/mpellen/Programs/POWHEG_box/POWHEG-BOX-RES-updated/POWHEG-BOX-RES/vbs-powheg-res/lhef_analysis
+    
+#     #      echo pwgLHEF_$counter.top
+#     #      cp pwgLHEF_analysis.top pwgLHEF_$counter.top
+    
+# done;
+
+list=$(ls pwgevents-????.lheoutput_py8_histos.top)
+
+counter=0
+
+for file in $list
+do
+    
+    echo $file
+    counter=`echo "$counter + 1" | bc`
+    echo $counter
+    
+    
+    echo rwgt-pwgcounters-st4-$counter.dat > input$counter
+    echo $file >> input$counter
+    
+    ./rwgtub.exe < input$counter
+    
+    #      cp $file pwgevents.lhe
+    #      /archive/mpellen/Programs/POWHEG_box/POWHEG-BOX-RES-updated/POWHEG-BOX-RES/vbs-powheg-res/lhef_analysis
+    
+    #echo $file | /archive/mpellen/Programs/POWHEG_box/POWHEG-BOX-RES-updated/POWHEG-BOX-RES/vbs-powheg-res/lhef_analysis
+    
+    #      echo pwgLHEF_$counter.top
+    #      cp pwgLHEF_analysis.top pwgLHEF_$counter.top
+    
+done;
+
+
+
+#/archive/mpellen/Programs/POWHEG_box/POWHEG-BOX-V2/mergedata 1 *top
+
+#rm pwgevents.lhe
+#rm pwgLHEF_analysis.top

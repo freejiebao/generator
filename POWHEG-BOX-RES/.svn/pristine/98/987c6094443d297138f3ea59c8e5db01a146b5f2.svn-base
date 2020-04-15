@@ -1,0 +1,60 @@
+The procedure step by step:
+(Copy the whole MadGraphStuff_MadLoop tree to a new location.)
+
+$ cd MadGraphStuff
+
+$ edit MadGraphStuff/Cards/proc_card.dat
+
+Set the process as in madgraph. Always enter the real emission
+process, i.e. the born process plus one j.  For example, for the Z,
+enter pp > e- e+ j. Remember also to set the QCD coupling appropriate
+for the real emission process.
+
+Set the model of your choice:
+  sm          (standard model with massive b quark (4 Flavour scheme)
+  sm-no_bmass (standard model with zero b mass (5 Flavour scheme))
+  [note that the heft and smckm models are NOT supported]
+and update the MultiParticles to reflect the 4 or 5 flavour scheme.
+
+$ ./NewProcess.sh
+
+Use:
+
+$ ./NewProcess.sh -g
+
+if you want to compile with debug information and no optimization.
+
+You will find in the current directory:
+
+Born.f
+real.f
+init_couplings.f
+coupl.inc
+Cards/param_card.dat
+
+To generate the virtual corrections, use MadGraph5_aMC@NLO v2.2.0 (or
+later).  Go to the main MG5_aMC_v2_X_X directory and generate the
+virtuals by doing
+
+$ ./bin/mg5_aMC <PATH_TO_POWHEG_BOX>/<YOUR_PROCESS>/MadLoop.mg5
+
+To compile the virtual corrections into a single library
+
+$ cd MadLoop5Library/SubProcesses
+$ make OLP
+
+Copy the MadLoop5 library to the obj-gfotran directory of the POWHEG process
+Copy the MadLoop5_resources directory to the POWHEG process directory
+
+The file Born_phsp.f is a placeholder and must be provided by the user
+to complete the POWHEG implementation, that can be compiled with
+
+$ make pwhg_main
+
+Model parameters for MadLoop are read in from the
+<YOUR_PROCESS>/MadLoop5_resources/param_card.dat file. Edit it to make
+it consistent with the values set in init_couplings.
+
+
+
+

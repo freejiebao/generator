@@ -1,0 +1,2 @@
+changes compared to public OpenLoops:
+SConstruct: install_path = os.path.join(config['generic_lib_dir'])

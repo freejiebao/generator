@@ -1,0 +1,3 @@
+[OpenLoops]
+compile_extra = 1
+process_repositories=public

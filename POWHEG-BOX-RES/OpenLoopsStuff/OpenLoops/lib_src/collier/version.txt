@@ -1,0 +1,5 @@
+
+Collier legacy version from 19.03.2014.
+
+Collier version from 25.04.2016 (first public release).
+- removed global_coli.h (file and includes)

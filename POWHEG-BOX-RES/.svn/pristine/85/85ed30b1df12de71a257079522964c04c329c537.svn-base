@@ -1,0 +1,116 @@
+
+# OpenLoops multi-precision preprocessor
+#
+# usage:
+# scons -f cpp.scons \
+#   mp_src=mpsrc1.F90,mpsrc2.F90,... \
+#   dp_src=spsrc.F90,... \
+#   version_src=vsrc.F90,... \
+#   mp=dp,qp \
+#   def=VAR1=val,VAR2,... \
+#   version=1.0 \
+#   revision=42 \
+#   cpp_cmd=cpp \
+#   kind_parameter=REALKIND \
+#   version_macro=VERSION \
+#   revision_macro=REVISION \
+#   target=cpp
+#
+# mp_src is preprocessed with cpp_defs and kind_parameter=p for each p in mp;
+# dp_src is preprocessed once with cpp_defs and kind_parameter=mp[0];
+# version_src is preprocessed once with cpp_defs and kind_parameter=mp[0], version_macro=version, revision_macro=revision;
+# target is the name of the scons target (displayed as 'scons: `target' is up to date');
+#
+# automatic cpp defines
+#   USE_p if precision p is active globally
+#   PRECISION_p if the currect file is for precision p
+
+# TODO: better use a pseudo builder to modify target directories
+
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join('pyol', 'tools')))
+import OLBaseConfig
+config = OLBaseConfig.get_config()
+
+cpp_flags = ['--traditional-cpp', '-P']
+
+def split_and_clean(ls):
+    """Create a list from a comma separated string and remove empty elements."""
+    return filter(lambda el: len(el) != 0, ls.split(','))
+
+mp_src      = split_and_clean(ARGUMENTS.get('mp_src',      ''))
+dp_src      = split_and_clean(ARGUMENTS.get('dp_src',      ''))
+version_src = split_and_clean(ARGUMENTS.get('version_src', ''))
+cpp_defs    = split_and_clean(ARGUMENTS.get('def',         ''))
+mp          = split_and_clean(ARGUMENTS.get('mp',        'dp'))
+cpp_cmd        = ARGUMENTS.get('cpp_cmd',     config['cpp'])
+kind_parameter = ARGUMENTS.get('kind_parameter', 'REALKIND')
+version_macro  = ARGUMENTS.get('version_macro',  'VERSION' )
+revision_macro = ARGUMENTS.get('revision_macro', 'REVISION')
+version        = ARGUMENTS.get('version',        'none'    )
+revision       = ARGUMENTS.get('revision',       'none'    )
+target         = ARGUMENTS.get('target',         'cpp'     )
+target_prefix  = ARGUMENTS.get('prefix',         ''        )
+
+cpp_defs = [cpp_def.split('=', 1) for cpp_def in cpp_defs] + [[kind_parameter, '$PRECISION']]
+cpp_defs += ['USE_' + prec for prec in mp]
+cpp_defs_version = cpp_defs + [[version_macro, '\\"' + version + '\\"'], [revision_macro, '\\"' + revision + '\\"']]
+
+
+def target_rename(target, source, env):
+    """Add target_prefix, precision suffix and file extension (lowercase source extension) to target."""
+    global target_prefix
+    ext = os.path.splitext(str(source[0]))[1]
+    path, tgt = os.path.split(str(target[0]))
+    suffix = env.subst('$PRECISION')
+    if suffix:
+        suffix = '_' + suffix
+    return os.path.join(path, target_prefix + tgt + suffix + ext.lower()), source
+
+
+cpp_builder = Builder(action = '$CPP $CPPFLAGS $_CPPDEFFLAGS $SOURCE $TARGET',
+                      emitter = target_rename,
+                      single_source = 1)
+copy_builder = Builder(action = Copy('$TARGET', '$SOURCE'),
+                     emitter = target_rename,
+                     single_source = 1)
+
+if '@all' in config['import_env']:
+    imported_env = os.environ
+else:
+    imported_env = {}
+    for envvar in config['import_env']:
+        imported_env[envvar] = os.environ.get(envvar, '')
+
+env = Environment(CPP = cpp_cmd,
+                  ENV = imported_env,
+                  BUILDERS = {'CPP': cpp_builder, 'COPY': copy_builder},
+                  CPPFLAGS = cpp_flags,
+                  CPPDEFINES = cpp_defs,
+                  PRECISION = mp[0])
+
+cpp_out = []
+
+if mp_src:
+    for precision in mp:
+        cpp_out.extend(env.CPP(source = mp_src,
+                               PRECISION = precision,
+                               CPPDEFINES = cpp_defs + ['PRECISION_' + precision]))
+
+if dp_src:
+    dp_fsrc = [fs for fs in dp_src if not fs.endswith('.c')]
+    dp_csrc = [cs for cs in dp_src if cs.endswith('.c')]
+    if dp_fsrc:
+        cpp_out.extend(env.CPP(source = dp_fsrc, PRECISION = ''))
+    if dp_csrc:
+        cpp_out.extend(env.COPY(source = dp_csrc, PRECISION = ''))
+
+if version_src:
+    cpp_out.extend(env.CPP(source = version_src,
+                           CPPDEFINES = cpp_defs_version,
+                           PRECISION = ''))
+
+# rename default target, displayed as 'scons: `target' is up to date'
+env.Alias(target, cpp_out)
+Default(target)

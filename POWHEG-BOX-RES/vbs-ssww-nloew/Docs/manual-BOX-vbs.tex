@@ -1,0 +1,364 @@
+\documentclass[paper]{JHEP3}
+\usepackage{amsmath,amssymb,enumerate,url}
+\bibliographystyle{JHEP}
+\usepackage{lineno}
+%\linenumbers
+
+%%%%%%%%%% Start TeXmacs macros
+\newcommand{\tmtextit}[1]{{\itshape{#1}}}
+\newcommand{\tmtexttt}[1]{{\ttfamily{#1}}}
+\newenvironment{enumeratenumeric}{\begin{enumerate}[1.] }{\end{enumerate}}
+\newcommand\sss{\mathchoice%
+{\displaystyle}%
+{\scriptstyle}%
+{\scriptscriptstyle}%
+{\scriptscriptstyle}%
+}
+
+\newcommand\as{\alpha_{\sss\rm S}}
+\newcommand\POWHEG{{\tt POWHEG}}
+\newcommand\POWHEGBOX{{\tt POWHEG BOX}}
+\newcommand\HERWIG{{\tt HERWIG}}
+\newcommand\PYTHIASIX{{\tt PYTHIA6}}
+\newcommand\PYTHIAEIGHT{{\tt PYTHIA8}}
+\newcommand\PYTHIA{{\tt PYTHIA}}
+\newcommand\PHOTOS{{\tt PHOTOS}}
+\newcommand\PHOTOSPP{{\tt PHOTOS++}}
+\newcommand\MCatNLO{{\tt MC@NLO}}
+\newcommand\DIR{{\tt Z\_ew-BMNNPV}}
+
+\newcommand\kt{k_{\sss\rm T}}
+
+\newcommand\pt{p_{\sss\rm T}}
+\newcommand\LambdaQCD{\Lambda_{\scriptscriptstyle QCD}}
+%%%%%%%%%% End TeXmacs macros
+
+
+\title{Same-sign W-boson scattering at EW NLO accuracy in the POWHEG-BOX-RES: user manual} \vfill
+\author{Mauro Chiesa\\
+  Universit\"at W\"urzburg, Institut f\"ur Theoretische Physik und Astrophysik\\
+  Emil-Hilb-Weg 22, 97074 W\"urzburg, Germany\\
+  E-mail: \email{Mauro.Chiesa@physik.uni-wuerzburg.de}}
+\author{Ansgar Denner\\
+  Universit\"at W\"urzburg, Institut f\"ur Theoretische Physik und Astrophysik\\
+  Emil-Hilb-Weg 22, 97074 W\"urzburg, Germany\\
+  E-mail: \email{Ansgar.Denner@physik.uni-wuerzburg.de}}
+\author{Jean-Nicolas Lang\\
+  Universit\"at Z\"urich, Physik-Institut,\\
+  CH-8057 Z\"urich, Switzerland\\
+  E-mail: \email{jlang@physik.uzh.ch}}
+\author{Mathieu Pellen\\
+  University of Cambridge, Cavendish Laboratory,\\
+  Cambridge CB3 0HE, United Kingdom\\
+  E-mail: \email{mpellen@hep.phy.cam.ac.uk}}
+\vskip -0.5truecm
+
+\keywords{POWHEG, Shower Monte Carlo, NLO, Electroweak}
+
+\abstract{This note documents the use of the package
+  \tmtexttt{POWHEG-BOX-RES/vbs-ssww-nloew} for same-sign W-boson scattering processes at the LHC including
+  NLO electroweak corrections.
+  The generated LH-events can be easily interfaced to shower Monte Carlo programs, in
+  such a way that both NLO and shower accuracy are maintained.}
+\preprint{\today\\ \tmtexttt{POWHEG-BOX-RES}}
+
+\begin{document}
+
+
+\section{Introduction}
+
+The \tmtexttt{POWHEG BOX} program is a framework for implementing NLO
+calculations in shower Monte Carlo programs according to the
+\POWHEG{} method. An explanation of the method and a discussion of 
+how the code is organized can be found in Refs.~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2010xd,Jezo:2015aia}.
+The code is distributed according to the ``MCNET GUIDELINES for Event Generator
+Authors and Users'' and can be found at the web page \\
+%
+\begin{center}
+ \url{http://powhegbox.mib.infn.it}.
+\end{center}
+%
+~\\
+%
+This program is an implementation of the NLO EW corrections to the
+same-sign W-boson scattering process at the LHC  
+presented in Ref.~\cite{Chiesa:2019ulk}. Please cite the paper when you use the program.
+Though the calculation uses the full LO and NLO matrix elements
+for the process ${\rm pp}\to l \nu l' \nu'jj$ with same-sign $l$ and $l'$ 
+(at order $\mathcal{O}\left( \alpha^6\right)$ and $\mathcal{O}\left( \alpha^7\right)$, respectively),
+the code should only be used for typical VBS selection cuts.
+% added-b
+This limitation is related to the interface to shower Monte Carlo programs, which perform
+the shower evolution of the LH-events preserving the virtuality of the resonances that
+appear explicitly in the LH-event files. As the resonance structure of the events written on
+disk for $s$-channel processes corresponds to the one in Fig.~1 of Ref.~\cite{Chiesa:2019ulk},
+the event selection should suppress the other possible event topologies as in the case of VBS
+selection cuts. 
+% added-e
+In order to run the \tmtexttt{POWHEG BOX} program, we recommend 
+to start from the \tmtexttt{POWHEG BOX} user manual, which
+contains all the information and settings that are common between
+all subprocesses. In this note we focus on  the settings and
+parameters specific to the same-sign W-boson scattering implementation.
+
+\section{External libraries}
+\label{sec:libraries}
+
+The code relies on the matrix element provider \tmtexttt{RECOLA}~\cite{Actis:2012qn,Actis:2016mpe},
+that makes use of the \tmtexttt{COLLIER}~\cite{Denner:2016kdg} library for the evaluation of tensor and scalar
+one-loop integrals. The user should download the \tmtexttt{recola2-collier-X.Y.Z} package from
+the web page \url{https://recola.hepforge.org/} and  follow the installation instructions therein.  
+
+In addition, we recommend to use {\tt LHAPDF} (\url{https://lhapdf.hepforge.org/})~\cite{Buckley:2014ana} as well as {\tt FastJet} (\url{http://fastjet.fr/})~\cite{Cacciari:2011ma}. These are by default used in our implementation but can be switched off if needed.
+
+We provide an  interface to \tmtexttt{PYTHIA8}~\cite{Sjostrand:2014zea}
+(version 8.2XY) for the parton shower evolution and subsequent
+hadronization of the events.
+
+In order to build the \tmtexttt{pwhg\_main} executable in \tmtexttt{POWHEG-BOX-RES/vbs-ssww-nloew},
+the following  variables  should be set in  the \tmtexttt{Makefile}:
+\begin{itemize}
+ \item \tmtexttt{RECOLALOCATION=PATH\_TO\_RECOLA2COLLIER/recola2-collier-X.Y.Z/recola2-X.Y.Z} 
+ \item \tmtexttt{LHAPDF\_CONFIG=PATH\_TO\_LHAPDF/bin/lhapdf-config}
+ \item \tmtexttt{FASTJET\_CONFIG=PATH\_TO\_FASTJET/bin/fastjet-config}
+\end{itemize}
+For the compilation of the \tmtexttt{main-PYTHIA82-lhef} executable 
+the following variables should be defined in the \tmtexttt{Makefile}:
+\begin{itemize}
+\item \tmtexttt{HEPMCLOCATION=PATH\_TO\_HEPMC}
+\item \tmtexttt{PYTHIA8LOCATION=PATH\_TO\_PYTHIA8}
+\end{itemize}
+
+
+\section{Generation of events}
+\label{sec:gen_events}
+
+
+
+Build the executable\\
+
+\noindent\tmtexttt{\$ cd POWHEG-BOX-RES/vbs-ssww-nloew \\
+\$ make pwhg\_main }\\
+
+We provide a sample run folder ({\tt testrun}) to test the event generation at very low statistics:\\
+
+\noindent\tmtexttt{\$
+cd testrun\\
+\$ ./runpar.sh}\\
+
+The {\tt runpar.sh} script should be edited to export the path to {\tt Recola2}:\\
+
+\noindent\tmtexttt{export LD\_LIBRARY\_PATH=PATH\_TO\_RECOLA2COLLIER/recola2-collier-X.Y.Z/recola2-X.Y.Z}\\
+
+At the end of the run there should be six event files ({\tt pwgevents-000X.lhe}) containing ten
+events each. As many upper bound violations occur when running the code at NLO EW accuracy,
+a correction factor has to be applied to the weights of the btilde and remnant events
+({\tt ub\_btilde\_corr} and {\tt ub\_remn\_corr}, respectively): the {\tt runpar.sh} script
+takes care of computing these correction factors after the event generation by running
+the {\tt phyton} script {\tt POWHEG-BOX-RES/Scripts/FindReweightFromCounters.py} on the 
+{\tt pwgcounters-st4-XXXX.dat} files. The correction factors are then written
+in the input files {\tt XXXX-powheg.input} that should be used for the parton shower 
+evolution of the events (see the description of the \tmtexttt{main-PYTHIA82-lhef} executable
+below). In order to run the parton shower, compile the \tmtexttt{main-PYTHIA82-lhef} executable
+and edit the {\tt runpar.sh} script to set the variable {\tt DOPYTHIAPS} to 1.
+
+The second run folder ({\tt run}) contains the files {\tt powheg.input-save} and {\tt runpar.sh}
+with all the parameters and settings used to produce the results presented in
+Refs.~\cite{Chiesa:2019ulk,Biedermann:2016yds}.\footnote{There is one difference: in the original article,
+  the PDF NNPDF3.0QED has been used.   This PDF does not have a {\tt lhaid} identifier.
+  Therefore we have put the lhapdf id of NNPDF3.0.} As can be seen from the {\tt runpar.sh}
+script, 25 cores are used for the preparation of the grids in stages 1--3 (we actually
+generated the grids on a single machine with 5 cores), while 2000 jobs
+are used for the event generation in stage 4 (this stage of the calculation was performed
+on a computing cluster). Since the 2000 instances of {\tt pwhg\_main} used in stage 4
+are independent, the parallelization of the event generation can be easily adapted by
+the user.
+\\
+\\
+\\
+\\
+We provide the executable \tmtexttt{main-PYTHIA82-lhef} which processes the events in the
+file \tmtexttt{pwgevents.lhe} and passes them as input to parton shower programs, performing the
+required vetoes and setting the required flags in a manner consistent with the aimed (NLO+PS) accuracy
+of the input events. The shower Monte Carlo program \PYTHIA{} is used to perform the QCD and QED shower.
+The recommended \PYTHIA{} options can be found in the function \tmtexttt{pythia\_init} in the file
+\tmtexttt{pythia82F77.cc}: we refer to the online \PYTHIA{} documentation for a description
+of the above mentioned options. To shower an event file proceed as follows:
+\begin{itemize}
+\item build the \tmtexttt{main-PYTHIA82-lhef} executable \\
+  \noindent\tmtexttt{\$ cd POWHEG-BOX-RES/vbs-ssww-nloew \\
+    \$ make main-PYTHIA82-lhef }\\
+\item export the relevant environmental variables \\  
+  \noindent\tmtexttt{\$ export PYTHIA8DATA=PATH\_TO\_pythia82XY/share/Pythia8/xmldoc/ \\
+  \$ export LD\_LIBRARY\_PATH=\$LD\_LIBRARY\_PATH:PATH\_TO\_HEPMC/lib:PATH\_TO\_PYTHIA/lib/lib }\\
+\item run the parton shower on the event file \tmtexttt{pwgevents-XXXX.lhe} using
+  the options in the file \tmtexttt{XXXX-powheg.input} \\
+  \noindent\tmtexttt{\$ cd testrun \\
+    \$ echo \$I > input \\
+    \$ echo pwgevents-XXXX.lhe >> input \\
+    \$ ../main-PYTHIA82-lhef < input }\\
+\end{itemize}
+where {\tt \$I} corresponds to index {\tt XXXX} of the event file once the starting {\tt 0} characters have been removed. 
+If the event file is generated at NLO EW accuracy, the input file \tmtexttt{XXXX-powheg.input} must
+include the input parameters \tmtexttt{ub\_btilde\_corr} and \tmtexttt{ub\_remn\_corr} mentioned above.
+
+
+
+\section{Process specific input parameters}
+\label{sec:flags}
+
+All the parameters and flags are set in the input file \tmtexttt{powheg.input}.
+The mandatory parameters are those needed to select the final-state leptons originating from the vector bosons:
+\\
+\tmtexttt{
+  idvecbos 24 !  24 pp->W+W+jj (-24 pp->W+W+jj)}
+\\
+\\
+\tmtexttt{
+  vdecaymode 1 !  1  W(-> e nu\_e)W(-> mu nu\_mu) \\
+  \phantom{aaaaaaaaaaaa} ! 2  W(-> e nu\_e)W(-> e  nu\_e ) \\
+  \phantom{aaaaaaaaaaaa} ! 3  W(-> mu nu\_mu)W(-> mu nu\_mu)}
+\\
+\\
+In addition to the mandatory parameters, the \POWHEGBOX{} input allows for an easy 
+setting of EW and run parameters, by explicitly adding the relevant 
+lines to the input card. 
+If one of the following entries is not present in the input card  
+the reported default value is assumed. The values below correspond to the current default. 
+~\\~\\
+ \tmtexttt{
+   Wmass\phantom{aa}  80.357973609878d0 \phantom{aaaaaaa} ! W pole mass in GeV\\
+   Wwidth\phantom{a}  2.0842989982782d0 \phantom{aaaaaaa} ! W pole width in GeV\\
+   Zmass\phantom{aa}  91.1534806191827d0 \phantom{aaaaaa} ! Z pole mass in GeV\\
+   Zwidth\phantom{a}  2.4942663787728d0 \phantom{aaaaaaa} ! Z pole width in GeV\\
+   gmu\phantom{aaaa}  0.11663787d-4 \phantom{aaaaaaaaaaa} ! Fermi constant in GeV\^{}-2\\
+   Hmass\phantom{aa}  125d0 \phantom{aaaaaaaaaaaaaaaaaaa} ! Higgs mass in GeV\\
+   Tmass \phantom{a} 173.2d0  \phantom{aaaaaaaaaaaaaaaaa} ! top mass in GeV
+}
+\\
+\\
+\tmtexttt{runningscale 0\phantom{aaaa}! choice for ren and fac scales in Bbar integration}\\
+\tmtexttt{\phantom{aaaaaaaaaaaaaaaaa} ! 0: fixed scale M\_W}\\
+\tmtexttt{\phantom{aaaaaaaaaaaaaaaaa} ! 1: running scale sqrt(ptj1*ptj2) }\\ 
+The user can implement different functional forms for the running scale editing
+the subroutine {\tt set\_fac\_ren\_scales} in the file {\tt Born\_phsp.f}.
+\\
+\\
+\tmtexttt{fakevirt 0 \phantom{aaaaaaa}! 0=off,1=on (default 0)}\\
+As the calculation of the virtual matrix elements is highly time-consuming, the user
+can replace them with the Born ones multiplied by $\alpha/4\pi$ by setting the flag
+{\tt fakevirt} to 1 in the input file. This should only be done in stage 1 (iterations
+{\tt xg1} and {\tt xg2} in {\tt runpar.sh}) and stage 3. Using {\tt fakevirt} for stages
+2 or 4 spoils the NLO accuracy of the calculation.
+\\
+\\
+\tmtexttt{bornzerodamp 1 \phantom{aaaa}! 0=off,1=on (default 1)}\\
+Flag to split the event generation in btilde and remnant generation with improved efficiency (see {\tt POWHEG} manual).
+\\
+\\
+\tmtexttt{rad\_ptsqmin\_em 0.001d0**2 \phantom{aaa} ! minimum pt of the POWHEG radiation \\
+ \phantom{rad\_ptsqmin\_em 0.001d0**2Aaaaa}! (default 0.001d0**2) }
+\\
+\\
+\tmtexttt{cmass\_lhe 0d0 \phantom{aaa} ! charm mass written in the LH events (default 0)}\\
+Note that quarks are massless in the calculation. The $c$ mass can be used to reshuffle the
+event kinematics before the LH event is written on disk.
+\\
+\\
+\tmtexttt{ubexcess\_correct 1 \phantom{aaa} ! store ub-correction factors in \\
+ \phantom{ubexcess\_correct 1 aaa} ! pwg-counters-st4-XXXX.dat files (default 0)}\\
+Due to the large number on upper-bound violations at NLO, the flag \tmtexttt{ubexcess\_correct} should always
+be set to 1 when generating events at NLO EW accuracy. As described above,
+the correction factors \tmtexttt{ub\_btilde\_corr} and \tmtexttt{ub\_remn\_corr} are computed by the script
+{\tt FindReweightFromCounters.py} and should be added to the input file when running the {\tt PYTHIA}
+interface \tmtexttt{main-PYTHIA82-lhef}. 
+\\
+\\
+\subsection{General input flags}
+
+The flags below are common to all the {\tt POWHEG} process-folders. We list them for completeness.
+\\
+\\
+\tmtexttt{
+ih1 1 \phantom{aaaaaaaaa}! hadron 1 (1 for protons, -1 for antiprotons)\\
+ih2 1 \phantom{aaaaaaaaa}! hadron 2 (1 for protons, -1 for antiprotons)\\
+ndns1 131 \phantom{aaaaa}! pdf set for hadron 1 (native mlm numbering) \\
+ndns2 131 \phantom{aaaaa}! pdf set for hadron 2 (native mlm numbering) \\
+lhans1 260000 \phantom{a}! pdf set for hadron 1 (LHAPDF LHA numbering) \\
+lhans2 260000 \phantom{a}! pdf set for hadron 2 (LHAPDF LHA numbering) \\
+ebeam1 6500d0 \phantom{a}! energy of beam 1 (GeV)                      \\
+ebeam2 6500d0 \phantom{a}! energy of beam 2 (GeV)                      \\
+ncall1 10000 \phantom{aa}!st1 number of calls for initializing the integration grid \\
+itmx1 2 \phantom{aaaaaaa}!st1 number of iterations for initializing the integration grid \\
+ncall2 1000 \phantom{aaa}!st2 number of calls for computing the Bbar integral \\
+itmx2 2 \phantom{aaaaaaa}!st2 number of iterations for computing the Bbar integral \\
+nubound 1000 \phantom{aa}!st3 number of bbarra calls to setup norm of upper bounding function \\
+numevts 10 \phantom{aaaa}!st4 number of events to be generated }\\
+\\
+\\
+
+\subsection{Flags used by the shower interfaces}
+
+The flags below do not affect the event generation (stages 1--4). They are only
+used by the {\tt PYTHIA} interface \tmtexttt{main-PYTHIA82-lhef}.
+\\
+\\
+\tmtexttt{ub\_btilde\_corr 1 \phantom{aaa} ! ub-corr factor for btilde events (default 1)\\
+  ub\_remn\_corr 1 \phantom{aaaaa} ! ub-corr factor for remnant events (default 1)}\\
+See the description of the flag \tmtexttt{ubexcess\_correct}.
+\\
+\\
+\tmtexttt{use-scalup-ptj 4 \phantom{aaaa}! starting scale for QCD radiation in PS (default 4)\\
+  \phantom{aaaaaaaaaaaaaaaaaaaaa}! 0=standard powheg scalup\\
+  \phantom{aaaaaaaaaaaaaaaaaaaaa}! 1=hardest quark pt (ptj1)\\
+  \phantom{aaaaaaaaaaaaaaaaaaaaa}! 2=softest quark pt (ptj2)\\
+  \phantom{aaaaaaaaaaaaaaaaaaaaa}! 3=(ptj1+ptj2)/2\\
+  \phantom{aaaaaaaaaaaaaaaaaaaaa}! 4=sqrt(ptj1*ptj2)}\\
+Note that the scale is computed from the kinematics of the LH event generated by {\tt POWHEG}.
+\\
+\\
+\tmtexttt{SI\_maxshowerevents -1 !  Number of events to read from the .lhe \\
+ \phantom{SI\_maxshowerevents -1a}!  (default: -1, all events)}
+\\
+\\
+\tmtexttt{SI\_pytune  -1  \phantom{aaaaaaaaa}! PYTHIA tune in -1,50 (default -1, default pp tune)\\
+  \phantom{SI\_maxshowerevents -1a}! see PYTHIA documentation for the tune numbering}
+\\
+\\
+\tmtexttt{SI\_nohad 0 \phantom{aaaaaaaaaaa}!  if 1 switch off the hadronization (default 0)}
+\\
+\\
+\tmtexttt{SI\_savehistos 1 \phantom{aaaaaa}!  if 1 save the results in a .top file (default 0)}
+\\
+\\
+\tmtexttt{SI\_noQEDq 0 \phantom{aaaaaaaaaa}!  if 1 switch off the QED PS from quarks (default 0)}
+\\
+\\        
+\tmtexttt{SI\_qcdps 1 \phantom{aaaaaaaaaa} ! if 0 switch off QCD PS radiation (defaulf 1)} \\
+Note that {\tt PYTHIA} gives an intrinsic $p_{\rm T}$ to the initial-state partons even
+for \tmtexttt{SI\_qcdps} equal to 0.
+\\
+\\
+The decays of hadronic resonances which can proceed radiatively have been 
+suppressed. In order to allow for such decays, the user should 
+open the file \tmtexttt{pythia82F77.cc} and comment the relevant lines in the function {\tt pythia\_init}.
+
+\section*{Acknowledgements}
+
+We would liked to thank Paolo Nason for his help regarding {\sc Powheg}.
+MC, AD, and MP acknowledge financial support by the
+German Federal Ministry for Education and Research (BMBF) under
+contracts no.~05H15WWCA1 and 05H18WWCA1 and the German Research Foundation (DFG) under
+reference number DE 623/6-1.
+J.-N.~Lang acknowledges support from the Swiss National Science Foundation (SNF)
+under contract BSCGI0-157722.
+MP is supported by the European Research Council Consolidator Grant NNLOforLHC2.
+
+
+%\bibliographystyle{JHEP.bst}
+\bibliography{manual-BOX-vbs}
+
+\end{document}
+
+
+
