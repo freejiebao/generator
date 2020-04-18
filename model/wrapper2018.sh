@@ -42,6 +42,7 @@ pushd .
 cmssw_setup $sandbox_name1 || exit_on_error $? 151 "Could not unpack sandbox"
 popd
 sandbox_name="VBS_SSWW_$1_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+#wget --no-check-certificate --progress=bar "http://stash.osgconnect.net/+jiexiao/2018_reco/${sandbox_name}" || exit_on_error $? 150 "Could not download sandbox."
 xrdcp root://eosuser.cern.ch//eos/user/j/jixiao/eft/gridpack/$sandbox_name .
 sed -i "s/^.*tarball.tar.xz.*$/     args = cms.vstring(\'..\/$sandbox_name\'),/" -i SMP-RunIIFall18wmLHEGS-00059_1_cfg.py
 
