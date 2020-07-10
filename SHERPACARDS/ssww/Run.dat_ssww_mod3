@@ -1,0 +1,126 @@
+(run){
+  % general settings
+  EVENTS 1M;
+
+  % choose EW Gmu input scheme
+  EW_SCHEME 3;
+
+  % tags for process setup
+  % NJET:=1;
+  QCUT:=30.;
+
+  %scales, tags for scale variations
+  FSF:=1.0; RSF:=1.0; QSF:=1.0;
+  SCALES=STRICT_METS{FSF*MU_F2}{RSF*MU_R2}{QSF*MU_Q2};
+  CORE_SCALE VAR{Abs2(p[2]+p[3])};
+  EXCLUSIVE_CLUSTER_MODE 1;
+
+  %solves problem with dipole QED modeling
+  ME_QED_CLUSTERING_THRESHOLD 10;
+
+  % improve integration performance
+  PSI_ITMIN 25000;
+  INTEGRATION_ERROR 0.05;
+
+  % PDF on-the-fly variations
+  PDF_LIBRARY LHAPDFSherpa;
+  PDF_SET NNPDF31_nnlo_as_0118_mc_hessian_pdfas;
+
+  % Print_Graphs
+  Print_Graphs ssww_mod3;
+  % collider setup
+  BEAM_1 2212; BEAM_ENERGY_1 6500.;
+  BEAM_2 2212; BEAM_ENERGY_2 6500.;
+}(run)
+
+
+(processes){
+  Process 93 93 -> -24[a] -24[b] 93 93;
+  Decay -24[a] -> 11 -12;
+  Decay -24[b] -> 11 -12;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> -24[c] -24[d] 93 93;
+  Decay -24[c] -> 13 -14;
+  Decay -24[d] -> 13 -14;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> -24[e] -24[f] 93 93;
+  Decay -24[e] -> 15 -16;
+  Decay -24[f] -> 15 -16;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> -24[g] -24[h] 93 93;
+  Decay -24[g] -> 11 -12;
+  Decay -24[h] -> 13 -14;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> -24[i] -24[j] 93 93;
+  Decay -24[i] -> 11 -12;
+  Decay -24[j] -> 15 -16;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> -24[k] -24[l] 93 93;
+  Decay -24[k] -> 13 -14;
+  Decay -24[l] -> 15 -16;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> 24[m] 24[n] 93 93;
+  Decay 24[m] -> -11 12;
+  Decay 24[n] -> -11 12;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> 24[o] 24[p] 93 93;
+  Decay 24[o] -> -13 14;
+  Decay 24[p] -> -13 14;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> 24[q] 24[r] 93 93;
+  Decay 24[q] -> -15 16;
+  Decay 24[r] -> -15 16;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> 24[s] 24[t] 93 93;
+  Decay 24[s] -> -11 12;
+  Decay 24[t] -> -13 14;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> 24[u] 24[v] 93 93;
+  Decay 24[u] -> -11 12;
+  Decay 24[v] -> -15 16;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+  
+  Process 93 93 -> 24[w] 24[x] 93 93;
+  Decay 24[w] -> -13 14;
+  Decay 24[x] -> -15 16;
+  Order (*,6);
+  CKKW sqr(QCUT/E_CMS);
+  End process;
+}(processes)
+
+(selector){
+  NJetFinder 2 10. 0. 0.4 -1 6.5;
+  Mass 93 93 100 E_CMS;
+}(selector)

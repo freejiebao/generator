@@ -1,0 +1,166 @@
+nohup: ignoring input
+XXX: mpirun
+  -> SHERPA path: '/cvmfs/cms.cern.ch/slc6_amd64_gcc700/external/sherpa/2.2.8-gnimlf2'
+  -> SHERPA run path: '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod2'
+  -> PROCESS name: 'ssww_mod2'
+  -> Library & cross section otions: 'LBCR'
+  -> include path: '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python'
+  -> custom data card file name: ''
+  -> custom library file name: ''
+  -> custom cross section file name: ''
+  -> output path: '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python'
+  -> MPI running command: 'mpirun'
+  -> additional MPI options: '-n 14 '
+  -> No. of events: '0'
+ <I> multiple CPU cores detected: 33-1
+ path '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod2/TMP' does not exist,
+  -> creating path '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod2/TMP'
+ <I> using COMIX/internal ME generator
+ 'Process' subdirectory does not exist and will be created
+ 'Result' subdirectory does not exist and will be created
+ <I> Sherpa executable is /cvmfs/cms.cern.ch/slc6_amd64_gcc700/external/sherpa/2.2.8-gnimlf2/bin/Sherpa
+ <I> creating library code...
+     ...Logs stored in /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod2/sherpa_ssww_mod2_passLBCR.out and /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod2/sherpa_ssww_mod2_passLBCR.err.
+Welcome to Sherpa, xiaoj. Initialization of framework underway.
+The local time is Wed Jul  8 04:58:20 2020.
+Run_Parameter::Init(): Seed mode '*'
+Run_Parameter::Init(): Setting memory limit to 125.828 GB.
+Random::SetSeed(): Seed set to 1234
+-----------------------------------------------------------------------------
+-----------    Event generation run with SHERPA started .......   -----------
+-----------------------------------------------------------------------------
+................................................ |       +                   
+................................................ ||  |       +  +            
+...................................        ....  | |         /   +           
+................. ................   _,_ |  ....  ||         +|  +  +        
+...............................  __.'  ,\|  ...  ||    /    +|          +    
+.............................. (  \    \   ...  | |  |   + + \         +   
+.............................  (    \   -/  .... ||       +    |          +  
+........ ...................  <S   /()))))~~~~~~~~##     +     /\    +       
+............................ (!H   (~~)))))~~~~~~#/     +  +    |  +         
+................ ........... (!E   (~~~)))))     /|/    +         +          
+............................ (!R   (~~~)))))   |||   + +            +        
+..... ...................... (!P    (~~~~)))   /|  + +          +            
+............................ (!A>    (~~~~~~~~~##        + +        +        
+............................. ~~(!    '~~~~~~~ \       +     + +      +      
+...............................  `~~~QQQQQDb //   |         + + +        +   
+........................ ..........   IDDDDP||     \  + + + + +             +
+....................................  IDDDI||       \                      + 
+.................................... IHD HD||         \ + +  + + + + +      +
+...................................  IHD ##|            :-) + +\          +  
+......... ............... ......... IHI ## /      /   +  + + + +\       +    
+................................... IHI/ /       /      + + + +        +     
+................................... ## | | /    / + +      + + /      +      
+....................... /TT\ .....  ##/ ///  / + + + + + + +/       +        
+......................./TTT/T\ ... /TT\/\\\ / + + + + + + +/   \         +   
+....................../TTT/TTTT\...|TT/T\\\/   +    ++  + /              
+-----------------------------------------------------------------------------
+
+     SHERPA version 2.2.8 (Cho Oyu)
+                                                                             
+     Authors:        Enrico Bothmann, Stefan Hoeche, Frank Krauss,           
+                     Silvan Kuttimalai, Marek Schoenherr, Holger Schulz,     
+                     Steffen Schumann, Frank Siegert, Korinna Zapp           
+     Former Authors: Timo Fischer, Tanju Gleisberg, Hendrik Hoeth,           
+                     Ralf Kuhn, Thomas Laubrich, Andreas Schaelicke,         
+                     Jan Winter                                              
+                                                                             
+     This program uses a lot of genuine and original research work           
+     by other people. Users are encouraged to refer to                       
+     the various original publications.                                      
+                                                                             
+     Users are kindly asked to refer to the documentation                    
+     published under JHEP 02(2009)007                                        
+                                                                             
+     Please visit also our homepage                                          
+                                                                             
+       http://sherpa.hepforge.org                                            
+                                                                             
+     for news, bugreports, updates and new releases.                         
+                                                                             
+-----------------------------------------------------------------------------
+
+WARNING: You are using an unsupported development branch.
+Git branch master, revision 6881713ab01a5b0b71db5e3d5db6895121272c0c.
+
+Beam_Spectra_Handler : 
+   type = Monochromatic*Monochromatic
+   for    P+  ((6500,0,0,6500))
+   and    P+  ((6500,0,0,-6500))
+PDF set 'NNPDF31_nnlo_as_0118_mc_hessian_pdfas' loaded for beam 1 (P+).
+PDF set 'NNPDF31_nnlo_as_0118_mc_hessian_pdfas' loaded for beam 2 (P+).
+Initialized the ISR: (SF)*(SF)
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+ List of Particle Data 
+  IDName     kfc  MASS[<kfc>]   WIDTH[<kfc>]  STABLE[<kfc>] MASSIVE[<kfc>]  ACTIVE[<kfc>]  YUKAWA[<kfc>]
+       d       1         0.01              0              1              0              1              0
+       u       2        0.005              0              1              0              1              0
+       s       3          0.2              0              1              0              1              0
+       c       4         1.42              0              1              0              1              0
+       b       5          4.8              0              1              0              1              0
+       t       6       173.21              2              0              1              1         173.21
+      e-      11     0.000511              0              1              0              1              0
+      ve      12            0              0              1              0              1              0
+     mu-      13        0.105              0              1              0              1              0
+     vmu      14            0              0              1              0              1              0
+    tau-      15        1.777    2.26735e-12              0              0              1              0
+    vtau      16            0              0              1              0              1              0
+       G      21            0              0              1              0              1              0
+       P      22            0              0              1              0              1              0
+       Z      23      91.1876         2.4952              0              1              1        91.1876
+      W+      24       80.385          2.085              0              1              1         80.385
+      h0      25          125        0.00407              0              1              1            125
+
+ List of Particle Containers 
+    IDName     kfc     Constituents
+         l      90     {e-,e+,mu-,mu+,tau-,tau+}
+         v      91     {ve,veb,vmu,vmub,vtau,vtaub}
+         j      93     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         Q      94     {d,db,u,ub,s,sb,c,cb,b,bb}
+         r      99     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+
+Initialized the Fragmentation_Handler.
+Initialized the Soft_Collision_Handler.
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set exclusive cluster mode 1.
+CS_Shower::CS_Shower(): Set color setter mode 0
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set exclusive cluster mode 1.
+CS_Shower::CS_Shower(): Set color setter mode 0
+Initialized the Shower_Handler.
++-----------------------------------------+
+|   X   X   X XXXX  XXX  XXX  XXX         |
+|  X X  XX XX X    X      X  X     X   X  |
+| X   X X X X XXX  X XXX  X  X    XXX XXX |
+| XXXXX X   X X    X   X  X  X     X   X  |
+| X   X X   X XXXX  XXX  XXX  XXX         |
++-----------------------------------------+
+| please cite: JHEP 0202:044,2002         |
++-----------------------------------------+
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Comix: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
++----------------------------------+
+|                                  |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mMM[0m [34mMM[0m I  [33mX[0m [33mX[0m      |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m [34mM[0m [34mM[0m I   [33mX[0m       |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m   [34mM[0m I  [33mX[0m [33mX[0m      |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|                                  |
++==================================+
+|  Color dressed  Matrix Elements  |
+|     http://comix.freacafe.de     |
+|   please cite  JHEP12(2008)039   |
++----------------------------------+
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Amegic: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
+Amegic::Initialize(): Set gauge 1.
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Internal: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
+Matrix_Element_Handler::BuildProcesses(): Looking for processes ............................................................

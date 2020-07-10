@@ -1,0 +1,3671 @@
+nohup: ignoring input
+XXX: mpirun
+  -> SHERPA path: '/cvmfs/cms.cern.ch/slc6_amd64_gcc700/external/sherpa/2.2.8-gnimlf2'
+  -> SHERPA run path: '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5'
+  -> PROCESS name: 'ssww_mod5'
+  -> Library & cross section otions: 'LBCR'
+  -> include path: '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python'
+  -> custom data card file name: ''
+  -> custom library file name: ''
+  -> custom cross section file name: ''
+  -> output path: '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python'
+  -> MPI running command: 'mpirun'
+  -> additional MPI options: '-n 28 '
+  -> No. of events: '0'
+ <I> multiple CPU cores detected: 33-1
+ path '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP' exists,
+  -> cleaning path '/home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP'
+ <I> using COMIX/internal ME generator
+ 'Process' subdirectory does not exist and will be created
+ 'Result' subdirectory does not exist and will be created
+ <I> Sherpa executable is /cvmfs/cms.cern.ch/slc6_amd64_gcc700/external/sherpa/2.2.8-gnimlf2/bin/Sherpa
+ <I> creating library code...
+     ...Logs stored in /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/sherpa_ssww_mod5_passLBCR.out and /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/sherpa_ssww_mod5_passLBCR.err.
+Welcome to Sherpa, xiaoj. Initialization of framework underway.
+The local time is Wed Jul  8 23:20:49 2020.
+Run_Parameter::Init(): Seed mode '*'
+Run_Parameter::Init(): Setting memory limit to 125.828 GB.
+Random::SetSeed(): Seed set to 1234
+-----------------------------------------------------------------------------
+-----------    Event generation run with SHERPA started .......   -----------
+-----------------------------------------------------------------------------
+................................................ |       +                   
+................................................ ||  |       +  +            
+...................................        ....  | |         /   +           
+................. ................   _,_ |  ....  ||         +|  +  +        
+...............................  __.'  ,\|  ...  ||    /    +|          +    
+.............................. (  \    \   ...  | |  |   + + \         +   
+.............................  (    \   -/  .... ||       +    |          +  
+........ ...................  <S   /()))))~~~~~~~~##     +     /\    +       
+............................ (!H   (~~)))))~~~~~~#/     +  +    |  +         
+................ ........... (!E   (~~~)))))     /|/    +         +          
+............................ (!R   (~~~)))))   |||   + +            +        
+..... ...................... (!P    (~~~~)))   /|  + +          +            
+............................ (!A>    (~~~~~~~~~##        + +        +        
+............................. ~~(!    '~~~~~~~ \       +     + +      +      
+...............................  `~~~QQQQQDb //   |         + + +        +   
+........................ ..........   IDDDDP||     \  + + + + +             +
+....................................  IDDDI||       \                      + 
+.................................... IHD HD||         \ + +  + + + + +      +
+...................................  IHD ##|            :-) + +\          +  
+......... ............... ......... IHI ## /      /   +  + + + +\       +    
+................................... IHI/ /       /      + + + +        +     
+................................... ## | | /    / + +      + + /      +      
+....................... /TT\ .....  ##/ ///  / + + + + + + +/       +        
+......................./TTT/T\ ... /TT\/\\\ / + + + + + + +/   \         +   
+....................../TTT/TTTT\...|TT/T\\\/   +    ++  + /              
+-----------------------------------------------------------------------------
+
+     SHERPA version 2.2.8 (Cho Oyu)
+                                                                             
+     Authors:        Enrico Bothmann, Stefan Hoeche, Frank Krauss,           
+                     Silvan Kuttimalai, Marek Schoenherr, Holger Schulz,     
+                     Steffen Schumann, Frank Siegert, Korinna Zapp           
+     Former Authors: Timo Fischer, Tanju Gleisberg, Hendrik Hoeth,           
+                     Ralf Kuhn, Thomas Laubrich, Andreas Schaelicke,         
+                     Jan Winter                                              
+                                                                             
+     This program uses a lot of genuine and original research work           
+     by other people. Users are encouraged to refer to                       
+     the various original publications.                                      
+                                                                             
+     Users are kindly asked to refer to the documentation                    
+     published under JHEP 02(2009)007                                        
+                                                                             
+     Please visit also our homepage                                          
+                                                                             
+       http://sherpa.hepforge.org                                            
+                                                                             
+     for news, bugreports, updates and new releases.                         
+                                                                             
+-----------------------------------------------------------------------------
+
+WARNING: You are using an unsupported development branch.
+Git branch master, revision 6881713ab01a5b0b71db5e3d5db6895121272c0c.
+
+Beam_Spectra_Handler : 
+   type = Monochromatic*Monochromatic
+   for    P+  ((6500,0,0,6500))
+   and    P+  ((6500,0,0,-6500))
+PDF set 'NNPDF31_nnlo_as_0118_mc_hessian_pdfas' loaded for beam 1 (P+).
+PDF set 'NNPDF31_nnlo_as_0118_mc_hessian_pdfas' loaded for beam 2 (P+).
+Initialized the ISR: (SF)*(SF)
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+ List of Particle Data 
+  IDName     kfc  MASS[<kfc>]   WIDTH[<kfc>]  STABLE[<kfc>] MASSIVE[<kfc>]  ACTIVE[<kfc>]  YUKAWA[<kfc>]
+       d       1         0.01              0              1              0              1              0
+       u       2        0.005              0              1              0              1              0
+       s       3          0.2              0              1              0              1              0
+       c       4         1.42              0              1              0              1              0
+       b       5          4.8              0              1              0              1              0
+       t       6       173.21              2              0              1              1         173.21
+      e-      11     0.000511              0              1              0              1              0
+      ve      12            0              0              1              0              1              0
+     mu-      13        0.105              0              1              0              1              0
+     vmu      14            0              0              1              0              1              0
+    tau-      15        1.777    2.26735e-12              0              0              1              0
+    vtau      16            0              0              1              0              1              0
+       G      21            0              0              1              0              1              0
+       P      22            0              0              1              0              1              0
+       Z      23      91.1876         2.4952              0              1              1        91.1876
+      W+      24       80.385         31.275              0              1              1         80.385
+      h0      25          125        0.00407              0              1              1            125
+
+ List of Particle Containers 
+    IDName     kfc     Constituents
+         l      90     {e-,e+,mu-,mu+,tau-,tau+}
+         v      91     {ve,veb,vmu,vmub,vtau,vtaub}
+         j      93     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         Q      94     {d,db,u,ub,s,sb,c,cb,b,bb}
+         r      99     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+
+Initialized the Fragmentation_Handler.
+Initialized the Soft_Collision_Handler.
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set exclusive cluster mode 1.
+CS_Shower::CS_Shower(): Set color setter mode 0
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set exclusive cluster mode 1.
+CS_Shower::CS_Shower(): Set color setter mode 0
+Initialized the Shower_Handler.
++-----------------------------------------+
+|   X   X   X XXXX  XXX  XXX  XXX         |
+|  X X  XX XX X    X      X  X     X   X  |
+| X   X X X X XXX  X XXX  X  X    XXX XXX |
+| XXXXX X   X X    X   X  X  X     X   X  |
+| X   X X   X XXXX  XXX  XXX  XXX         |
++-----------------------------------------+
+| please cite: JHEP 0202:044,2002         |
++-----------------------------------------+
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Comix: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
++----------------------------------+
+|                                  |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mMM[0m [34mMM[0m I  [33mX[0m [33mX[0m      |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m [34mM[0m [34mM[0m I   [33mX[0m       |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m   [34mM[0m I  [33mX[0m [33mX[0m      |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|                                  |
++==================================+
+|  Color dressed  Matrix Elements  |
+|     http://comix.freacafe.de     |
+|   please cite  JHEP12(2008)039   |
++----------------------------------+
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Amegic: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
+Amegic::Initialize(): Set gauge 1.
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Internal: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
+Matrix_Element_Handler::BuildProcesses(): Looking for processes ................................................................................................................................................ done ( 51 MB, 7s / 6s ).
+Matrix_Element_Handler::InitializeProcesses(): Performing tests 
+  Amplitude::GaugeTest(): Large deviation {
+         2.78843085756e-25
+     vs   2.7884308569e-25
+     =>  2.34269714738e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.04107019651e-25
+     vs  2.04107019669e-25
+     => -8.53466186612e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         6.51876892779e-23
+     vs  6.51876895789e-23
+     =>  -4.6173885826e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.32832253316e-25
+     vs  2.32832252966e-25
+     =>  1.50300127899e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.54875866288e-23
+     vs  1.54875866303e-23
+     => -9.55304724215e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.80120383118e-22
+     vs  1.80120383104e-22
+     =>  7.79676323504e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.25166210001e-26
+     vs  1.25166209153e-26
+     =>  6.78098910356e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.80603820835e-25
+     vs  8.80603820945e-25
+     => -1.24568688697e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.22438384399e-24
+     vs  3.22438384392e-24
+     =>  2.25803820086e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.00649010229e-25
+     vs  2.00649010264e-25
+     =>  -1.7050505452e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.96314199571e-25
+     vs  2.96314199465e-25
+     =>  3.60008467482e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.04501464077e-27
+     vs  6.04501464564e-27
+     => -8.06110844742e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.05646397348e-27
+     vs  2.05646397349e-27
+     => -2.23021601187e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.78876963774e-25
+     vs  2.78876965436e-25
+     => -5.96157201382e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.99521973359e-23
+     vs  3.99521973375e-23
+     => -3.89226428865e-11
+  }
+...
+  Amplitude::GaugeTest(): Large deviation {
+         7.91066246089e-23
+     vs  7.91066246103e-23
+     => -1.76275660735e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.89227618396e-26
+     vs   2.8922761819e-26
+     =>  7.10315584129e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.18753228925e-24
+     vs  5.18753228913e-24
+     =>  2.28901342325e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.74754142555e-24
+     vs  1.74754142559e-24
+     => -2.37045938434e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.26373301975e-26
+     vs  2.26373301693e-26
+     =>  1.24368293442e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.21098533292e-23
+     vs  2.21098533286e-23
+     =>  2.50617304687e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.71739809666e-25
+     vs  5.71739814602e-25
+     => -8.63296023557e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          3.3454729762e-24
+     vs  3.34547297618e-24
+     =>  3.17079695833e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.91695683798e-27
+     vs  4.91695683123e-27
+     =>  1.37155864444e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         9.70612385013e-27
+     vs  9.70612383886e-27
+     =>  1.16153064944e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         2.02492800675e-24
+     vs  2.02492800636e-24
+     =>  1.91888505086e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.11630930086e-22
+     vs   1.1163093007e-22
+     =>  1.46002987478e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.00301249449e-26
+     vs   3.0030124952e-26
+     => -2.35187758157e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.07458028533e-26
+     vs  5.07458029114e-26
+     => -1.14433862386e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.18861437238e-23
+     vs  1.18861437243e-23
+     => -4.00705024717e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.67279975474e-25
+     vs  1.67279975439e-25
+     =>  2.07318384682e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         7.36360423088e-25
+     vs  7.36360423024e-25
+     =>  8.70588046098e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.92932363664e-25
+     vs  1.92932363598e-25
+     =>  3.44085648862e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.09888302528e-24
+     vs   2.0988830254e-24
+     => -5.80744341505e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         4.46175782045e-27
+     vs  4.46175782046e-27
+     => -2.46025422257e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.23927959674e-25
+     vs  8.23927959431e-25
+     =>  2.94212432195e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          2.3505977427e-26
+     vs  2.35059774278e-26
+     => -3.33147953668e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.77997476234e-24
+     vs  2.77997476124e-24
+     =>  3.95294019739e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.77519900647e-25
+     vs  2.77519900607e-25
+     =>  1.45623291203e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.91748346459e-27
+     vs  3.91748346284e-27
+     =>  4.45772085911e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.22609972079e-27
+     vs  1.22609972563e-27
+     => -3.94885546484e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.78766833387e-26
+     vs  6.78766832781e-26
+     =>  8.92384832696e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.29403467362e-23
+     vs  1.29403467389e-23
+     =>  -2.0283730251e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.45807113705e-26
+     vs  5.45807114284e-26
+     => -1.06049180548e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.34750014643e-25
+     vs   6.3475001461e-25
+     =>  5.22912824152e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         5.40148304938e-24
+     vs  5.40148305016e-24
+     => -1.44770972987e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.88882386635e-28
+     vs  5.88882384002e-28
+     =>  4.47236181422e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.87326758817e-25
+     vs  6.87326759033e-25
+     => -3.14266612733e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.69948760935e-25
+     vs   2.6994876072e-25
+     =>  7.96284371773e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.74491056072e-25
+     vs  2.74491056004e-25
+     =>  2.48066012176e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.57625910153e-26
+     vs  4.57625910114e-26
+     =>  8.51752002262e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.21065112272e-23
+     vs  2.21065113412e-23
+     => -5.15472464713e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         3.52028406357e-26
+     vs  3.52028407506e-26
+     =>  -3.2634259739e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+           8.895605578e-27
+     vs  8.89560553957e-27
+     =>  4.32069069412e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.83139909344e-27
+     vs  6.83139906671e-27
+     =>  3.91275545297e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         5.84351504297e-24
+     vs  5.84351504324e-24
+     => -4.70277150555e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         7.11676657171e-25
+     vs  7.11676653769e-25
+     =>    4.779370677e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.40664349592e-26
+     vs  5.40664349716e-26
+     => -2.29390728634e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.48132759354e-25
+     vs  5.48132759311e-25
+     =>  7.84339260207e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.51365617668e-26
+     vs  3.51365617199e-26
+     =>  1.33635369437e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.02739730858e-28
+     vs  1.02739730588e-28
+     =>  2.63048316462e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.29024240387e-25
+     vs  2.29024240294e-25
+     =>  4.05840694384e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         2.20895027287e-24
+     vs  2.20895027289e-24
+     => -9.78594982826e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.84042105409e-26
+     vs  3.84042105506e-26
+     => -2.51337395341e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.62130828242e-28
+     vs  2.62130827876e-28
+     =>  1.39583566927e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         2.33011756455e-26
+     vs  2.33011756619e-26
+     => -7.02297664468e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.50810040216e-26
+     vs  1.50810039921e-26
+     =>  1.95545002413e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.37774270229e-24
+     vs   1.3777427045e-24
+     => -1.60873792066e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         6.11530830036e-25
+     vs  6.11530830015e-25
+     =>  3.52857743025e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.14663812909e-26
+     vs  8.14663814356e-26
+     => -1.77627790254e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          4.5222783165e-26
+     vs  4.52227831653e-26
+     => -7.96784860313e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.22049079894e-23
+     vs  2.22049080076e-23
+     => -8.20273737823e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.05122744899e-24
+     vs  3.05122744952e-24
+     => -1.72308722846e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.78945536934e-24
+     vs   5.7894553685e-24
+     =>  1.45214951175e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          1.5128135209e-24
+     vs  1.51281350027e-24
+     =>  1.36359084024e-08
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.84324346956e-27
+     vs  3.84324346792e-27
+     =>  4.27393676006e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.2493587763e-25
+     vs   1.2493587757e-25
+     =>  4.83859841083e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.36807554332e-25
+     vs  8.36807555165e-25
+     => -9.96430049582e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.73164359901e-26
+     vs  1.73164359971e-26
+     => -4.06810696241e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.94662593557e-24
+     vs  1.94662593567e-24
+     => -5.31402699622e-11
+  }
+...
+  Amplitude::GaugeTest(): Large deviation {
+         1.02095198232e-25
+     vs  1.02095198238e-25
+     => -5.65503199823e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.50227550821e-27
+     vs  1.50227550556e-27
+     =>  1.76129555385e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.2126124452e-28
+     vs  1.21261242846e-28
+     =>   1.3802461396e-08
+  }
+...
+  Amplitude::GaugeTest(): Large deviation {
+         2.92931657973e-26
+     vs  2.92931657727e-26
+     =>  8.40378211464e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.22287162596e-24
+     vs  4.22287162978e-24
+     => -9.06232866527e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.67295400828e-25
+     vs   4.6729540088e-25
+     => -1.10929043728e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.56728602088e-25
+     vs  1.56728601982e-25
+     =>  6.78846534541e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          9.7070175459e-26
+     vs  9.70701756641e-26
+     => -2.11246875548e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.42051322451e-26
+     vs  2.42051320326e-26
+     =>  8.78009265293e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.45111493281e-25
+     vs  1.45111493334e-25
+     => -3.69477448636e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         9.68797293224e-26
+     vs  9.68797293355e-26
+     => -1.35968014625e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.49503339805e-26
+     vs  3.49503339952e-26
+     => -4.19592027789e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         7.37062654967e-25
+     vs  7.37062655299e-25
+     => -4.50067649815e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.47952526254e-27
+     vs  3.47952529402e-27
+     => -9.04790908862e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.94675230515e-25
+     vs  2.94675230487e-25
+     =>  9.44992972762e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.69112252448e-26
+     vs  2.69112252522e-26
+     => -2.73787881255e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.29916136833e-27
+     vs  8.29916135806e-27
+     =>  1.23742616154e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.66113733808e-23
+     vs   1.6611373381e-23
+     => -9.05520103345e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.95977295333e-26
+     vs  1.95977293979e-26
+     =>  6.90722679053e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.85341029265e-26
+     vs  2.85341029268e-26
+     => -1.06118447363e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.45554465567e-26
+     vs  1.45554465301e-26
+     =>  1.83073556315e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.57437072653e-26
+     vs  5.57437073931e-26
+     => -2.29285823661e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.0730577869e-26
+     vs  1.07305778604e-26
+     =>  8.05267630355e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          1.6846659737e-26
+     vs  1.68466596777e-26
+     =>  3.51765461204e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         7.50887327965e-28
+     vs  7.50887327547e-28
+     =>  5.57840440507e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.9993414756e-24
+     vs  1.99934147475e-24
+     =>  4.26802149178e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         9.85392353074e-25
+     vs  9.85392351839e-25
+     =>  1.25339894019e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.80857834048e-26
+     vs  3.80857834402e-26
+     => -9.29856858178e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.24701838526e-27
+     vs  2.24701836978e-27
+     =>  6.88987711328e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.39303798787e-27
+     vs  1.39303798786e-27
+     =>   6.8935968045e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.20390050425e-27
+     vs  3.20390050906e-27
+     => -1.49918932824e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.83020003751e-23
+     vs  1.83020003691e-23
+     =>  3.27675886425e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.87487478544e-28
+     vs  2.87487478266e-28
+     =>   9.6680086159e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.26976492321e-25
+     vs  1.26976492352e-25
+     => -2.45200637572e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.51574882743e-26
+     vs  5.51574882726e-26
+     =>  3.19375637048e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.10509621618e-23
+     vs  1.10509621608e-23
+     =>   9.6958885365e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.55972202449e-27
+     vs  2.55972200728e-27
+     =>  6.72015509906e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.16184521304e-26
+     vs  3.16184521046e-26
+     =>  8.17551137899e-10
+  }
+. done ( 51 MB, 0s / 0s ).
+Initialized the Matrix_Element_Handler for the hard processes.
+Initialized the Beam_Remnant_Handler.
+Initialized the Soft_Photon_Handler.
+[31mVariations::InitialiseParametersVector([32m0 variations[31m)[0m[31m{[0m
+  Named variations:
+[31m}[0m
+[1mSherpa: [0m[34mSherpa::InitializeTheRun[0m throws [1m[31mnormal exit[0m[1m: 
+   [0m[31mInitialization complete.[0m
+WARNING: You are using an unsupported development branch.
+------------------------------------------------------------------------
+[1mPlease cite the publications listed in '[31mSherpa_References.tex[0m[1m'.[0m
+  Extract the bibtex list by running 'get_bibtex Sherpa_References.tex'
+  or email the file to 'slaclib2@slac.stanford.edu', subject 'generate'.
+------------------------------------------------------------------------
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+ <I> calculating cross sections... Logs stored in /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/sherpa_ssww_mod5_passLBCR.out and /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/sherpa_ssww_mod5_passLBCR.err.
+ <I> ...using MPI
+Welcome to Sherpa, xiaoj. Initialization of framework underway.
+The local time is Wed Jul  8 23:20:57 2020.
+Run_Parameter::Init(): Seed mode '*'
+Run_Parameter::Init(): Setting memory limit to 125.828 GB.
+Random::SetSeed(): Seed set to 1234
+My_MPI::PrintRankInfo(): Running on 28 ranks.
+-----------------------------------------------------------------------------
+-----------    Event generation run with SHERPA started .......   -----------
+-----------------------------------------------------------------------------
+................................................ |       +                   
+................................................ ||  |       +  +            
+...................................        ....  | |         /   +           
+................. ................   _,_ |  ....  ||         +|  +  +        
+...............................  __.'  ,\|  ...  ||    /    +|          +    
+.............................. (  \    \   ...  | |  |   + + \         +   
+.............................  (    \   -/  .... ||       +    |          +  
+........ ...................  <S   /()))))~~~~~~~~##     +     /\    +       
+............................ (!H   (~~)))))~~~~~~#/     +  +    |  +         
+................ ........... (!E   (~~~)))))     /|/    +         +          
+............................ (!R   (~~~)))))   |||   + +            +        
+..... ...................... (!P    (~~~~)))   /|  + +          +            
+............................ (!A>    (~~~~~~~~~##        + +        +        
+............................. ~~(!    '~~~~~~~ \       +     + +      +      
+...............................  `~~~QQQQQDb //   |         + + +        +   
+........................ ..........   IDDDDP||     \  + + + + +             +
+....................................  IDDDI||       \                      + 
+.................................... IHD HD||         \ + +  + + + + +      +
+...................................  IHD ##|            :-) + +\          +  
+......... ............... ......... IHI ## /      /   +  + + + +\       +    
+................................... IHI/ /       /      + + + +        +     
+................................... ## | | /    / + +      + + /      +      
+....................... /TT\ .....  ##/ ///  / + + + + + + +/       +        
+......................./TTT/T\ ... /TT\/\\\ / + + + + + + +/   \         +   
+....................../TTT/TTTT\...|TT/T\\\/   +    ++  + /              
+-----------------------------------------------------------------------------
+
+     SHERPA version 2.2.8 (Cho Oyu)
+                                                                             
+     Authors:        Enrico Bothmann, Stefan Hoeche, Frank Krauss,           
+                     Silvan Kuttimalai, Marek Schoenherr, Holger Schulz,     
+                     Steffen Schumann, Frank Siegert, Korinna Zapp           
+     Former Authors: Timo Fischer, Tanju Gleisberg, Hendrik Hoeth,           
+                     Ralf Kuhn, Thomas Laubrich, Andreas Schaelicke,         
+                     Jan Winter                                              
+                                                                             
+     This program uses a lot of genuine and original research work           
+     by other people. Users are encouraged to refer to                       
+     the various original publications.                                      
+                                                                             
+     Users are kindly asked to refer to the documentation                    
+     published under JHEP 02(2009)007                                        
+                                                                             
+     Please visit also our homepage                                          
+                                                                             
+       http://sherpa.hepforge.org                                            
+                                                                             
+     for news, bugreports, updates and new releases.                         
+                                                                             
+-----------------------------------------------------------------------------
+
+WARNING: You are using an unsupported development branch.
+Git branch master, revision 6881713ab01a5b0b71db5e3d5db6895121272c0c.
+
+Beam_Spectra_Handler : 
+   type = Monochromatic*Monochromatic
+   for    P+  ((6500,0,0,6500))
+   and    P+  ((6500,0,0,-6500))
+PDF set 'NNPDF31_nnlo_as_0118_mc_hessian_pdfas' loaded for beam 1 (P+).
+PDF set 'NNPDF31_nnlo_as_0118_mc_hessian_pdfas' loaded for beam 2 (P+).
+Initialized the ISR: (SF)*(SF)
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+ List of Particle Data 
+  IDName     kfc  MASS[<kfc>]   WIDTH[<kfc>]  STABLE[<kfc>] MASSIVE[<kfc>]  ACTIVE[<kfc>]  YUKAWA[<kfc>]
+       d       1         0.01              0              1              0              1              0
+       u       2        0.005              0              1              0              1              0
+       s       3          0.2              0              1              0              1              0
+       c       4         1.42              0              1              0              1              0
+       b       5          4.8              0              1              0              1              0
+       t       6       173.21              2              0              1              1         173.21
+      e-      11     0.000511              0              1              0              1              0
+      ve      12            0              0              1              0              1              0
+     mu-      13        0.105              0              1              0              1              0
+     vmu      14            0              0              1              0              1              0
+    tau-      15        1.777    2.26735e-12              0              0              1              0
+    vtau      16            0              0              1              0              1              0
+       G      21            0              0              1              0              1              0
+       P      22            0              0              1              0              1              0
+       Z      23      91.1876         2.4952              0              1              1        91.1876
+      W+      24       80.385         31.275              0              1              1         80.385
+      h0      25          125        0.00407              0              1              1            125
+
+ List of Particle Containers 
+    IDName     kfc     Constituents
+         l      90     {e-,e+,mu-,mu+,tau-,tau+}
+         v      91     {ve,veb,vmu,vmub,vtau,vtaub}
+         j      93     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         Q      94     {d,db,u,ub,s,sb,c,cb,b,bb}
+         r      99     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set exclusive cluster mode 1.
+CS_Shower::CS_Shower(): Set color setter mode 0
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set exclusive cluster mode 1.
+CS_Shower::CS_Shower(): Set color setter mode 0
+Initialized the Shower_Handler.
++-----------------------------------------+
+|   X   X   X XXXX  XXX  XXX  XXX         |
+|  X X  XX XX X    X      X  X     X   X  |
+| X   X X X X XXX  X XXX  X  X    XXX XXX |
+| XXXXX X   X X    X   X  X  X     X   X  |
+| X   X X   X XXXX  XXX  XXX  XXX         |
++-----------------------------------------+
+| please cite: JHEP 0202:044,2002         |
++-----------------------------------------+
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Comix: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
++----------------------------------+
+|                                  |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mMM[0m [34mMM[0m I  [33mX[0m [33mX[0m      |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m [34mM[0m [34mM[0m I   [33mX[0m       |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m   [34mM[0m I  [33mX[0m [33mX[0m      |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|                                  |
++==================================+
+|  Color dressed  Matrix Elements  |
+|     http://comix.freacafe.de     |
+|   please cite  JHEP12(2008)039   |
++----------------------------------+
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Amegic: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
+Amegic::Initialize(): Set gauge 1.
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Internal: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
+Matrix_Element_Handler::BuildProcesses(): Looking for processes ................................................................................................................................................ done ( 53 MB, 0s / 0s ).
+Matrix_Element_Handler::InitializeProcesses(): Performing tests 
+  Amplitude::GaugeTest(): Large deviation {
+         2.78843085756e-25
+     vs   2.7884308569e-25
+     =>  2.34269714738e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.04107019651e-25
+     vs  2.04107019669e-25
+     => -8.53466186612e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         6.51876892779e-23
+     vs  6.51876895789e-23
+     =>  -4.6173885826e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.32832253316e-25
+     vs  2.32832252966e-25
+     =>  1.50300127899e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.54875866288e-23
+     vs  1.54875866303e-23
+     => -9.55304724215e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.80120383118e-22
+     vs  1.80120383104e-22
+     =>  7.79676323504e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.25166210001e-26
+     vs  1.25166209153e-26
+     =>  6.78098910356e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.80603820835e-25
+     vs  8.80603820945e-25
+     => -1.24568688697e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.22438384399e-24
+     vs  3.22438384392e-24
+     =>  2.25803820086e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.00649010229e-25
+     vs  2.00649010264e-25
+     =>  -1.7050505452e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.96314199571e-25
+     vs  2.96314199465e-25
+     =>  3.60008467482e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.04501464077e-27
+     vs  6.04501464564e-27
+     => -8.06110844742e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.05646397348e-27
+     vs  2.05646397349e-27
+     => -2.23021601187e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.78876963774e-25
+     vs  2.78876965436e-25
+     => -5.96157201382e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.99521973359e-23
+     vs  3.99521973375e-23
+     => -3.89226428865e-11
+  }
+...
+  Amplitude::GaugeTest(): Large deviation {
+         7.91066246089e-23
+     vs  7.91066246103e-23
+     => -1.76275660735e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.89227618396e-26
+     vs   2.8922761819e-26
+     =>  7.10315584129e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.18753228925e-24
+     vs  5.18753228913e-24
+     =>  2.28901342325e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.74754142555e-24
+     vs  1.74754142559e-24
+     => -2.37045938434e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.26373301975e-26
+     vs  2.26373301693e-26
+     =>  1.24368293442e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.21098533292e-23
+     vs  2.21098533286e-23
+     =>  2.50617304687e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.71739809666e-25
+     vs  5.71739814602e-25
+     => -8.63296023557e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          3.3454729762e-24
+     vs  3.34547297618e-24
+     =>  3.17079695833e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.91695683798e-27
+     vs  4.91695683123e-27
+     =>  1.37155864444e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         9.70612385013e-27
+     vs  9.70612383886e-27
+     =>  1.16153064944e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         2.02492800675e-24
+     vs  2.02492800636e-24
+     =>  1.91888505086e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.11630930086e-22
+     vs   1.1163093007e-22
+     =>  1.46002987478e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.00301249449e-26
+     vs   3.0030124952e-26
+     => -2.35187758157e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.07458028533e-26
+     vs  5.07458029114e-26
+     => -1.14433862386e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.18861437238e-23
+     vs  1.18861437243e-23
+     => -4.00705024717e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.67279975474e-25
+     vs  1.67279975439e-25
+     =>  2.07318384682e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         7.36360423088e-25
+     vs  7.36360423024e-25
+     =>  8.70588046098e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.92932363664e-25
+     vs  1.92932363598e-25
+     =>  3.44085648862e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.09888302528e-24
+     vs   2.0988830254e-24
+     => -5.80744341505e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         4.46175782045e-27
+     vs  4.46175782046e-27
+     => -2.46025422257e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.23927959674e-25
+     vs  8.23927959431e-25
+     =>  2.94212432195e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          2.3505977427e-26
+     vs  2.35059774278e-26
+     => -3.33147953668e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.77997476234e-24
+     vs  2.77997476124e-24
+     =>  3.95294019739e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.77519900647e-25
+     vs  2.77519900607e-25
+     =>  1.45623291203e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.91748346459e-27
+     vs  3.91748346284e-27
+     =>  4.45772085911e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.22609972079e-27
+     vs  1.22609972563e-27
+     => -3.94885546484e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.78766833387e-26
+     vs  6.78766832781e-26
+     =>  8.92384832696e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.29403467362e-23
+     vs  1.29403467389e-23
+     =>  -2.0283730251e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.45807113705e-26
+     vs  5.45807114284e-26
+     => -1.06049180548e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.34750014643e-25
+     vs   6.3475001461e-25
+     =>  5.22912824152e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         5.40148304938e-24
+     vs  5.40148305016e-24
+     => -1.44770972987e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.88882386635e-28
+     vs  5.88882384002e-28
+     =>  4.47236181422e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.87326758817e-25
+     vs  6.87326759033e-25
+     => -3.14266612733e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.69948760935e-25
+     vs   2.6994876072e-25
+     =>  7.96284371773e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.74491056072e-25
+     vs  2.74491056004e-25
+     =>  2.48066012176e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.57625910153e-26
+     vs  4.57625910114e-26
+     =>  8.51752002262e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.21065112272e-23
+     vs  2.21065113412e-23
+     => -5.15472464713e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         3.52028406357e-26
+     vs  3.52028407506e-26
+     =>  -3.2634259739e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+           8.895605578e-27
+     vs  8.89560553957e-27
+     =>  4.32069069412e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.83139909344e-27
+     vs  6.83139906671e-27
+     =>  3.91275545297e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         5.84351504297e-24
+     vs  5.84351504324e-24
+     => -4.70277150555e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         7.11676657171e-25
+     vs  7.11676653769e-25
+     =>    4.779370677e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.40664349592e-26
+     vs  5.40664349716e-26
+     => -2.29390728634e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.48132759354e-25
+     vs  5.48132759311e-25
+     =>  7.84339260207e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.51365617668e-26
+     vs  3.51365617199e-26
+     =>  1.33635369437e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.02739730858e-28
+     vs  1.02739730588e-28
+     =>  2.63048316462e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.29024240387e-25
+     vs  2.29024240294e-25
+     =>  4.05840694384e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         2.20895027287e-24
+     vs  2.20895027289e-24
+     => -9.78594982826e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.84042105409e-26
+     vs  3.84042105506e-26
+     => -2.51337395341e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.62130828242e-28
+     vs  2.62130827876e-28
+     =>  1.39583566927e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         2.33011756455e-26
+     vs  2.33011756619e-26
+     => -7.02297664468e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.50810040216e-26
+     vs  1.50810039921e-26
+     =>  1.95545002413e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.37774270229e-24
+     vs   1.3777427045e-24
+     => -1.60873792066e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         6.11530830036e-25
+     vs  6.11530830015e-25
+     =>  3.52857743025e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.14663812909e-26
+     vs  8.14663814356e-26
+     => -1.77627790254e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          4.5222783165e-26
+     vs  4.52227831653e-26
+     => -7.96784860313e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.22049079894e-23
+     vs  2.22049080076e-23
+     => -8.20273737823e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.05122744899e-24
+     vs  3.05122744952e-24
+     => -1.72308722846e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.78945536934e-24
+     vs   5.7894553685e-24
+     =>  1.45214951175e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          1.5128135209e-24
+     vs  1.51281350027e-24
+     =>  1.36359084024e-08
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.84324346956e-27
+     vs  3.84324346792e-27
+     =>  4.27393676006e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.2493587763e-25
+     vs   1.2493587757e-25
+     =>  4.83859841083e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.36807554332e-25
+     vs  8.36807555165e-25
+     => -9.96430049582e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.73164359901e-26
+     vs  1.73164359971e-26
+     => -4.06810696241e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.94662593557e-24
+     vs  1.94662593567e-24
+     => -5.31402699622e-11
+  }
+...
+  Amplitude::GaugeTest(): Large deviation {
+         1.02095198232e-25
+     vs  1.02095198238e-25
+     => -5.65503199823e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.50227550821e-27
+     vs  1.50227550556e-27
+     =>  1.76129555385e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.2126124452e-28
+     vs  1.21261242846e-28
+     =>   1.3802461396e-08
+  }
+...
+  Amplitude::GaugeTest(): Large deviation {
+         2.92931657973e-26
+     vs  2.92931657727e-26
+     =>  8.40378211464e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.22287162596e-24
+     vs  4.22287162978e-24
+     => -9.06232866527e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.67295400828e-25
+     vs   4.6729540088e-25
+     => -1.10929043728e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.56728602088e-25
+     vs  1.56728601982e-25
+     =>  6.78846534541e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          9.7070175459e-26
+     vs  9.70701756641e-26
+     => -2.11246875548e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.42051322451e-26
+     vs  2.42051320326e-26
+     =>  8.78009265293e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.45111493281e-25
+     vs  1.45111493334e-25
+     => -3.69477448636e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         9.68797293224e-26
+     vs  9.68797293355e-26
+     => -1.35968014625e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.49503339805e-26
+     vs  3.49503339952e-26
+     => -4.19592027789e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         7.37062654967e-25
+     vs  7.37062655299e-25
+     => -4.50067649815e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.47952526254e-27
+     vs  3.47952529402e-27
+     => -9.04790908862e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.94675230515e-25
+     vs  2.94675230487e-25
+     =>  9.44992972762e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.69112252448e-26
+     vs  2.69112252522e-26
+     => -2.73787881255e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.29916136833e-27
+     vs  8.29916135806e-27
+     =>  1.23742616154e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.66113733808e-23
+     vs   1.6611373381e-23
+     => -9.05520103345e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.95977295333e-26
+     vs  1.95977293979e-26
+     =>  6.90722679053e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.85341029265e-26
+     vs  2.85341029268e-26
+     => -1.06118447363e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.45554465567e-26
+     vs  1.45554465301e-26
+     =>  1.83073556315e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.57437072653e-26
+     vs  5.57437073931e-26
+     => -2.29285823661e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.0730577869e-26
+     vs  1.07305778604e-26
+     =>  8.05267630355e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          1.6846659737e-26
+     vs  1.68466596777e-26
+     =>  3.51765461204e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         7.50887327965e-28
+     vs  7.50887327547e-28
+     =>  5.57840440507e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.9993414756e-24
+     vs  1.99934147475e-24
+     =>  4.26802149178e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         9.85392353074e-25
+     vs  9.85392351839e-25
+     =>  1.25339894019e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.80857834048e-26
+     vs  3.80857834402e-26
+     => -9.29856858178e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.24701838526e-27
+     vs  2.24701836978e-27
+     =>  6.88987711328e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.39303798787e-27
+     vs  1.39303798786e-27
+     =>   6.8935968045e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.20390050425e-27
+     vs  3.20390050906e-27
+     => -1.49918932824e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.83020003751e-23
+     vs  1.83020003691e-23
+     =>  3.27675886425e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.87487478544e-28
+     vs  2.87487478266e-28
+     =>   9.6680086159e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.26976492321e-25
+     vs  1.26976492352e-25
+     => -2.45200637572e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.51574882743e-26
+     vs  5.51574882726e-26
+     =>  3.19375637048e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.10509621618e-23
+     vs  1.10509621608e-23
+     =>   9.6958885365e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.55972202449e-27
+     vs  2.55972200728e-27
+     =>  6.72015509906e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.16184521304e-26
+     vs  3.16184521046e-26
+     =>  8.17551137899e-10
+  }
+. done ( 53 MB, 0s / 0s ).
+Initialized the Matrix_Element_Handler for the hard processes.
+Initialized the Beam_Remnant_Handler.
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[e-__veb]__W-[e-__veb]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 23:20:59. Lean back and enjoy ... .
+[34m4.22981e-07 pb[0m +- ( [31m1.1804e-07 pb = 27.9066 %[0m ) 25000 ( 132236 -> 18.9 % )
+full optimization:  ( 5s elapsed / 5m 51s left ) [23:21:04]   
+[34m4.13894e-07 pb[0m +- ( [31m8.46094e-08 pb = 20.4423 %[0m ) 50000 ( 195194 -> 39.7 % )
+full optimization:  ( 10s elapsed / 5m 35s left ) [23:21:10]   
+[34m3.83303e-07 pb[0m +- ( [31m6.65145e-08 pb = 17.353 %[0m ) 75000 ( 249313 -> 46.1 % )
+full optimization:  ( 15s elapsed / 5m 26s left ) [23:21:15]   
+[34m3.68131e-07 pb[0m +- ( [31m5.63937e-08 pb = 15.3189 %[0m ) 100000 ( 295062 -> 54.6 % )
+full optimization:  ( 20s elapsed / 5m 18s left ) [23:21:20]   
+[34m3.60263e-07 pb[0m +- ( [31m4.92973e-08 pb = 13.6837 %[0m ) 125000 ( 339250 -> 56.5 % )
+full optimization:  ( 25s elapsed / 5m 11s left ) [23:21:25]   
+[34m3.69877e-07 pb[0m +- ( [31m4.59524e-08 pb = 12.4237 %[0m ) 150000 ( 383967 -> 55.9 % )
+full optimization:  ( 31s elapsed / 5m 6s left ) [23:21:31]   
+[34m3.84282e-07 pb[0m +- ( [31m3.89046e-08 pb = 10.124 %[0m ) 200000 ( 460273 -> 65.5 % )
+full optimization:  ( 41s elapsed / 4m 53s left ) [23:21:41]   
+[34m4.0864e-07 pb[0m +- ( [31m3.44571e-08 pb = 8.43215 %[0m ) 250000 ( 533977 -> 67.8 % )
+full optimization:  ( 51s elapsed / 4m 42s left ) [23:21:51]   
+[34m4.89663e-07 pb[0m +- ( [31m7.0214e-08 pb = 14.3393 %[0m ) 300000 ( 603114 -> 72.3 % )
+full optimization:  ( 1m 1s elapsed / 4m 31s left ) [23:22:02]   
+[34m5.10944e-07 pb[0m +- ( [31m6.2931e-08 pb = 12.3166 %[0m ) 350000 ( 675915 -> 68.6 % )
+full optimization:  ( 1m 11s elapsed / 4m 20s left ) [23:22:12]   
+[34m5.22646e-07 pb[0m +- ( [31m5.63771e-08 pb = 10.7869 %[0m ) 400000 ( 755265 -> 63 % )
+full optimization:  ( 1m 21s elapsed / 4m 9s left ) [23:22:22]   
+[34m5.30446e-07 pb[0m +- ( [31m5.07389e-08 pb = 9.56533 %[0m ) 450000 ( 839786 -> 59.1 % )
+full optimization:  ( 1m 31s elapsed / 3m 59s left ) [23:22:33]   
+[34m5.39686e-07 pb[0m +- ( [31m4.59209e-08 pb = 8.50882 %[0m ) 500000 ( 928449 -> 56.3 % )
+full optimization:  ( 1m 41s elapsed / 3m 48s left ) [23:22:43]   
+[34m5.44272e-07 pb[0m +- ( [31m4.18064e-08 pb = 7.68116 %[0m ) 550000 ( 1020309 -> 54.4 % )
+full optimization:  ( 1m 50s elapsed / 3m 37s left ) [23:22:53]   
+[34m5.5174e-07 pb[0m +- ( [31m3.82304e-08 pb = 6.92907 %[0m ) 600000 ( 1116844 -> 51.7 % )
+full optimization:  ( 1m 59s elapsed / 3m 25s left ) [23:23:03]   
+[34m5.57687e-07 pb[0m +- ( [31m3.50317e-08 pb = 6.28162 %[0m ) 650000 ( 1219673 -> 48.6 % )
+full optimization:  ( 2m 9s elapsed / 3m 15s left ) [23:23:14]   
+[34m5.64238e-07 pb[0m +- ( [31m3.2308e-08 pb = 5.72595 %[0m ) 700000 ( 1323626 -> 48 % )
+full optimization:  ( 2m 20s elapsed / 3m 5s left ) [23:23:24]   
+[34m5.70141e-07 pb[0m +- ( [31m2.99272e-08 pb = 5.24908 %[0m ) 750000 ( 1430000 -> 47 % )
+full optimization:  ( 2m 30s elapsed / 2m 55s left ) [23:23:35]   
+[34m5.73255e-07 pb[0m +- ( [31m2.7865e-08 pb = 4.86084 %[0m ) 800000 ( 1536839 -> 46.7 % )
+full optimization:  ( 2m 40s elapsed / 2m 45s left ) [23:23:45]   
+[34m5.75023e-07 pb[0m +- ( [31m2.60628e-08 pb = 4.53248 %[0m ) 850000 ( 1643956 -> 46.6 % )
+full optimization:  ( 2m 50s elapsed / 2m 35s left ) [23:23:55]   
+[34m5.80706e-07 pb[0m +- ( [31m2.45075e-08 pb = 4.22029 %[0m ) 900000 ( 1749814 -> 47.2 % )
+full optimization:  ( 3m elapsed / 2m 26s left ) [23:24:06]   
+[34m5.83961e-07 pb[0m +- ( [31m2.31438e-08 pb = 3.96325 %[0m ) 950000 ( 1854008 -> 47.9 % )
+full optimization:  ( 3m 10s elapsed / 2m 16s left ) [23:24:16]   
+[34m5.8505e-07 pb[0m +- ( [31m2.19195e-08 pb = 3.74661 %[0m ) 1000000 ( 1958570 -> 47.8 % )
+full optimization:  ( 3m 21s elapsed / 2m 5s left ) [23:24:27]   
+[34m5.86919e-07 pb[0m +- ( [31m2.08298e-08 pb = 3.54901 %[0m ) 1050000 ( 2062449 -> 48.1 % )
+full optimization:  ( 3m 31s elapsed / 1m 56s left ) [23:24:37]   
+[34m5.88288e-07 pb[0m +- ( [31m1.98022e-08 pb = 3.36607 %[0m ) 1100000 ( 2170973 -> 46 % )
+full optimization:  ( 3m 41s elapsed / 1m 46s left ) [23:24:48]   
+[34m5.89347e-07 pb[0m +- ( [31m1.88802e-08 pb = 3.20358 %[0m ) 1150000 ( 2278466 -> 46.5 % )
+integration time:  ( 3m 52s elapsed / 1m 36s left ) [23:24:58]   
+[34m5.91926e-07 pb[0m +- ( [31m1.72779e-08 pb = 2.91892 %[0m ) 1250000 ( 2493428 -> 46.5 % )
+integration time:  ( 4m 13s elapsed / 1m 16s left ) [23:25:19]   
+[34m5.95328e-07 pb[0m +- ( [31m1.59426e-08 pb = 2.67796 %[0m ) 1350000 ( 2709418 -> 46.4 % )
+integration time:  ( 4m 33s elapsed / 56s left ) [23:25:40]   
+[34m5.96698e-07 pb[0m +- ( [31m1.47893e-08 pb = 2.47852 %[0m ) 1450000 ( 2924553 -> 46.4 % )
+integration time:  ( 4m 54s elapsed / 35s left ) [23:26:01]   
+[34m5.98293e-07 pb[0m +- ( [31m1.37995e-08 pb = 2.30648 %[0m ) 1550000 ( 3138636 -> 46.5 % )
+integration time:  ( 5m 15s elapsed / 15s left ) [23:26:22]   
+[1m2_6__j__j__W-[e-__veb]__W-[e-__veb]__j__j[0m : [34m[1m5.98293e-07 pb[0m +- ( [31m1.37995e-08 pb = 2.30648 %[0m ) [1m exp. eff: [31m0.0182074 %[0m
+  reduce max for 2_6__j__j__W-[e-__veb]__W-[e-__veb]__j__j to 0.844178 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[mu-__vmub]__W-[mu-__vmub]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 23:26:23. Lean back and enjoy ... .
+[34m2.67501e-07 pb[0m +- ( [31m3.73366e-08 pb = 13.9575 %[0m ) 25000 ( 132118 -> 18.9 % )
+full optimization:  ( 5s elapsed / 5m 53s left ) [23:26:28]   
+[34m2.71624e-07 pb[0m +- ( [31m2.68857e-08 pb = 9.89811 %[0m ) 50000 ( 190271 -> 42.9 % )
+full optimization:  ( 10s elapsed / 5m 38s left ) [23:26:33]   
+[34m2.76499e-07 pb[0m +- ( [31m2.17657e-08 pb = 7.8719 %[0m ) 75000 ( 241348 -> 48.9 % )
+full optimization:  ( 15s elapsed / 5m 26s left ) [23:26:39]   
+[34m2.74885e-07 pb[0m +- ( [31m1.86965e-08 pb = 6.80158 %[0m ) 100000 ( 288174 -> 53.3 % )
+full optimization:  ( 20s elapsed / 5m 17s left ) [23:26:44]   
+[34m2.80549e-07 pb[0m +- ( [31m1.66959e-08 pb = 5.95114 %[0m ) 125000 ( 332785 -> 56 % )
+full optimization:  ( 25s elapsed / 5m 10s left ) [23:26:49]   
+[34m2.92436e-07 pb[0m +- ( [31m1.71458e-08 pb = 5.8631 %[0m ) 150000 ( 376552 -> 57.1 % )
+full optimization:  ( 30s elapsed / 5m 5s left ) [23:26:54]   
+[34m3.80367e-07 pb[0m +- ( [31m6.53422e-08 pb = 17.1787 %[0m ) 200000 ( 449355 -> 68.6 % )
+full optimization:  ( 40s elapsed / 4m 52s left ) [23:27:05]   
+[34m4.20556e-07 pb[0m +- ( [31m6.1752e-08 pb = 14.6834 %[0m ) 250000 ( 519450 -> 71.3 % )
+full optimization:  ( 51s elapsed / 4m 40s left ) [23:27:15]   
+[34m4.44297e-07 pb[0m +- ( [31m5.4845e-08 pb = 12.3442 %[0m ) 300000 ( 592531 -> 68.4 % )
+full optimization:  ( 1m 1s elapsed / 4m 29s left ) [23:27:25]   
+[34m4.58987e-07 pb[0m +- ( [31m4.86887e-08 pb = 10.6079 %[0m ) 350000 ( 669003 -> 65.3 % )
+full optimization:  ( 1m 11s elapsed / 4m 19s left ) [23:27:36]   
+[34m4.74535e-07 pb[0m +- ( [31m4.35366e-08 pb = 9.17459 %[0m ) 400000 ( 749332 -> 62.2 % )
+full optimization:  ( 1m 21s elapsed / 4m 9s left ) [23:27:47]   
+[34m4.91623e-07 pb[0m +- ( [31m3.92467e-08 pb = 7.98309 %[0m ) 450000 ( 832770 -> 59.9 % )
+full optimization:  ( 1m 31s elapsed / 4m left ) [23:27:57]   
+[34m5.04653e-07 pb[0m +- ( [31m3.55384e-08 pb = 7.04215 %[0m ) 500000 ( 920650 -> 56.8 % )
+full optimization:  ( 1m 41s elapsed / 3m 50s left ) [23:28:08]   
+[34m5.15712e-07 pb[0m +- ( [31m3.2328e-08 pb = 6.26861 %[0m ) 550000 ( 1012960 -> 54.1 % )
+full optimization:  ( 1m 52s elapsed / 3m 39s left ) [23:28:19]   
+[34m5.24331e-07 pb[0m +- ( [31m2.95536e-08 pb = 5.63644 %[0m ) 600000 ( 1108932 -> 52 % )
+full optimization:  ( 2m 2s elapsed / 3m 29s left ) [23:28:29]   
+[34m5.30037e-07 pb[0m +- ( [31m2.71369e-08 pb = 5.11981 %[0m ) 650000 ( 1208558 -> 50.1 % )
+full optimization:  ( 2m 12s elapsed / 3m 18s left ) [23:28:39]   
+[34m5.35731e-07 pb[0m +- ( [31m2.50707e-08 pb = 4.67971 %[0m ) 700000 ( 1309285 -> 49.6 % )
+full optimization:  ( 2m 22s elapsed / 3m 8s left ) [23:28:49]   
+[34m5.41186e-07 pb[0m +- ( [31m2.32194e-08 pb = 4.29047 %[0m ) 750000 ( 1415135 -> 47.2 % )
+full optimization:  ( 2m 32s elapsed / 2m 58s left ) [23:29:00]   
+[34m5.45719e-07 pb[0m +- ( [31m2.16178e-08 pb = 3.96134 %[0m ) 800000 ( 1521406 -> 47 % )
+full optimization:  ( 2m 42s elapsed / 2m 48s left ) [23:29:10]   
+[34m5.52294e-07 pb[0m +- ( [31m2.02341e-08 pb = 3.66364 %[0m ) 850000 ( 1627686 -> 47 % )
+full optimization:  ( 2m 53s elapsed / 2m 38s left ) [23:29:21]   
+[34m5.56871e-07 pb[0m +- ( [31m1.90347e-08 pb = 3.41815 %[0m ) 900000 ( 1732251 -> 47.8 % )
+full optimization:  ( 3m 3s elapsed / 2m 28s left ) [23:29:31]   
+[34m5.59957e-07 pb[0m +- ( [31m1.79648e-08 pb = 3.20824 %[0m ) 950000 ( 1837487 -> 47.5 % )
+full optimization:  ( 3m 13s elapsed / 2m 18s left ) [23:29:41]   
+[34m5.62074e-07 pb[0m +- ( [31m1.70185e-08 pb = 3.02781 %[0m ) 1000000 ( 1941298 -> 48.1 % )
+full optimization:  ( 3m 23s elapsed / 2m 8s left ) [23:29:52]   
+[34m5.65398e-07 pb[0m +- ( [31m1.61743e-08 pb = 2.8607 %[0m ) 1050000 ( 2044894 -> 48.2 % )
+full optimization:  ( 3m 34s elapsed / 1m 57s left ) [23:30:02]   
+[34m5.68595e-07 pb[0m +- ( [31m1.54045e-08 pb = 2.70923 %[0m ) 1100000 ( 2149256 -> 47.9 % )
+full optimization:  ( 3m 44s elapsed / 1m 47s left ) [23:30:12]   
+[34m5.71122e-07 pb[0m +- ( [31m1.47015e-08 pb = 2.57414 %[0m ) 1150000 ( 2254264 -> 47.6 % )
+integration time:  ( 3m 54s elapsed / 1m 37s left ) [23:30:23]   
+[34m5.76756e-07 pb[0m +- ( [31m1.34828e-08 pb = 2.3377 %[0m ) 1250000 ( 2464412 -> 47.5 % )
+integration time:  ( 4m 15s elapsed / 1m 17s left ) [23:30:44]   
+[34m5.79239e-07 pb[0m +- ( [31m1.24554e-08 pb = 2.15031 %[0m ) 1350000 ( 2673302 -> 47.7 % )
+integration time:  ( 4m 36s elapsed / 56s left ) [23:31:05]   
+[34m5.83218e-07 pb[0m +- ( [31m1.15787e-08 pb = 1.98531 %[0m ) 1450000 ( 2882883 -> 47.7 % )
+integration time:  ( 4m 57s elapsed / 36s left ) [23:31:27]   
+[34m5.86659e-07 pb[0m +- ( [31m1.08214e-08 pb = 1.84458 %[0m ) 1550000 ( 3092111 -> 47.7 % )
+integration time:  ( 5m 18s elapsed / 15s left ) [23:31:48]   
+[1m2_6__j__j__W-[mu-__vmub]__W-[mu-__vmub]__j__j[0m : [34m[1m5.86659e-07 pb[0m +- ( [31m1.08214e-08 pb = 1.84458 %[0m ) [1m exp. eff: [31m0.027454 %[0m
+  reduce max for 2_6__j__j__W-[mu-__vmub]__W-[mu-__vmub]__j__j to 0.726026 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[tau-__vtaub]__W-[tau-__vtaub]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 23:31:48. Lean back and enjoy ... .
+[34m2.53186e-07 pb[0m +- ( [31m3.29236e-08 pb = 13.0037 %[0m ) 25000 ( 131082 -> 19 % )
+full optimization:  ( 5s elapsed / 5m 47s left ) [23:31:53]   
+[34m2.63288e-07 pb[0m +- ( [31m2.4627e-08 pb = 9.35363 %[0m ) 50000 ( 195124 -> 39 % )
+full optimization:  ( 10s elapsed / 5m 34s left ) [23:31:59]   
+[34m2.95554e-07 pb[0m +- ( [31m2.69467e-08 pb = 9.11736 %[0m ) 75000 ( 246907 -> 48.2 % )
+full optimization:  ( 15s elapsed / 5m 22s left ) [23:32:04]   
+[34m3.0247e-07 pb[0m +- ( [31m2.30827e-08 pb = 7.6314 %[0m ) 100000 ( 294942 -> 52 % )
+full optimization:  ( 20s elapsed / 5m 15s left ) [23:32:09]   
+[34m3.07675e-07 pb[0m +- ( [31m2.07548e-08 pb = 6.74568 %[0m ) 125000 ( 342809 -> 52.2 % )
+full optimization:  ( 25s elapsed / 5m 8s left ) [23:32:14]   
+[34m3.22424e-07 pb[0m +- ( [31m2.00112e-08 pb = 6.2065 %[0m ) 150000 ( 389171 -> 53.9 % )
+full optimization:  ( 30s elapsed / 5m 4s left ) [23:32:20]   
+[34m3.35381e-07 pb[0m +- ( [31m1.72508e-08 pb = 5.14363 %[0m ) 200000 ( 467303 -> 63.9 % )
+full optimization:  ( 40s elapsed / 4m 52s left ) [23:32:31]   
+[34m3.76359e-07 pb[0m +- ( [31m2.20625e-08 pb = 5.8621 %[0m ) 250000 ( 541120 -> 67.7 % )
+full optimization:  ( 50s elapsed / 4m 40s left ) [23:32:41]   
+[34m4.08798e-07 pb[0m +- ( [31m2.51262e-08 pb = 6.14637 %[0m ) 300000 ( 613074 -> 69.4 % )
+full optimization:  ( 1m elapsed / 4m 29s left ) [23:32:51]   
+[34m4.29312e-07 pb[0m +- ( [31m2.28083e-08 pb = 5.31275 %[0m ) 350000 ( 688968 -> 65.8 % )
+full optimization:  ( 1m 10s elapsed / 4m 17s left ) [23:33:01]   
+[34m4.47753e-07 pb[0m +- ( [31m2.04573e-08 pb = 4.56888 %[0m ) 400000 ( 772257 -> 60 % )
+full optimization:  ( 1m 20s elapsed / 4m 7s left ) [23:33:12]   
+[34m4.66089e-07 pb[0m +- ( [31m1.84973e-08 pb = 3.96861 %[0m ) 450000 ( 859115 -> 57.5 % )
+full optimization:  ( 1m 30s elapsed / 3m 58s left ) [23:33:22]   
+[34m4.82275e-07 pb[0m +- ( [31m1.68688e-08 pb = 3.49775 %[0m ) 500000 ( 950659 -> 54.6 % )
+full optimization:  ( 1m 40s elapsed / 3m 47s left ) [23:33:33]   
+[34m4.94646e-07 pb[0m +- ( [31m1.54369e-08 pb = 3.12079 %[0m ) 550000 ( 1045728 -> 52.5 % )
+full optimization:  ( 1m 50s elapsed / 3m 37s left ) [23:33:43]   
+[34m5.07776e-07 pb[0m +- ( [31m1.41312e-08 pb = 2.78297 %[0m ) 600000 ( 1151067 -> 47.4 % )
+full optimization:  ( 2m 1s elapsed / 3m 26s left ) [23:33:54]   
+[34m5.18189e-07 pb[0m +- ( [31m1.30244e-08 pb = 2.51344 %[0m ) 650000 ( 1256147 -> 47.5 % )
+full optimization:  ( 2m 10s elapsed / 3m 17s left ) [23:34:04]   
+[34m5.2564e-07 pb[0m +- ( [31m1.20493e-08 pb = 2.29231 %[0m ) 700000 ( 1364788 -> 46 % )
+full optimization:  ( 2m 21s elapsed / 3m 6s left ) [23:34:14]   
+[34m5.3289e-07 pb[0m +- ( [31m1.12307e-08 pb = 2.1075 %[0m ) 750000 ( 1472428 -> 46.4 % )
+full optimization:  ( 2m 30s elapsed / 2m 56s left ) [23:34:25]   
+[34m5.38878e-07 pb[0m +- ( [31m1.05219e-08 pb = 1.95255 %[0m ) 800000 ( 1579749 -> 46.5 % )
+full optimization:  ( 2m 39s elapsed / 2m 45s left ) [23:34:35]   
+[34m5.43147e-07 pb[0m +- ( [31m9.87768e-09 pb = 1.8186 %[0m ) 850000 ( 1690142 -> 45.2 % )
+full optimization:  ( 2m 49s elapsed / 2m 35s left ) [23:34:45]   
+[34m5.47254e-07 pb[0m +- ( [31m9.31963e-09 pb = 1.70298 %[0m ) 900000 ( 1797955 -> 46.3 % )
+full optimization:  ( 2m 59s elapsed / 2m 25s left ) [23:34:56]   
+[34m5.52311e-07 pb[0m +- ( [31m8.85312e-09 pb = 1.60292 %[0m ) 950000 ( 1903152 -> 47.5 % )
+full optimization:  ( 3m 9s elapsed / 2m 15s left ) [23:35:06]   
+[34m5.56051e-07 pb[0m +- ( [31m8.43072e-09 pb = 1.51618 %[0m ) 1000000 ( 2007222 -> 48 % )
+full optimization:  ( 3m 20s elapsed / 2m 5s left ) [23:35:17]   
+[34m5.59657e-07 pb[0m +- ( [31m8.07967e-09 pb = 1.44368 %[0m ) 1050000 ( 2109391 -> 48.9 % )
+full optimization:  ( 3m 30s elapsed / 1m 55s left ) [23:35:27]   
+[34m5.62498e-07 pb[0m +- ( [31m7.74567e-09 pb = 1.37701 %[0m ) 1100000 ( 2209880 -> 49.7 % )
+full optimization:  ( 3m 40s elapsed / 1m 45s left ) [23:35:38]   
+[34m5.64446e-07 pb[0m +- ( [31m7.43583e-09 pb = 1.31737 %[0m ) 1150000 ( 2310193 -> 49.8 % )
+integration time:  ( 3m 51s elapsed / 1m 35s left ) [23:35:48]   
+[34m5.69123e-07 pb[0m +- ( [31m6.89902e-09 pb = 1.21222 %[0m ) 1250000 ( 2511972 -> 49.6 % )
+integration time:  ( 4m 11s elapsed / 1m 16s left ) [23:36:09]   
+[34m5.7474e-07 pb[0m +- ( [31m6.45154e-09 pb = 1.12251 %[0m ) 1350000 ( 2713444 -> 49.6 % )
+integration time:  ( 4m 32s elapsed / 55s left ) [23:36:30]   
+[34m5.76964e-07 pb[0m +- ( [31m6.05194e-09 pb = 1.04893 %[0m ) 1450000 ( 2914791 -> 49.6 % )
+integration time:  ( 4m 53s elapsed / 35s left ) [23:36:51]   
+[34m5.80384e-07 pb[0m +- ( [31m5.70843e-09 pb = 0.983562 %[0m ) 1550000 ( 3116698 -> 49.6 % )
+integration time:  ( 5m 13s elapsed / 16s left ) [23:37:12]   
+[1m2_6__j__j__W-[tau-__vtaub]__W-[tau-__vtaub]__j__j[0m : [34m[1m5.80384e-07 pb[0m +- ( [31m5.70843e-09 pb = 0.983562 %[0m ) [1m exp. eff: [31m0.0184881 %[0m
+  reduce max for 2_6__j__j__W-[tau-__vtaub]__W-[tau-__vtaub]__j__j to 0.656104 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[e-__veb]__W-[mu-__vmub]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 23:37:12. Lean back and enjoy ... .
+[34m3.2586e-07 pb[0m +- ( [31m3.97067e-08 pb = 12.1852 %[0m ) 25000 ( 130864 -> 19.1 % )
+full optimization:  ( 5s elapsed / 5m 47s left ) [23:37:18]   
+[34m3.16768e-07 pb[0m +- ( [31m3.0059e-08 pb = 9.48929 %[0m ) 50000 ( 188888 -> 43 % )
+full optimization:  ( 10s elapsed / 5m 34s left ) [23:37:23]   
+[34m3.11923e-07 pb[0m +- ( [31m2.4449e-08 pb = 7.83815 %[0m ) 75000 ( 237733 -> 51.1 % )
+full optimization:  ( 15s elapsed / 5m 26s left ) [23:37:28]   
+[34m3.84309e-07 pb[0m +- ( [31m6.14711e-08 pb = 15.9952 %[0m ) 100000 ( 283966 -> 54 % )
+full optimization:  ( 20s elapsed / 5m 17s left ) [23:37:33]   
+[34m4.56467e-07 pb[0m +- ( [31m1.05575e-07 pb = 23.1288 %[0m ) 125000 ( 328446 -> 56.2 % )
+full optimization:  ( 25s elapsed / 5m 10s left ) [23:37:39]   
+[34m4.40441e-07 pb[0m +- ( [31m9.37887e-08 pb = 21.2943 %[0m ) 150000 ( 369870 -> 60.3 % )
+full optimization:  ( 31s elapsed / 5m 5s left ) [23:37:44]   
+[34m4.26169e-07 pb[0m +- ( [31m7.83798e-08 pb = 18.3917 %[0m ) 200000 ( 442811 -> 68.5 % )
+full optimization:  ( 41s elapsed / 4m 54s left ) [23:37:55]   
+[34m4.26623e-07 pb[0m +- ( [31m6.79531e-08 pb = 15.9281 %[0m ) 250000 ( 511486 -> 72.8 % )
+full optimization:  ( 51s elapsed / 4m 42s left ) [23:38:05]   
+[34m5.16583e-07 pb[0m +- ( [31m9.81586e-08 pb = 19.0015 %[0m ) 300000 ( 578332 -> 74.7 % )
+full optimization:  ( 1m 1s elapsed / 4m 31s left ) [23:38:16]   
+[34m5.28156e-07 pb[0m +- ( [31m8.77172e-08 pb = 16.6082 %[0m ) 350000 ( 650539 -> 69.2 % )
+full optimization:  ( 1m 11s elapsed / 4m 20s left ) [23:38:26]   
+[34m5.4597e-07 pb[0m +- ( [31m7.84668e-08 pb = 14.372 %[0m ) 400000 ( 729600 -> 63.2 % )
+full optimization:  ( 1m 21s elapsed / 4m 10s left ) [23:38:37]   
+[34m5.5177e-07 pb[0m +- ( [31m7.06692e-08 pb = 12.8077 %[0m ) 450000 ( 810583 -> 61.7 % )
+full optimization:  ( 1m 31s elapsed / 4m left ) [23:38:47]   
+[34m5.61093e-07 pb[0m +- ( [31m6.39665e-08 pb = 11.4004 %[0m ) 500000 ( 896030 -> 58.5 % )
+full optimization:  ( 1m 41s elapsed / 3m 49s left ) [23:38:58]   
+[34m5.66661e-07 pb[0m +- ( [31m5.82414e-08 pb = 10.278 %[0m ) 550000 ( 984422 -> 56.5 % )
+full optimization:  ( 1m 51s elapsed / 3m 39s left ) [23:39:09]   
+[34m5.68817e-07 pb[0m +- ( [31m5.32521e-08 pb = 9.36191 %[0m ) 600000 ( 1076966 -> 54 % )
+full optimization:  ( 2m 1s elapsed / 3m 27s left ) [23:39:19]   
+[34m5.74474e-07 pb[0m +- ( [31m4.89277e-08 pb = 8.51696 %[0m ) 650000 ( 1172691 -> 52.2 % )
+full optimization:  ( 2m 9s elapsed / 3m 15s left ) [23:39:29]   
+[34m5.78497e-07 pb[0m +- ( [31m4.50241e-08 pb = 7.78294 %[0m ) 700000 ( 1274912 -> 48.9 % )
+full optimization:  ( 2m 20s elapsed / 3m 5s left ) [23:39:40]   
+[34m5.83131e-07 pb[0m +- ( [31m4.15761e-08 pb = 7.12981 %[0m ) 750000 ( 1381264 -> 47 % )
+full optimization:  ( 2m 30s elapsed / 2m 55s left ) [23:39:50]   
+[34m5.87597e-07 pb[0m +- ( [31m3.86549e-08 pb = 6.57847 %[0m ) 800000 ( 1486720 -> 47.4 % )
+full optimization:  ( 2m 40s elapsed / 2m 45s left ) [23:40:00]   
+[34m5.91557e-07 pb[0m +- ( [31m3.60645e-08 pb = 6.09655 %[0m ) 850000 ( 1594450 -> 46.4 % )
+full optimization:  ( 2m 50s elapsed / 2m 36s left ) [23:40:11]   
+[34m5.93408e-07 pb[0m +- ( [31m3.38195e-08 pb = 5.6992 %[0m ) 900000 ( 1700953 -> 46.9 % )
+full optimization:  ( 3m elapsed / 2m 26s left ) [23:40:21]   
+[34m5.97121e-07 pb[0m +- ( [31m3.18642e-08 pb = 5.33631 %[0m ) 950000 ( 1807275 -> 47 % )
+full optimization:  ( 3m 11s elapsed / 2m 15s left ) [23:40:32]   
+[34m5.99075e-07 pb[0m +- ( [31m3.00805e-08 pb = 5.02116 %[0m ) 1000000 ( 1915247 -> 46.3 % )
+full optimization:  ( 3m 21s elapsed / 2m 6s left ) [23:40:42]   
+[34m5.99802e-07 pb[0m +- ( [31m2.84906e-08 pb = 4.75 %[0m ) 1050000 ( 2022909 -> 46.4 % )
+full optimization:  ( 3m 31s elapsed / 1m 56s left ) [23:40:53]   
+[34m5.99191e-07 pb[0m +- ( [31m2.70658e-08 pb = 4.51705 %[0m ) 1100000 ( 2130075 -> 46.6 % )
+full optimization:  ( 3m 41s elapsed / 1m 46s left ) [23:41:03]   
+[34m6.00567e-07 pb[0m +- ( [31m2.57924e-08 pb = 4.29468 %[0m ) 1150000 ( 2236103 -> 47.1 % )
+integration time:  ( 3m 52s elapsed / 1m 36s left ) [23:41:14]   
+[34m6.02971e-07 pb[0m +- ( [31m2.35824e-08 pb = 3.91103 %[0m ) 1250000 ( 2447423 -> 47.2 % )
+integration time:  ( 4m 13s elapsed / 1m 16s left ) [23:41:35]   
+[34m6.05909e-07 pb[0m +- ( [31m2.17386e-08 pb = 3.58776 %[0m ) 1350000 ( 2659199 -> 47.2 % )
+integration time:  ( 4m 33s elapsed / 56s left ) [23:41:56]   
+[34m6.07619e-07 pb[0m +- ( [31m2.01483e-08 pb = 3.31594 %[0m ) 1450000 ( 2871223 -> 47.2 % )
+integration time:  ( 4m 54s elapsed / 36s left ) [23:42:17]   
+[34m6.09563e-07 pb[0m +- ( [31m1.87811e-08 pb = 3.08107 %[0m ) 1550000 ( 3082854 -> 47.2 % )
+integration time:  ( 5m 15s elapsed / 15s left ) [23:42:38]   
+[1m2_6__j__j__W-[e-__veb]__W-[mu-__vmub]__j__j[0m : [34m[1m6.09563e-07 pb[0m +- ( [31m1.87811e-08 pb = 3.08107 %[0m ) [1m exp. eff: [31m0.0187987 %[0m
+  reduce max for 2_6__j__j__W-[e-__veb]__W-[mu-__vmub]__j__j to 0.824909 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[e-__veb]__W-[tau-__vtaub]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 23:42:38. Lean back and enjoy ... .
+[34m3.24226e-07 pb[0m +- ( [31m4.36698e-08 pb = 13.469 %[0m ) 25000 ( 132346 -> 18.8 % )
+full optimization:  ( 5s elapsed / 5m 44s left ) [23:42:44]   
+[34m3.20874e-07 pb[0m +- ( [31m3.29613e-08 pb = 10.2724 %[0m ) 50000 ( 189448 -> 43.7 % )
+full optimization:  ( 10s elapsed / 5m 30s left ) [23:42:49]   
+[34m3.35418e-07 pb[0m +- ( [31m3.02923e-08 pb = 9.03121 %[0m ) 75000 ( 234932 -> 54.9 % )
+full optimization:  ( 15s elapsed / 5m 21s left ) [23:42:54]   
+[34m3.24964e-07 pb[0m +- ( [31m2.58682e-08 pb = 7.96033 %[0m ) 100000 ( 277870 -> 58.2 % )
+full optimization:  ( 20s elapsed / 5m 12s left ) [23:42:59]   
+[34m3.60506e-07 pb[0m +- ( [31m4.82538e-08 pb = 13.385 %[0m ) 125000 ( 320597 -> 58.5 % )
+full optimization:  ( 25s elapsed / 5m 5s left ) [23:43:04]   
+[34m5.81749e-07 pb[0m +- ( [31m2.14436e-07 pb = 36.8606 %[0m ) 150000 ( 358680 -> 65.6 % )
+full optimization:  ( 30s elapsed / 5m left ) [23:43:10]   
+[34m5.75732e-07 pb[0m +- ( [31m1.82627e-07 pb = 31.7209 %[0m ) 200000 ( 424807 -> 75.6 % )
+full optimization:  ( 40s elapsed / 4m 50s left ) [23:43:21]   
+[34m5.7766e-07 pb[0m +- ( [31m1.5959e-07 pb = 27.627 %[0m ) 250000 ( 489283 -> 77.5 % )
+full optimization:  ( 50s elapsed / 4m 37s left ) [23:43:31]   
+[34m5.89783e-07 pb[0m +- ( [31m1.42091e-07 pb = 24.0921 %[0m ) 300000 ( 553539 -> 77.8 % )
+full optimization:  ( 1m elapsed / 4m 27s left ) [23:43:41]   
+[34m5.99794e-07 pb[0m +- ( [31m1.27792e-07 pb = 21.3059 %[0m ) 350000 ( 616670 -> 79.2 % )
+full optimization:  ( 1m 10s elapsed / 4m 16s left ) [23:43:52]   
+[34m6.02634e-07 pb[0m +- ( [31m1.15097e-07 pb = 19.099 %[0m ) 400000 ( 686838 -> 71.2 % )
+full optimization:  ( 1m 20s elapsed / 4m 6s left ) [23:44:02]   
+[34m6.07666e-07 pb[0m +- ( [31m1.04699e-07 pb = 17.2296 %[0m ) 450000 ( 756218 -> 72 % )
+full optimization:  ( 1m 30s elapsed / 3m 57s left ) [23:44:13]   
+[34m6.03629e-07 pb[0m +- ( [31m9.52411e-08 pb = 15.7781 %[0m ) 500000 ( 831507 -> 66.4 % )
+full optimization:  ( 1m 40s elapsed / 3m 47s left ) [23:44:23]   
+[34m6.14369e-07 pb[0m +- ( [31m8.74329e-08 pb = 14.2313 %[0m ) 550000 ( 913127 -> 61.2 % )
+full optimization:  ( 1m 50s elapsed / 3m 37s left ) [23:44:34]   
+[34m6.12217e-07 pb[0m +- ( [31m7.92661e-08 pb = 12.9474 %[0m ) 600000 ( 1007656 -> 52.8 % )
+full optimization:  ( 2m elapsed / 3m 27s left ) [23:44:44]   
+[34m6.11162e-07 pb[0m +- ( [31m7.22138e-08 pb = 11.8158 %[0m ) 650000 ( 1106406 -> 50.6 % )
+full optimization:  ( 2m 11s elapsed / 3m 16s left ) [23:44:55]   
+[34m6.16122e-07 pb[0m +- ( [31m6.61783e-08 pb = 10.7411 %[0m ) 700000 ( 1208135 -> 49.1 % )
+full optimization:  ( 2m 21s elapsed / 3m 6s left ) [23:45:05]   
+[34m6.19954e-07 pb[0m +- ( [31m6.11607e-08 pb = 9.86537 %[0m ) 750000 ( 1307888 -> 50.1 % )
+full optimization:  ( 2m 31s elapsed / 2m 56s left ) [23:45:15]   
+[34m6.19724e-07 pb[0m +- ( [31m5.6701e-08 pb = 9.14939 %[0m ) 800000 ( 1411313 -> 48.3 % )
+full optimization:  ( 2m 41s elapsed / 2m 46s left ) [23:45:25]   
+[34m6.18174e-07 pb[0m +- ( [31m5.2972e-08 pb = 8.56911 %[0m ) 850000 ( 1511102 -> 50.1 % )
+full optimization:  ( 2m 51s elapsed / 2m 36s left ) [23:45:36]   
+[34m6.18014e-07 pb[0m +- ( [31m4.9758e-08 pb = 8.05127 %[0m ) 900000 ( 1609264 -> 50.9 % )
+full optimization:  ( 3m 1s elapsed / 2m 26s left ) [23:45:46]   
+[34m6.17395e-07 pb[0m +- ( [31m4.69254e-08 pb = 7.60055 %[0m ) 950000 ( 1706883 -> 51.2 % )
+full optimization:  ( 3m 11s elapsed / 2m 17s left ) [23:45:57]   
+[34m6.18159e-07 pb[0m +- ( [31m4.43702e-08 pb = 7.1778 %[0m ) 1000000 ( 1806041 -> 50.4 % )
+full optimization:  ( 3m 22s elapsed / 2m 6s left ) [23:46:07]   
+[34m6.1837e-07 pb[0m +- ( [31m4.20896e-08 pb = 6.80655 %[0m ) 1050000 ( 1904611 -> 50.7 % )
+full optimization:  ( 3m 31s elapsed / 1m 56s left ) [23:46:17]   
+[34m6.17851e-07 pb[0m +- ( [31m4.00371e-08 pb = 6.48006 %[0m ) 1100000 ( 2002909 -> 50.8 % )
+full optimization:  ( 3m 40s elapsed / 1m 45s left ) [23:46:28]   
+[34m6.1725e-07 pb[0m +- ( [31m3.82157e-08 pb = 6.19128 %[0m ) 1150000 ( 2099019 -> 52 % )
+integration time:  ( 3m 49s elapsed / 1m 35s left ) [23:46:38]   
+[34m6.17813e-07 pb[0m +- ( [31m3.50391e-08 pb = 5.67148 %[0m ) 1250000 ( 2293353 -> 51.6 % )
+integration time:  ( 4m 9s elapsed / 1m 15s left ) [23:46:59]   
+[34m6.20108e-07 pb[0m +- ( [31m3.2333e-08 pb = 5.2141 %[0m ) 1350000 ( 2487078 -> 51.6 % )
+integration time:  ( 4m 30s elapsed / 55s left ) [23:47:21]   
+[34m6.19105e-07 pb[0m +- ( [31m2.99965e-08 pb = 4.84514 %[0m ) 1450000 ( 2682432 -> 51.5 % )
+integration time:  ( 4m 51s elapsed / 35s left ) [23:47:41]   
+[34m6.1906e-07 pb[0m +- ( [31m2.79873e-08 pb = 4.52094 %[0m ) 1550000 ( 2877007 -> 51.4 % )
+integration time:  ( 5m 11s elapsed / 15s left ) [23:48:02]   
+[1m2_6__j__j__W-[e-__veb]__W-[tau-__vtaub]__j__j[0m : [34m[1m6.1906e-07 pb[0m +- ( [31m2.79873e-08 pb = 4.52094 %[0m ) [1m exp. eff: [31m0.00856034 %[0m
+  reduce max for 2_6__j__j__W-[e-__veb]__W-[tau-__vtaub]__j__j to 0.793566 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[mu-__vmub]__W-[tau-__vtaub]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 23:48:03. Lean back and enjoy ... .
+[34m3.383e-07 pb[0m +- ( [31m6.51651e-08 pb = 19.2625 %[0m ) 25000 ( 131746 -> 18.9 % )
+full optimization:  ( 5s elapsed / 5m 47s left ) [23:48:08]   
+[34m3.36712e-07 pb[0m +- ( [31m4.72925e-08 pb = 14.0454 %[0m ) 50000 ( 190651 -> 42.4 % )
+full optimization:  ( 10s elapsed / 5m 35s left ) [23:48:13]   
+[34m3.39483e-07 pb[0m +- ( [31m4.04662e-08 pb = 11.9199 %[0m ) 75000 ( 243968 -> 46.8 % )
+full optimization:  ( 15s elapsed / 5m 26s left ) [23:48:19]   
+[34m3.29485e-07 pb[0m +- ( [31m3.37503e-08 pb = 10.2433 %[0m ) 100000 ( 295765 -> 48.2 % )
+full optimization:  ( 20s elapsed / 5m 19s left ) [23:48:24]   
+[34m3.43263e-07 pb[0m +- ( [31m3.5855e-08 pb = 10.4453 %[0m ) 125000 ( 346152 -> 49.6 % )
+full optimization:  ( 26s elapsed / 5m 12s left ) [23:48:29]   
+[34m3.40259e-07 pb[0m +- ( [31m3.14858e-08 pb = 9.2535 %[0m ) 150000 ( 395870 -> 50.2 % )
+full optimization:  ( 31s elapsed / 5m 7s left ) [23:48:34]   
+[34m5.81494e-07 pb[0m +- ( [31m2.16128e-07 pb = 37.1676 %[0m ) 200000 ( 476753 -> 61.8 % )
+full optimization:  ( 41s elapsed / 4m 55s left ) [23:48:45]   
+[34m5.73512e-07 pb[0m +- ( [31m1.87413e-07 pb = 32.6782 %[0m ) 250000 ( 550057 -> 68.2 % )
+full optimization:  ( 51s elapsed / 4m 43s left ) [23:48:55]   
+[34m5.71933e-07 pb[0m +- ( [31m1.66026e-07 pb = 29.0288 %[0m ) 300000 ( 621056 -> 70.4 % )
+full optimization:  ( 1m 1s elapsed / 4m 31s left ) [23:49:06]   
+[34m5.76487e-07 pb[0m +- ( [31m1.48179e-07 pb = 25.7037 %[0m ) 350000 ( 695993 -> 66.7 % )
+full optimization:  ( 1m 11s elapsed / 4m 20s left ) [23:49:16]   
+[34m5.75678e-07 pb[0m +- ( [31m1.32897e-07 pb = 23.0852 %[0m ) 400000 ( 776086 -> 62.4 % )
+full optimization:  ( 1m 21s elapsed / 4m 10s left ) [23:49:26]   
+[34m5.82389e-07 pb[0m +- ( [31m1.19825e-07 pb = 20.5748 %[0m ) 450000 ( 860871 -> 58.9 % )
+full optimization:  ( 1m 31s elapsed / 3m 59s left ) [23:49:37]   
+[34m5.86569e-07 pb[0m +- ( [31m1.08661e-07 pb = 18.5249 %[0m ) 500000 ( 949396 -> 56.4 % )
+full optimization:  ( 1m 41s elapsed / 3m 49s left ) [23:49:47]   
+[34m5.88752e-07 pb[0m +- ( [31m9.9094e-08 pb = 16.8312 %[0m ) 550000 ( 1041135 -> 54.5 % )
+full optimization:  ( 1m 51s elapsed / 3m 39s left ) [23:49:57]   
+[34m5.91148e-07 pb[0m +- ( [31m9.09673e-08 pb = 15.3882 %[0m ) 600000 ( 1134228 -> 53.7 % )
+full optimization:  ( 2m 1s elapsed / 3m 28s left ) [23:50:08]   
+[34m5.93712e-07 pb[0m +- ( [31m8.39499e-08 pb = 14.1398 %[0m ) 650000 ( 1229141 -> 52.6 % )
+full optimization:  ( 2m 11s elapsed / 3m 18s left ) [23:50:18]   
+[34m5.96532e-07 pb[0m +- ( [31m7.78058e-08 pb = 13.043 %[0m ) 700000 ( 1326338 -> 51.4 % )
+full optimization:  ( 2m 22s elapsed / 3m 7s left ) [23:50:28]   
+[34m5.98237e-07 pb[0m +- ( [31m7.26078e-08 pb = 12.137 %[0m ) 750000 ( 1421426 -> 52.5 % )
+full optimization:  ( 2m 31s elapsed / 2m 58s left ) [23:50:38]   
+[34m6.01624e-07 pb[0m +- ( [31m6.80903e-08 pb = 11.3178 %[0m ) 800000 ( 1515904 -> 52.9 % )
+full optimization:  ( 2m 41s elapsed / 2m 47s left ) [23:50:48]   
+[34m6.01292e-07 pb[0m +- ( [31m6.40497e-08 pb = 10.652 %[0m ) 850000 ( 1611650 -> 52.2 % )
+full optimization:  ( 2m 52s elapsed / 2m 37s left ) [23:50:59]   
+[34m6.02066e-07 pb[0m +- ( [31m6.04735e-08 pb = 10.0443 %[0m ) 900000 ( 1707089 -> 52.3 % )
+full optimization:  ( 3m 2s elapsed / 2m 27s left ) [23:51:09]   
+[34m6.0338e-07 pb[0m +- ( [31m5.73057e-08 pb = 9.49745 %[0m ) 950000 ( 1801609 -> 52.8 % )
+full optimization:  ( 3m 11s elapsed / 2m 16s left ) [23:51:20]   
+[34m6.05152e-07 pb[0m +- ( [31m5.44856e-08 pb = 9.00362 %[0m ) 1000000 ( 1895119 -> 53.4 % )
+full optimization:  ( 3m 20s elapsed / 2m 6s left ) [23:51:30]   
+[34m6.07623e-07 pb[0m +- ( [31m5.19237e-08 pb = 8.54539 %[0m ) 1050000 ( 1988842 -> 53.3 % )
+full optimization:  ( 3m 31s elapsed / 1m 55s left ) [23:51:40]   
+[34m6.0778e-07 pb[0m +- ( [31m4.95863e-08 pb = 8.1586 %[0m ) 1100000 ( 2082780 -> 53.2 % )
+full optimization:  ( 3m 40s elapsed / 1m 45s left ) [23:51:51]   
+[34m6.08467e-07 pb[0m +- ( [31m4.74332e-08 pb = 7.79553 %[0m ) 1150000 ( 2177501 -> 52.7 % )
+integration time:  ( 3m 50s elapsed / 1m 35s left ) [23:52:01]   
+[34m6.08321e-07 pb[0m +- ( [31m4.36377e-08 pb = 7.17347 %[0m ) 1250000 ( 2367258 -> 52.7 % )
+integration time:  ( 4m 11s elapsed / 1m 15s left ) [23:52:22]   
+[34m6.0889e-07 pb[0m +- ( [31m4.04034e-08 pb = 6.63559 %[0m ) 1350000 ( 2557214 -> 52.6 % )
+integration time:  ( 4m 31s elapsed / 56s left ) [23:52:43]   
+[34m6.10209e-07 pb[0m +- ( [31m3.76214e-08 pb = 6.16533 %[0m ) 1450000 ( 2746836 -> 52.7 % )
+integration time:  ( 4m 52s elapsed / 36s left ) [23:53:04]   
+[34m6.11699e-07 pb[0m +- ( [31m3.52025e-08 pb = 5.75487 %[0m ) 1550000 ( 2936567 -> 52.7 % )
+integration time:  ( 5m 13s elapsed / 15s left ) [23:53:25]   
+[34m6.12194e-07 pb[0m +- ( [31m3.30748e-08 pb = 5.40267 %[0m ) 1650000 ( 3125961 -> 52.7 % )
+integration time:  ( 5m 34s elapsed / 0s left ) [23:53:46]   
+[34m6.13244e-07 pb[0m +- ( [31m3.11925e-08 pb = 5.08648 %[0m ) 1750000 ( 3315165 -> 52.7 % )
+integration time:  ( 5m 54s elapsed / 0s left ) [23:54:07]   
+Channel_Basics::SqLam argument -4.59374e-08 <0 in Channel_Basics::sqlam()
+s;s1;s2: 10002.8;10000.2;0.000169008
+[34m6.13255e-07 pb[0m +- ( [31m2.95053e-08 pb = 4.81126 %[0m ) 1850000 ( 3505318 -> 52.7 % )
+integration time:  ( 6m 12s elapsed / 0s left ) [23:54:28]   
+[1m2_6__j__j__W-[mu-__vmub]__W-[tau-__vtaub]__j__j[0m : [34m[1m6.13255e-07 pb[0m +- ( [31m2.95053e-08 pb = 4.81126 %[0m ) [1m exp. eff: [31m0.0205727 %[0m
+  reduce max for 2_6__j__j__W-[mu-__vmub]__W-[tau-__vtaub]__j__j to 0.753504 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[e+__ve]__W+[e+__ve]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 23:54:28. Lean back and enjoy ... .
+[34m9.18783e-07 pb[0m +- ( [31m1.49055e-07 pb = 16.2231 %[0m ) 25000 ( 132693 -> 18.8 % )
+full optimization:  ( 5s elapsed / 5m 42s left ) [23:54:34]   
+[34m1.07334e-06 pb[0m +- ( [31m1.61486e-07 pb = 15.0452 %[0m ) 50000 ( 189526 -> 43.9 % )
+full optimization:  ( 10s elapsed / 5m 30s left ) [23:54:39]   
+[34m1.10518e-06 pb[0m +- ( [31m1.37824e-07 pb = 12.4707 %[0m ) 75000 ( 230493 -> 61 % )
+full optimization:  ( 15s elapsed / 5m 19s left ) [23:54:44]   
+[34m1.44973e-06 pb[0m +- ( [31m3.71244e-07 pb = 25.6078 %[0m ) 100000 ( 269110 -> 64.7 % )
+full optimization:  ( 20s elapsed / 5m 12s left ) [23:54:49]   
+[34m1.41983e-06 pb[0m +- ( [31m3.28927e-07 pb = 23.1667 %[0m ) 125000 ( 305583 -> 68.5 % )
+full optimization:  ( 25s elapsed / 5m 4s left ) [23:54:54]   
+[34m1.46113e-06 pb[0m +- ( [31m3.07057e-07 pb = 21.0151 %[0m ) 150000 ( 339492 -> 73.7 % )
+full optimization:  ( 30s elapsed / 4m 59s left ) [23:54:59]   
+[34m1.48735e-06 pb[0m +- ( [31m2.66627e-07 pb = 17.9263 %[0m ) 200000 ( 402542 -> 79.3 % )
+full optimization:  ( 40s elapsed / 4m 48s left ) [23:55:10]   
+[34m1.5509e-06 pb[0m +- ( [31m2.31138e-07 pb = 14.9035 %[0m ) 250000 ( 468076 -> 76.2 % )
+full optimization:  ( 50s elapsed / 4m 36s left ) [23:55:20]   
+[34m1.74626e-06 pb[0m +- ( [31m2.05865e-07 pb = 11.7889 %[0m ) 300000 ( 537720 -> 71.7 % )
+full optimization:  ( 1m elapsed / 4m 26s left ) [23:55:30]   
+[34m2.40368e-06 pb[0m +- ( [31m5.3337e-07 pb = 22.1898 %[0m ) 350000 ( 607546 -> 71.6 % )
+full optimization:  ( 1m 10s elapsed / 4m 16s left ) [23:55:41]   
+[34m2.49463e-06 pb[0m +- ( [31m4.71021e-07 pb = 18.8814 %[0m ) 400000 ( 688894 -> 61.4 % )
+full optimization:  ( 1m 20s elapsed / 4m 6s left ) [23:55:51]   
+[34m2.55872e-06 pb[0m +- ( [31m4.20362e-07 pb = 16.4286 %[0m ) 450000 ( 772682 -> 59.6 % )
+full optimization:  ( 1m 30s elapsed / 3m 56s left ) [23:56:02]   
+[34m2.62974e-06 pb[0m +- ( [31m3.78755e-07 pb = 14.4028 %[0m ) 500000 ( 858231 -> 58.4 % )
+full optimization:  ( 1m 40s elapsed / 3m 46s left ) [23:56:12]   
+[34m2.6605e-06 pb[0m +- ( [31m3.44532e-07 pb = 12.9499 %[0m ) 550000 ( 943734 -> 58.4 % )
+full optimization:  ( 1m 50s elapsed / 3m 36s left ) [23:56:23]   
+[34m2.69309e-06 pb[0m +- ( [31m3.15143e-07 pb = 11.7019 %[0m ) 600000 ( 1032144 -> 56.5 % )
+full optimization:  ( 2m elapsed / 3m 26s left ) [23:56:33]   
+[34m2.74919e-06 pb[0m +- ( [31m2.88323e-07 pb = 10.4876 %[0m ) 650000 ( 1129694 -> 51.2 % )
+full optimization:  ( 2m 10s elapsed / 3m 16s left ) [23:56:44]   
+[34m2.77058e-06 pb[0m +- ( [31m2.65903e-07 pb = 9.59737 %[0m ) 700000 ( 1225278 -> 52.3 % )
+full optimization:  ( 2m 20s elapsed / 3m 6s left ) [23:56:54]   
+[34m2.79443e-06 pb[0m +- ( [31m2.47312e-07 pb = 8.85017 %[0m ) 750000 ( 1317860 -> 54 % )
+full optimization:  ( 2m 30s elapsed / 2m 56s left ) [23:57:04]   
+[34m2.81071e-06 pb[0m +- ( [31m2.3121e-07 pb = 8.22601 %[0m ) 800000 ( 1410030 -> 54.2 % )
+full optimization:  ( 2m 40s elapsed / 2m 46s left ) [23:57:14]   
+[34m2.82495e-06 pb[0m +- ( [31m2.16918e-07 pb = 7.67867 %[0m ) 850000 ( 1503300 -> 53.6 % )
+full optimization:  ( 2m 51s elapsed / 2m 36s left ) [23:57:25]   
+[34m2.84304e-06 pb[0m +- ( [31m2.04266e-07 pb = 7.18477 %[0m ) 900000 ( 1597124 -> 53.2 % )
+full optimization:  ( 3m 1s elapsed / 2m 26s left ) [23:57:35]   
+[34m2.86697e-06 pb[0m +- ( [31m1.9302e-07 pb = 6.73253 %[0m ) 950000 ( 1690883 -> 53.3 % )
+full optimization:  ( 3m 11s elapsed / 2m 16s left ) [23:57:46]   
+[34m2.87636e-06 pb[0m +- ( [31m1.83155e-07 pb = 6.3676 %[0m ) 1000000 ( 1782551 -> 54.5 % )
+full optimization:  ( 3m 21s elapsed / 2m 6s left ) [23:57:56]   
+[34m2.8856e-06 pb[0m +- ( [31m1.7435e-07 pb = 6.04208 %[0m ) 1050000 ( 1873069 -> 55.2 % )
+full optimization:  ( 3m 31s elapsed / 1m 56s left ) [23:58:06]   
+[34m2.89617e-06 pb[0m +- ( [31m1.66347e-07 pb = 5.74367 %[0m ) 1100000 ( 1963696 -> 55.1 % )
+full optimization:  ( 3m 41s elapsed / 1m 46s left ) [23:58:17]   
+[34m2.91282e-06 pb[0m +- ( [31m1.59177e-07 pb = 5.46472 %[0m ) 1150000 ( 2052722 -> 56.1 % )
+integration time:  ( 3m 52s elapsed / 1m 36s left ) [23:58:27]   
+[34m2.92253e-06 pb[0m +- ( [31m1.46495e-07 pb = 5.0126 %[0m ) 1250000 ( 2231432 -> 56 % )
+integration time:  ( 4m 13s elapsed / 1m 16s left ) [23:58:48]   
+[34m2.94307e-06 pb[0m +- ( [31m1.35721e-07 pb = 4.61154 %[0m ) 1350000 ( 2409892 -> 56 % )
+integration time:  ( 4m 33s elapsed / 56s left ) [23:59:09]   
+[34m2.95474e-06 pb[0m +- ( [31m1.26453e-07 pb = 4.27965 %[0m ) 1450000 ( 2587890 -> 56 % )
+integration time:  ( 4m 54s elapsed / 35s left ) [23:59:30]   
+[34m2.96906e-06 pb[0m +- ( [31m1.18328e-07 pb = 3.98536 %[0m ) 1550000 ( 2767071 -> 56 % )
+integration time:  ( 5m 14s elapsed / 15s left ) [23:59:51]   
+[1m2_6__j__j__W+[e+__ve]__W+[e+__ve]__j__j[0m : [34m[1m2.96906e-06 pb[0m +- ( [31m1.18328e-07 pb = 3.98536 %[0m ) [1m exp. eff: [31m0.0266149 %[0m
+  reduce max for 2_6__j__j__W+[e+__ve]__W+[e+__ve]__j__j to 0.782389 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[mu+__vmu]__W+[mu+__vmu]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 23:59:51. Lean back and enjoy ... .
+[34m1.03548e-06 pb[0m +- ( [31m1.80325e-07 pb = 17.4146 %[0m ) 25000 ( 130146 -> 19.2 % )
+full optimization:  ( 5s elapsed / 5m 49s left ) [23:59:57]   
+[34m1.26452e-06 pb[0m +- ( [31m3.30951e-07 pb = 26.172 %[0m ) 50000 ( 190389 -> 41.4 % )
+full optimization:  ( 9s elapsed / 5m 2s left ) [00:00:02]   
+[34m1.19864e-06 pb[0m +- ( [31m2.65033e-07 pb = 22.1112 %[0m ) 75000 ( 238510 -> 51.9 % )
+full optimization:  ( 14s elapsed / 5m 3s left ) [00:00:07]   
+[34m1.16144e-06 pb[0m +- ( [31m2.25382e-07 pb = 19.4055 %[0m ) 100000 ( 281521 -> 58.1 % )
+full optimization:  ( 19s elapsed / 5m left ) [00:00:12]   
+[34m1.17737e-06 pb[0m +- ( [31m2.01225e-07 pb = 17.0911 %[0m ) 125000 ( 322966 -> 60.3 % )
+full optimization:  ( 24s elapsed / 4m 57s left ) [00:00:17]   
+[34m1.18748e-06 pb[0m +- ( [31m1.82654e-07 pb = 15.3816 %[0m ) 150000 ( 360039 -> 67.4 % )
+full optimization:  ( 29s elapsed / 4m 54s left ) [00:00:22]   
+[34m1.21433e-06 pb[0m +- ( [31m1.55421e-07 pb = 12.799 %[0m ) 200000 ( 426636 -> 75 % )
+full optimization:  ( 39s elapsed / 4m 45s left ) [00:00:33]   
+[34m1.49194e-06 pb[0m +- ( [31m2.27846e-07 pb = 15.2718 %[0m ) 250000 ( 490760 -> 77.9 % )
+full optimization:  ( 49s elapsed / 4m 34s left ) [00:00:43]   
+[34m1.57966e-06 pb[0m +- ( [31m2.04089e-07 pb = 12.9198 %[0m ) 300000 ( 555834 -> 76.8 % )
+full optimization:  ( 59s elapsed / 4m 23s left ) [00:00:54]   
+[34m1.71998e-06 pb[0m +- ( [31m1.85906e-07 pb = 10.8086 %[0m ) 350000 ( 621630 -> 75.9 % )
+full optimization:  ( 1m 9s elapsed / 4m 13s left ) [00:01:04]   
+[34m1.85162e-06 pb[0m +- ( [31m1.68624e-07 pb = 9.10684 %[0m ) 400000 ( 689747 -> 73.4 % )
+full optimization:  ( 1m 19s elapsed / 4m 4s left ) [00:01:14]   
+[34m1.97884e-06 pb[0m +- ( [31m1.53968e-07 pb = 7.78072 %[0m ) 450000 ( 760809 -> 70.3 % )
+full optimization:  ( 1m 29s elapsed / 3m 54s left ) [00:01:24]   
+[34m2.08131e-06 pb[0m +- ( [31m1.40292e-07 pb = 6.74055 %[0m ) 500000 ( 837110 -> 65.5 % )
+full optimization:  ( 1m 39s elapsed / 3m 44s left ) [00:01:35]   
+[34m2.16486e-06 pb[0m +- ( [31m1.28513e-07 pb = 5.93635 %[0m ) 550000 ( 915770 -> 63.5 % )
+full optimization:  ( 1m 49s elapsed / 3m 34s left ) [00:01:45]   
+[34m2.25563e-06 pb[0m +- ( [31m1.18761e-07 pb = 5.26512 %[0m ) 600000 ( 999107 -> 59.9 % )
+full optimization:  ( 1m 59s elapsed / 3m 25s left ) [00:01:55]   
+[34m2.33597e-06 pb[0m +- ( [31m1.09689e-07 pb = 4.69567 %[0m ) 650000 ( 1083986 -> 58.9 % )
+full optimization:  ( 2m 9s elapsed / 3m 15s left ) [00:02:05]   
+[34m2.3889e-06 pb[0m +- ( [31m1.01589e-07 pb = 4.25256 %[0m ) 700000 ( 1172195 -> 56.6 % )
+full optimization:  ( 2m 19s elapsed / 3m 5s left ) [00:02:16]   
+[34m2.45454e-06 pb[0m +- ( [31m9.45843e-08 pb = 3.85345 %[0m ) 750000 ( 1262170 -> 55.5 % )
+full optimization:  ( 2m 30s elapsed / 2m 55s left ) [00:02:26]   
+[34m2.5042e-06 pb[0m +- ( [31m8.84047e-08 pb = 3.53026 %[0m ) 800000 ( 1353736 -> 54.6 % )
+full optimization:  ( 2m 40s elapsed / 2m 45s left ) [00:02:36]   
+[34m2.54752e-06 pb[0m +- ( [31m8.30628e-08 pb = 3.26054 %[0m ) 850000 ( 1443986 -> 55.4 % )
+full optimization:  ( 2m 50s elapsed / 2m 35s left ) [00:02:46]   
+[34m2.58308e-06 pb[0m +- ( [31m7.81375e-08 pb = 3.02497 %[0m ) 900000 ( 1538048 -> 53.1 % )
+full optimization:  ( 3m elapsed / 2m 26s left ) [00:02:57]   
+[34m2.60899e-06 pb[0m +- ( [31m7.37591e-08 pb = 2.82711 %[0m ) 950000 ( 1631769 -> 53.3 % )
+full optimization:  ( 3m 10s elapsed / 2m 16s left ) [00:03:07]   
+[34m2.64245e-06 pb[0m +- ( [31m6.986e-08 pb = 2.64375 %[0m ) 1000000 ( 1726077 -> 53 % )
+full optimization:  ( 3m 21s elapsed / 2m 5s left ) [00:03:18]   
+[34m2.67087e-06 pb[0m +- ( [31m6.63425e-08 pb = 2.48393 %[0m ) 1050000 ( 1822717 -> 51.7 % )
+full optimization:  ( 3m 31s elapsed / 1m 55s left ) [00:03:28]   
+[34m2.69371e-06 pb[0m +- ( [31m6.31652e-08 pb = 2.34492 %[0m ) 1100000 ( 1917635 -> 52.6 % )
+full optimization:  ( 3m 40s elapsed / 1m 45s left ) [00:03:38]   
+[34m2.71606e-06 pb[0m +- ( [31m6.02781e-08 pb = 2.21932 %[0m ) 1150000 ( 2012754 -> 52.5 % )
+integration time:  ( 3m 50s elapsed / 1m 36s left ) [00:03:48]   
+[34m2.75061e-06 pb[0m +- ( [31m5.53389e-08 pb = 2.01188 %[0m ) 1250000 ( 2201499 -> 52.8 % )
+integration time:  ( 4m 9s elapsed / 1m 14s left ) [00:04:09]   
+[34m2.77604e-06 pb[0m +- ( [31m5.11255e-08 pb = 1.84167 %[0m ) 1350000 ( 2390213 -> 52.9 % )
+integration time:  ( 4m 28s elapsed / 55s left ) [00:04:29]   
+[34m2.79913e-06 pb[0m +- ( [31m4.77492e-08 pb = 1.70586 %[0m ) 1450000 ( 2579316 -> 52.8 % )
+integration time:  ( 4m 49s elapsed / 35s left ) [00:04:49]   
+[34m2.82971e-06 pb[0m +- ( [31m4.46822e-08 pb = 1.57904 %[0m ) 1550000 ( 2768081 -> 52.9 % )
+integration time:  ( 5m 10s elapsed / 15s left ) [00:05:10]   
+[1m2_6__j__j__W+[mu+__vmu]__W+[mu+__vmu]__j__j[0m : [34m[1m2.82971e-06 pb[0m +- ( [31m4.46822e-08 pb = 1.57904 %[0m ) [1m exp. eff: [31m0.0187943 %[0m
+  reduce max for 2_6__j__j__W+[mu+__vmu]__W+[mu+__vmu]__j__j to 0.869198 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[tau+__vtau]__W+[tau+__vtau]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 00:05:11. Lean back and enjoy ... .
+[34m1.22467e-06 pb[0m +- ( [31m2.14084e-07 pb = 17.4809 %[0m ) 25000 ( 130936 -> 19 % )
+full optimization:  ( 5s elapsed / 5m 49s left ) [00:05:16]   
+[34m2.1986e-06 pb[0m +- ( [31m1.10988e-06 pb = 50.4812 %[0m ) 50000 ( 184494 -> 46.6 % )
+full optimization:  ( 10s elapsed / 5m 30s left ) [00:05:21]   
+[34m1.9552e-06 pb[0m +- ( [31m8.99209e-07 pb = 45.9906 %[0m ) 75000 ( 227824 -> 57.6 % )
+full optimization:  ( 15s elapsed / 5m 20s left ) [00:05:26]   
+[34m1.78272e-06 pb[0m +- ( [31m7.62324e-07 pb = 42.7617 %[0m ) 100000 ( 268829 -> 60.9 % )
+full optimization:  ( 20s elapsed / 5m 12s left ) [00:05:32]   
+[34m1.8275e-06 pb[0m +- ( [31m6.73249e-07 pb = 36.8399 %[0m ) 125000 ( 309486 -> 61.4 % )
+full optimization:  ( 25s elapsed / 5m 3s left ) [00:05:36]   
+[34m1.77011e-06 pb[0m +- ( [31m6.05002e-07 pb = 34.1788 %[0m ) 150000 ( 344581 -> 71.2 % )
+full optimization:  ( 29s elapsed / 4m 52s left ) [00:05:42]   
+[34m1.91537e-06 pb[0m +- ( [31m5.14054e-07 pb = 26.8384 %[0m ) 200000 ( 412065 -> 74 % )
+full optimization:  ( 39s elapsed / 4m 43s left ) [00:05:52]   
+[34m1.93968e-06 pb[0m +- ( [31m4.46054e-07 pb = 22.9963 %[0m ) 250000 ( 476044 -> 78.1 % )
+full optimization:  ( 49s elapsed / 4m 33s left ) [00:06:02]   
+[34m2.05501e-06 pb[0m +- ( [31m3.97861e-07 pb = 19.3605 %[0m ) 300000 ( 538575 -> 79.9 % )
+full optimization:  ( 59s elapsed / 4m 22s left ) [00:06:12]   
+[34m2.14998e-06 pb[0m +- ( [31m3.54045e-07 pb = 16.4674 %[0m ) 350000 ( 606016 -> 74.1 % )
+full optimization:  ( 1m 9s elapsed / 4m 12s left ) [00:06:23]   
+[34m2.26177e-06 pb[0m +- ( [31m3.16755e-07 pb = 14.0048 %[0m ) 400000 ( 678182 -> 69.2 % )
+full optimization:  ( 1m 19s elapsed / 4m 2s left ) [00:06:33]   
+[34m2.34031e-06 pb[0m +- ( [31m2.84733e-07 pb = 12.1664 %[0m ) 450000 ( 755265 -> 64.8 % )
+full optimization:  ( 1m 29s elapsed / 3m 53s left ) [00:06:43]   
+[34m2.42463e-06 pb[0m +- ( [31m2.56236e-07 pb = 10.568 %[0m ) 500000 ( 839807 -> 59.1 % )
+full optimization:  ( 1m 39s elapsed / 3m 43s left ) [00:06:53]   
+[34m2.48751e-06 pb[0m +- ( [31m2.31385e-07 pb = 9.30187 %[0m ) 550000 ( 930445 -> 55.1 % )
+full optimization:  ( 1m 49s elapsed / 3m 33s left ) [00:07:03]   
+[34m2.54618e-06 pb[0m +- ( [31m2.10189e-07 pb = 8.25508 %[0m ) 600000 ( 1024742 -> 53 % )
+full optimization:  ( 1m 59s elapsed / 3m 23s left ) [00:07:13]   
+[34m2.60054e-06 pb[0m +- ( [31m1.92524e-07 pb = 7.40324 %[0m ) 650000 ( 1119353 -> 52.8 % )
+full optimization:  ( 2m 9s elapsed / 3m 14s left ) [00:07:23]   
+[34m2.63356e-06 pb[0m +- ( [31m1.77379e-07 pb = 6.73532 %[0m ) 700000 ( 1215469 -> 52 % )
+full optimization:  ( 2m 19s elapsed / 3m 4s left ) [00:07:34]   
+[34m2.67247e-06 pb[0m +- ( [31m1.6455e-07 pb = 6.15722 %[0m ) 750000 ( 1311212 -> 52.2 % )
+full optimization:  ( 2m 29s elapsed / 2m 54s left ) [00:07:44]   
+[34m2.71469e-06 pb[0m +- ( [31m1.53543e-07 pb = 5.65602 %[0m ) 800000 ( 1406891 -> 52.2 % )
+full optimization:  ( 2m 39s elapsed / 2m 44s left ) [00:07:54]   
+[34m2.74342e-06 pb[0m +- ( [31m1.44082e-07 pb = 5.2519 %[0m ) 850000 ( 1500119 -> 53.6 % )
+full optimization:  ( 2m 49s elapsed / 2m 34s left ) [00:08:04]   
+[34m2.77115e-06 pb[0m +- ( [31m1.35684e-07 pb = 4.8963 %[0m ) 900000 ( 1593808 -> 53.3 % )
+full optimization:  ( 2m 59s elapsed / 2m 25s left ) [00:08:14]   
+[34m2.78772e-06 pb[0m +- ( [31m1.28147e-07 pb = 4.59685 %[0m ) 950000 ( 1688307 -> 52.9 % )
+full optimization:  ( 3m 9s elapsed / 2m 14s left ) [00:08:24]   
+[34m2.80396e-06 pb[0m +- ( [31m1.2158e-07 pb = 4.33599 %[0m ) 1000000 ( 1781044 -> 53.9 % )
+full optimization:  ( 3m 16s elapsed / 2m 3s left ) [00:08:34]   
+[34m2.82384e-06 pb[0m +- ( [31m1.15546e-07 pb = 4.09182 %[0m ) 1050000 ( 1875064 -> 53.1 % )
+full optimization:  ( 3m 26s elapsed / 1m 53s left ) [00:08:45]   
+[34m2.83892e-06 pb[0m +- ( [31m1.10028e-07 pb = 3.8757 %[0m ) 1100000 ( 1970137 -> 52.5 % )
+full optimization:  ( 3m 36s elapsed / 1m 44s left ) [00:08:55]   
+[34m2.85137e-06 pb[0m +- ( [31m1.05038e-07 pb = 3.68377 %[0m ) 1150000 ( 2064657 -> 52.8 % )
+integration time:  ( 3m 47s elapsed / 1m 34s left ) [00:09:05]   
+[34m2.8732e-06 pb[0m +- ( [31m9.63549e-08 pb = 3.35357 %[0m ) 1250000 ( 2253347 -> 52.9 % )
+integration time:  ( 4m 7s elapsed / 1m 14s left ) [00:09:26]   
+[34m2.89166e-06 pb[0m +- ( [31m8.90634e-08 pb = 3.08001 %[0m ) 1350000 ( 2441080 -> 53 % )
+integration time:  ( 4m 28s elapsed / 54s left ) [00:09:47]   
+[34m2.90704e-06 pb[0m +- ( [31m8.28204e-08 pb = 2.84896 %[0m ) 1450000 ( 2629740 -> 53 % )
+integration time:  ( 4m 47s elapsed / 35s left ) [00:10:07]   
+[34m2.91811e-06 pb[0m +- ( [31m7.73455e-08 pb = 2.65053 %[0m ) 1550000 ( 2818424 -> 53 % )
+integration time:  ( 5m 8s elapsed / 15s left ) [00:10:28]   
+[1m2_6__j__j__W+[tau+__vtau]__W+[tau+__vtau]__j__j[0m : [34m[1m2.91811e-06 pb[0m +- ( [31m7.73455e-08 pb = 2.65053 %[0m ) [1m exp. eff: [31m0.0134875 %[0m
+  reduce max for 2_6__j__j__W+[tau+__vtau]__W+[tau+__vtau]__j__j to 0.949138 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[e+__ve]__W+[mu+__vmu]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 00:10:28. Lean back and enjoy ... .
+[34m9.08844e-07 pb[0m +- ( [31m1.24041e-07 pb = 13.6482 %[0m ) 25000 ( 130633 -> 19.1 % )
+full optimization:  ( 5s elapsed / 5m 47s left ) [00:10:34]   
+[34m8.54839e-07 pb[0m +- ( [31m8.83003e-08 pb = 10.3295 %[0m ) 50000 ( 187396 -> 44 % )
+full optimization:  ( 10s elapsed / 5m 33s left ) [00:10:39]   
+[34m8.67972e-07 pb[0m +- ( [31m7.58984e-08 pb = 8.74434 %[0m ) 75000 ( 235264 -> 52.2 % )
+full optimization:  ( 15s elapsed / 5m 22s left ) [00:10:44]   
+[34m8.93466e-07 pb[0m +- ( [31m7.02069e-08 pb = 7.85781 %[0m ) 100000 ( 278821 -> 57.3 % )
+full optimization:  ( 20s elapsed / 5m 14s left ) [00:10:49]   
+[34m1.0173e-06 pb[0m +- ( [31m1.22587e-07 pb = 12.0502 %[0m ) 125000 ( 318674 -> 62.7 % )
+full optimization:  ( 25s elapsed / 5m 8s left ) [00:10:54]   
+[34m1.0506e-06 pb[0m +- ( [31m1.12081e-07 pb = 10.6684 %[0m ) 150000 ( 354045 -> 70.6 % )
+full optimization:  ( 30s elapsed / 5m 3s left ) [00:11:00]   
+[34m1.2248e-06 pb[0m +- ( [31m1.12403e-07 pb = 9.17721 %[0m ) 200000 ( 419882 -> 75.9 % )
+full optimization:  ( 40s elapsed / 4m 50s left ) [00:11:10]   
+[34m1.48552e-06 pb[0m +- ( [31m1.24444e-07 pb = 8.37713 %[0m ) 250000 ( 485480 -> 76.2 % )
+full optimization:  ( 50s elapsed / 4m 39s left ) [00:11:21]   
+[34m1.66825e-06 pb[0m +- ( [31m1.17416e-07 pb = 7.03828 %[0m ) 300000 ( 550887 -> 76.4 % )
+full optimization:  ( 1m elapsed / 4m 28s left ) [00:11:31]   
+[34m1.82885e-06 pb[0m +- ( [31m1.06184e-07 pb = 5.80608 %[0m ) 350000 ( 618688 -> 73.7 % )
+full optimization:  ( 1m 10s elapsed / 4m 17s left ) [00:11:41]   
+[34m1.97028e-06 pb[0m +- ( [31m9.58868e-08 pb = 4.86666 %[0m ) 400000 ( 691967 -> 68.2 % )
+full optimization:  ( 1m 20s elapsed / 4m 7s left ) [00:11:51]   
+[34m2.09829e-06 pb[0m +- ( [31m8.79161e-08 pb = 4.18989 %[0m ) 450000 ( 771118 -> 63.1 % )
+full optimization:  ( 1m 30s elapsed / 3m 56s left ) [00:12:01]   
+[34m2.20274e-06 pb[0m +- ( [31m7.99464e-08 pb = 3.62941 %[0m ) 500000 ( 855002 -> 59.6 % )
+full optimization:  ( 1m 40s elapsed / 3m 47s left ) [00:12:12]   
+[34m2.2974e-06 pb[0m +- ( [31m7.29895e-08 pb = 3.17705 %[0m ) 550000 ( 942655 -> 57 % )
+full optimization:  ( 1m 50s elapsed / 3m 37s left ) [00:12:22]   
+[34m2.34943e-06 pb[0m +- ( [31m6.68187e-08 pb = 2.84404 %[0m ) 600000 ( 1034736 -> 54.3 % )
+full optimization:  ( 2m elapsed / 3m 26s left ) [00:12:32]   
+[34m2.41281e-06 pb[0m +- ( [31m6.18626e-08 pb = 2.56393 %[0m ) 650000 ( 1123888 -> 56 % )
+full optimization:  ( 2m 10s elapsed / 3m 16s left ) [00:12:42]   
+[34m2.46242e-06 pb[0m +- ( [31m5.75762e-08 pb = 2.3382 %[0m ) 700000 ( 1212452 -> 56.4 % )
+full optimization:  ( 2m 20s elapsed / 3m 5s left ) [00:12:52]   
+[34m2.49958e-06 pb[0m +- ( [31m5.38366e-08 pb = 2.15383 %[0m ) 750000 ( 1300938 -> 56.5 % )
+full optimization:  ( 2m 30s elapsed / 2m 55s left ) [00:13:02]   
+[34m2.54563e-06 pb[0m +- ( [31m5.06499e-08 pb = 1.98968 %[0m ) 800000 ( 1389814 -> 56.2 % )
+full optimization:  ( 2m 39s elapsed / 2m 45s left ) [00:13:12]   
+[34m2.58455e-06 pb[0m +- ( [31m4.78715e-08 pb = 1.85222 %[0m ) 850000 ( 1478053 -> 56.6 % )
+full optimization:  ( 2m 48s elapsed / 2m 34s left ) [00:13:22]   
+[34m2.61485e-06 pb[0m +- ( [31m4.54591e-08 pb = 1.7385 %[0m ) 900000 ( 1565501 -> 57.1 % )
+full optimization:  ( 2m 58s elapsed / 2m 24s left ) [00:13:33]   
+[34m2.64566e-06 pb[0m +- ( [31m4.33078e-08 pb = 1.63693 %[0m ) 950000 ( 1653554 -> 56.7 % )
+full optimization:  ( 3m 8s elapsed / 2m 13s left ) [00:13:43]   
+[34m2.66705e-06 pb[0m +- ( [31m4.12721e-08 pb = 1.54748 %[0m ) 1000000 ( 1741908 -> 56.5 % )
+full optimization:  ( 3m 17s elapsed / 2m 4s left ) [00:13:53]   
+[34m2.68676e-06 pb[0m +- ( [31m3.94428e-08 pb = 1.46804 %[0m ) 1050000 ( 1830277 -> 56.5 % )
+full optimization:  ( 3m 27s elapsed / 1m 54s left ) [00:14:03]   
+[34m2.70651e-06 pb[0m +- ( [31m3.77999e-08 pb = 1.39663 %[0m ) 1100000 ( 1917692 -> 57.1 % )
+full optimization:  ( 3m 37s elapsed / 1m 44s left ) [00:14:13]   
+[34m2.72374e-06 pb[0m +- ( [31m3.63111e-08 pb = 1.33313 %[0m ) 1150000 ( 2004394 -> 57.6 % )
+integration time:  ( 3m 47s elapsed / 1m 34s left ) [00:14:23]   
+[34m2.75454e-06 pb[0m +- ( [31m3.36776e-08 pb = 1.22262 %[0m ) 1250000 ( 2177675 -> 57.6 % )
+integration time:  ( 4m 7s elapsed / 1m 14s left ) [00:14:43]   
+[34m2.78398e-06 pb[0m +- ( [31m3.14246e-08 pb = 1.12877 %[0m ) 1350000 ( 2350702 -> 57.7 % )
+integration time:  ( 4m 26s elapsed / 54s left ) [00:15:04]   
+[34m2.8098e-06 pb[0m +- ( [31m2.94785e-08 pb = 1.04913 %[0m ) 1450000 ( 2524690 -> 57.6 % )
+integration time:  ( 4m 46s elapsed / 34s left ) [00:15:24]   
+[34m2.83086e-06 pb[0m +- ( [31m2.7774e-08 pb = 0.981115 %[0m ) 1550000 ( 2698237 -> 57.6 % )
+integration time:  ( 5m 5s elapsed / 15s left ) [00:15:44]   
+[1m2_6__j__j__W+[e+__ve]__W+[mu+__vmu]__j__j[0m : [34m[1m2.83086e-06 pb[0m +- ( [31m2.7774e-08 pb = 0.981115 %[0m ) [1m exp. eff: [31m0.0347189 %[0m
+  reduce max for 2_6__j__j__W+[e+__ve]__W+[mu+__vmu]__j__j to 0.781114 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[e+__ve]__W+[tau+__vtau]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 00:15:45. Lean back and enjoy ... .
+[34m1.37568e-06 pb[0m +- ( [31m4.50878e-07 pb = 32.7749 %[0m ) 25000 ( 130368 -> 19.1 % )
+full optimization:  ( 5s elapsed / 5m 40s left ) [00:15:50]   
+[34m1.2848e-06 pb[0m +- ( [31m3.29826e-07 pb = 25.6714 %[0m ) 50000 ( 182032 -> 48.3 % )
+full optimization:  ( 10s elapsed / 5m 23s left ) [00:15:55]   
+[34m1.3843e-06 pb[0m +- ( [31m2.90545e-07 pb = 20.9885 %[0m ) 75000 ( 222915 -> 61.1 % )
+full optimization:  ( 15s elapsed / 5m 11s left ) [00:16:00]   
+[34m1.35597e-06 pb[0m +- ( [31m2.49781e-07 pb = 18.4208 %[0m ) 100000 ( 261172 -> 65.3 % )
+full optimization:  ( 19s elapsed / 5m 5s left ) [00:16:05]   
+[34m1.29282e-06 pb[0m +- ( [31m2.19364e-07 pb = 16.9678 %[0m ) 125000 ( 297731 -> 68.3 % )
+full optimization:  ( 24s elapsed / 4m 57s left ) [00:16:10]   
+[34m1.26815e-06 pb[0m +- ( [31m1.96454e-07 pb = 15.4914 %[0m ) 150000 ( 332955 -> 70.9 % )
+full optimization:  ( 29s elapsed / 4m 52s left ) [00:16:15]   
+[34m1.42955e-06 pb[0m +- ( [31m2.02915e-07 pb = 14.1943 %[0m ) 200000 ( 397889 -> 77 % )
+full optimization:  ( 39s elapsed / 4m 40s left ) [00:16:26]   
+[34m1.65178e-06 pb[0m +- ( [31m2.09087e-07 pb = 12.6583 %[0m ) 250000 ( 463273 -> 76.4 % )
+full optimization:  ( 48s elapsed / 4m 29s left ) [00:16:36]   
+[34m2.27194e-06 pb[0m +- ( [31m5.11655e-07 pb = 22.5207 %[0m ) 300000 ( 532290 -> 72.4 % )
+full optimization:  ( 58s elapsed / 4m 19s left ) [00:16:46]   
+[34m2.50048e-06 pb[0m +- ( [31m4.68203e-07 pb = 18.7245 %[0m ) 350000 ( 602261 -> 71.4 % )
+full optimization:  ( 1m 8s elapsed / 4m 9s left ) [00:16:56]   
+[34m2.54926e-06 pb[0m +- ( [31m4.19296e-07 pb = 16.4477 %[0m ) 400000 ( 673857 -> 69.8 % )
+full optimization:  ( 1m 17s elapsed / 3m 59s left ) [00:17:06]   
+[34m2.60777e-06 pb[0m +- ( [31m3.78329e-07 pb = 14.5078 %[0m ) 450000 ( 747512 -> 67.8 % )
+full optimization:  ( 1m 27s elapsed / 3m 49s left ) [00:17:16]   
+[34m2.65017e-06 pb[0m +- ( [31m3.42954e-07 pb = 12.9409 %[0m ) 500000 ( 824968 -> 64.5 % )
+full optimization:  ( 1m 37s elapsed / 3m 39s left ) [00:17:26]   
+[34m2.69838e-06 pb[0m +- ( [31m3.1201e-07 pb = 11.5629 %[0m ) 550000 ( 907965 -> 60.2 % )
+full optimization:  ( 1m 47s elapsed / 3m 29s left ) [00:17:36]   
+[34m2.71006e-06 pb[0m +- ( [31m2.83448e-07 pb = 10.4591 %[0m ) 600000 ( 999726 -> 54.4 % )
+full optimization:  ( 1m 56s elapsed / 3m 20s left ) [00:17:46]   
+[34m2.73432e-06 pb[0m +- ( [31m2.59005e-07 pb = 9.47237 %[0m ) 650000 ( 1094426 -> 52.7 % )
+full optimization:  ( 2m 6s elapsed / 3m 10s left ) [00:17:56]   
+[34m2.76655e-06 pb[0m +- ( [31m2.3766e-07 pb = 8.59046 %[0m ) 700000 ( 1193413 -> 50.5 % )
+full optimization:  ( 2m 16s elapsed / 3m left ) [00:18:06]   
+[34m2.79064e-06 pb[0m +- ( [31m2.19558e-07 pb = 7.86765 %[0m ) 750000 ( 1292327 -> 50.5 % )
+full optimization:  ( 2m 26s elapsed / 2m 50s left ) [00:18:16]   
+[34m2.81324e-06 pb[0m +- ( [31m2.03713e-07 pb = 7.24124 %[0m ) 800000 ( 1393414 -> 49.4 % )
+full optimization:  ( 2m 35s elapsed / 2m 41s left ) [00:18:26]   
+[34m2.84039e-06 pb[0m +- ( [31m1.8997e-07 pb = 6.68816 %[0m ) 850000 ( 1495007 -> 49.2 % )
+full optimization:  ( 2m 45s elapsed / 2m 31s left ) [00:18:36]   
+[34m2.85549e-06 pb[0m +- ( [31m1.78151e-07 pb = 6.23888 %[0m ) 900000 ( 1594861 -> 50 % )
+full optimization:  ( 2m 55s elapsed / 2m 21s left ) [00:18:46]   
+[34m2.87141e-06 pb[0m +- ( [31m1.678e-07 pb = 5.8438 %[0m ) 950000 ( 1694096 -> 50.3 % )
+full optimization:  ( 3m 5s elapsed / 2m 11s left ) [00:18:56]   
+[34m2.88678e-06 pb[0m +- ( [31m1.5857e-07 pb = 5.49297 %[0m ) 1000000 ( 1793583 -> 50.2 % )
+full optimization:  ( 3m 15s elapsed / 2m 2s left ) [00:19:06]   
+[34m2.89073e-06 pb[0m +- ( [31m1.50347e-07 pb = 5.20099 %[0m ) 1050000 ( 1892371 -> 50.6 % )
+full optimization:  ( 3m 24s elapsed / 1m 52s left ) [00:19:16]   
+[34m2.91267e-06 pb[0m +- ( [31m1.43036e-07 pb = 4.91083 %[0m ) 1100000 ( 1991804 -> 50.2 % )
+full optimization:  ( 3m 34s elapsed / 1m 42s left ) [00:19:26]   
+[34m2.92539e-06 pb[0m +- ( [31m1.36385e-07 pb = 4.66211 %[0m ) 1150000 ( 2090356 -> 50.7 % )
+integration time:  ( 3m 44s elapsed / 1m 32s left ) [00:19:37]   
+[34m2.93931e-06 pb[0m +- ( [31m1.24844e-07 pb = 4.24738 %[0m ) 1250000 ( 2285158 -> 51.1 % )
+integration time:  ( 4m 4s elapsed / 1m 13s left ) [00:19:57]   
+[34m2.94983e-06 pb[0m +- ( [31m1.15108e-07 pb = 3.90218 %[0m ) 1350000 ( 2480686 -> 51.1 % )
+integration time:  ( 4m 24s elapsed / 53s left ) [00:20:17]   
+[34m2.95959e-06 pb[0m +- ( [31m1.06776e-07 pb = 3.60779 %[0m ) 1450000 ( 2676234 -> 51.1 % )
+integration time:  ( 4m 43s elapsed / 35s left ) [00:20:37]   
+[34m2.96646e-06 pb[0m +- ( [31m9.96194e-08 pb = 3.35819 %[0m ) 1550000 ( 2870889 -> 51.1 % )
+integration time:  ( 5m 3s elapsed / 15s left ) [00:20:57]   
+[1m2_6__j__j__W+[e+__ve]__W+[tau+__vtau]__j__j[0m : [34m[1m2.96646e-06 pb[0m +- ( [31m9.96194e-08 pb = 3.35819 %[0m ) [1m exp. eff: [31m0.0188568 %[0m
+  reduce max for 2_6__j__j__W+[e+__ve]__W+[tau+__vtau]__j__j to 0.547286 ( eps = 0.001 ) 
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[mu+__vmu]__W+[tau+__vtau]__j__j' (Comix)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 00:20:57. Lean back and enjoy ... .
+[34m1.10996e-06 pb[0m +- ( [31m1.78463e-07 pb = 16.0784 %[0m ) 25000 ( 131322 -> 19 % )
+full optimization:  ( 5s elapsed / 5m 44s left ) [00:21:03]   
+[34m1.03695e-06 pb[0m +- ( [31m1.31496e-07 pb = 12.681 %[0m ) 50000 ( 187851 -> 44.2 % )
+full optimization:  ( 10s elapsed / 5m 28s left ) [00:21:08]   
+[34m1.05685e-06 pb[0m +- ( [31m1.17718e-07 pb = 11.1386 %[0m ) 75000 ( 234296 -> 53.8 % )
+full optimization:  ( 15s elapsed / 5m 16s left ) [00:21:13]   
+[34m1.02311e-06 pb[0m +- ( [31m1.0094e-07 pb = 9.86594 %[0m ) 100000 ( 277993 -> 57.2 % )
+full optimization:  ( 20s elapsed / 5m 7s left ) [00:21:18]   
+[34m1.00879e-06 pb[0m +- ( [31m8.97008e-08 pb = 8.89195 %[0m ) 125000 ( 320340 -> 59 % )
+full optimization:  ( 25s elapsed / 5m left ) [00:21:23]   
+[34m1.08088e-06 pb[0m +- ( [31m9.25879e-08 pb = 8.56599 %[0m ) 150000 ( 359621 -> 63.6 % )
+full optimization:  ( 29s elapsed / 4m 55s left ) [00:21:28]   
+[34m1.12364e-06 pb[0m +- ( [31m8.02649e-08 pb = 7.14328 %[0m ) 200000 ( 427657 -> 73.4 % )
+full optimization:  ( 39s elapsed / 4m 44s left ) [00:21:38]   
+[34m1.35507e-06 pb[0m +- ( [31m1.66638e-07 pb = 12.2974 %[0m ) 250000 ( 492917 -> 76.6 % )
+full optimization:  ( 49s elapsed / 4m 32s left ) [00:21:49]   
+[34m1.57551e-06 pb[0m +- ( [31m1.6088e-07 pb = 10.2113 %[0m ) 300000 ( 555960 -> 79.3 % )
+full optimization:  ( 59s elapsed / 4m 21s left ) [00:21:59]   
+[34m1.70554e-06 pb[0m +- ( [31m1.45085e-07 pb = 8.50667 %[0m ) 350000 ( 621030 -> 76.8 % )
+full optimization:  ( 1m 8s elapsed / 4m 11s left ) [00:22:09]   
+[34m1.86821e-06 pb[0m +- ( [31m1.32364e-07 pb = 7.08505 %[0m ) 400000 ( 690706 -> 71.7 % )
+full optimization:  ( 1m 18s elapsed / 4m 1s left ) [00:22:19]   
+[34m1.9736e-06 pb[0m +- ( [31m1.20359e-07 pb = 6.09843 %[0m ) 450000 ( 761929 -> 70.2 % )
+full optimization:  ( 1m 28s elapsed / 3m 51s left ) [00:22:28]   
+[34m2.073e-06 pb[0m +- ( [31m1.10362e-07 pb = 5.32377 %[0m ) 500000 ( 836775 -> 66.8 % )
+full optimization:  ( 1m 37s elapsed / 3m 39s left ) [00:22:39]   
+[34m2.15319e-06 pb[0m +- ( [31m1.00852e-07 pb = 4.68386 %[0m ) 550000 ( 918574 -> 61.1 % )
+full optimization:  ( 1m 47s elapsed / 3m 29s left ) [00:22:48]   
+[34m2.24212e-06 pb[0m +- ( [31m9.25224e-08 pb = 4.12655 %[0m ) 600000 ( 1005441 -> 57.5 % )
+full optimization:  ( 1m 56s elapsed / 3m 20s left ) [00:22:58]   
+[34m2.32711e-06 pb[0m +- ( [31m8.52094e-08 pb = 3.6616 %[0m ) 650000 ( 1096253 -> 55 % )
+full optimization:  ( 2m 6s elapsed / 3m 10s left ) [00:23:09]   
+[34m2.38676e-06 pb[0m +- ( [31m7.88192e-08 pb = 3.30235 %[0m ) 700000 ( 1189165 -> 53.8 % )
+full optimization:  ( 2m 16s elapsed / 3m left ) [00:23:19]   
+[34m2.45541e-06 pb[0m +- ( [31m7.34533e-08 pb = 2.99149 %[0m ) 750000 ( 1281654 -> 54 % )
+full optimization:  ( 2m 26s elapsed / 2m 51s left ) [00:23:29]   
+[34m2.50824e-06 pb[0m +- ( [31m6.86807e-08 pb = 2.7382 %[0m ) 800000 ( 1375157 -> 53.4 % )
+full optimization:  ( 2m 36s elapsed / 2m 41s left ) [00:23:39]   
+[34m2.55505e-06 pb[0m +- ( [31m6.45368e-08 pb = 2.52586 %[0m ) 850000 ( 1469050 -> 53.2 % )
+full optimization:  ( 2m 46s elapsed / 2m 31s left ) [00:23:49]   
+[34m2.58557e-06 pb[0m +- ( [31m6.08824e-08 pb = 2.35469 %[0m ) 900000 ( 1562359 -> 53.5 % )
+full optimization:  ( 2m 55s elapsed / 2m 22s left ) [00:23:59]   
+[34m2.60769e-06 pb[0m +- ( [31m5.76458e-08 pb = 2.21061 %[0m ) 950000 ( 1654223 -> 54.4 % )
+full optimization:  ( 3m 5s elapsed / 2m 13s left ) [00:24:09]   
+[34m2.63422e-06 pb[0m +- ( [31m5.48702e-08 pb = 2.08298 %[0m ) 1000000 ( 1745418 -> 54.8 % )
+full optimization:  ( 3m 15s elapsed / 2m 3s left ) [00:24:19]   
+[34m2.66279e-06 pb[0m +- ( [31m5.23755e-08 pb = 1.96694 %[0m ) 1050000 ( 1835792 -> 55.3 % )
+full optimization:  ( 3m 25s elapsed / 1m 53s left ) [00:24:30]   
+[34m2.68283e-06 pb[0m +- ( [31m5.00391e-08 pb = 1.86516 %[0m ) 1100000 ( 1926746 -> 54.9 % )
+full optimization:  ( 3m 35s elapsed / 1m 43s left ) [00:24:40]   
+[34m2.69594e-06 pb[0m +- ( [31m4.79599e-08 pb = 1.77897 %[0m ) 1150000 ( 2016229 -> 55.8 % )
+integration time:  ( 3m 45s elapsed / 1m 34s left ) [00:24:50]   
+[34m2.73277e-06 pb[0m +- ( [31m4.43284e-08 pb = 1.6221 %[0m ) 1250000 ( 2196317 -> 55.6 % )
+integration time:  ( 4m 5s elapsed / 1m 14s left ) [00:25:10]   
+[34m2.76016e-06 pb[0m +- ( [31m4.12027e-08 pb = 1.49276 %[0m ) 1350000 ( 2375979 -> 55.6 % )
+integration time:  ( 4m 25s elapsed / 55s left ) [00:25:31]   
+[34m2.78264e-06 pb[0m +- ( [31m3.85401e-08 pb = 1.38502 %[0m ) 1450000 ( 2556098 -> 55.6 % )
+integration time:  ( 4m 46s elapsed / 34s left ) [00:25:51]   
+[34m2.80915e-06 pb[0m +- ( [31m3.62412e-08 pb = 1.29011 %[0m ) 1550000 ( 2735854 -> 55.6 % )
+integration time:  ( 5m 6s elapsed / 14s left ) [00:26:11]   
+[1m2_6__j__j__W+[mu+__vmu]__W+[tau+__vtau]__j__j[0m : [34m[1m2.80915e-06 pb[0m +- ( [31m3.62412e-08 pb = 1.29011 %[0m ) [1m exp. eff: [31m0.0232531 %[0m
+  reduce max for 2_6__j__j__W+[mu+__vmu]__W+[tau+__vtau]__j__j to 0.843586 ( eps = 0.001 ) 
+Return_Value::PrintStatistics(): Statistics {
+  Generated events: 0
+}
+WARNING: You are using an unsupported development branch.
+------------------------------------------------------------------------
+[1mPlease cite the publications listed in '[31mSherpa_References.tex[0m[1m'.[0m
+  Extract the bibtex list by running 'get_bibtex Sherpa_References.tex'
+  or email the file to 'slaclib2@slac.stanford.edu', subject 'generate'.
+------------------------------------------------------------------------
+Time: 1h 5m 14s on Thu Jul  9 00:26:12 2020
+ (User: 1h 3m 20s, System: 1m 38s, Children User: 0s, Children System: 0s)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+<I> ...generating events without MPI
+Welcome to Sherpa, xiaoj. Initialization of framework underway.
+The local time is Thu Jul  9 00:26:13 2020.
+Run_Parameter::Init(): Seed mode '*'
+Run_Parameter::Init(): Setting memory limit to 125.828 GB.
+Random::SetSeed(): Seed set to 1234
+-----------------------------------------------------------------------------
+-----------    Event generation run with SHERPA started .......   -----------
+-----------------------------------------------------------------------------
+................................................ |       +                   
+................................................ ||  |       +  +            
+...................................        ....  | |         /   +           
+................. ................   _,_ |  ....  ||         +|  +  +        
+...............................  __.'  ,\|  ...  ||    /    +|          +    
+.............................. (  \    \   ...  | |  |   + + \         +   
+.............................  (    \   -/  .... ||       +    |          +  
+........ ...................  <S   /()))))~~~~~~~~##     +     /\    +       
+............................ (!H   (~~)))))~~~~~~#/     +  +    |  +         
+................ ........... (!E   (~~~)))))     /|/    +         +          
+............................ (!R   (~~~)))))   |||   + +            +        
+..... ...................... (!P    (~~~~)))   /|  + +          +            
+............................ (!A>    (~~~~~~~~~##        + +        +        
+............................. ~~(!    '~~~~~~~ \       +     + +      +      
+...............................  `~~~QQQQQDb //   |         + + +        +   
+........................ ..........   IDDDDP||     \  + + + + +             +
+....................................  IDDDI||       \                      + 
+.................................... IHD HD||         \ + +  + + + + +      +
+...................................  IHD ##|            :-) + +\          +  
+......... ............... ......... IHI ## /      /   +  + + + +\       +    
+................................... IHI/ /       /      + + + +        +     
+................................... ## | | /    / + +      + + /      +      
+....................... /TT\ .....  ##/ ///  / + + + + + + +/       +        
+......................./TTT/T\ ... /TT\/\\\ / + + + + + + +/   \         +   
+....................../TTT/TTTT\...|TT/T\\\/   +    ++  + /              
+-----------------------------------------------------------------------------
+
+     SHERPA version 2.2.8 (Cho Oyu)
+                                                                             
+     Authors:        Enrico Bothmann, Stefan Hoeche, Frank Krauss,           
+                     Silvan Kuttimalai, Marek Schoenherr, Holger Schulz,     
+                     Steffen Schumann, Frank Siegert, Korinna Zapp           
+     Former Authors: Timo Fischer, Tanju Gleisberg, Hendrik Hoeth,           
+                     Ralf Kuhn, Thomas Laubrich, Andreas Schaelicke,         
+                     Jan Winter                                              
+                                                                             
+     This program uses a lot of genuine and original research work           
+     by other people. Users are encouraged to refer to                       
+     the various original publications.                                      
+                                                                             
+     Users are kindly asked to refer to the documentation                    
+     published under JHEP 02(2009)007                                        
+                                                                             
+     Please visit also our homepage                                          
+                                                                             
+       http://sherpa.hepforge.org                                            
+                                                                             
+     for news, bugreports, updates and new releases.                         
+                                                                             
+-----------------------------------------------------------------------------
+
+WARNING: You are using an unsupported development branch.
+Git branch master, revision 6881713ab01a5b0b71db5e3d5db6895121272c0c.
+
+Beam_Spectra_Handler : 
+   type = Monochromatic*Monochromatic
+   for    P+  ((6500,0,0,6500))
+   and    P+  ((6500,0,0,-6500))
+PDF set 'NNPDF31_nnlo_as_0118_mc_hessian_pdfas' loaded for beam 1 (P+).
+PDF set 'NNPDF31_nnlo_as_0118_mc_hessian_pdfas' loaded for beam 2 (P+).
+Initialized the ISR: (SF)*(SF)
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+One_Running_AlphaS::One_Running_AlphaS() {
+  Setting \alpha_s according to PDF
+  perturbative order 2
+  \alpha_s(M_Z) = 0.118
+}
+ List of Particle Data 
+  IDName     kfc  MASS[<kfc>]   WIDTH[<kfc>]  STABLE[<kfc>] MASSIVE[<kfc>]  ACTIVE[<kfc>]  YUKAWA[<kfc>]
+       d       1         0.01              0              1              0              1              0
+       u       2        0.005              0              1              0              1              0
+       s       3          0.2              0              1              0              1              0
+       c       4         1.42              0              1              0              1              0
+       b       5          4.8              0              1              0              1              0
+       t       6       173.21              2              0              1              1         173.21
+      e-      11     0.000511              0              1              0              1              0
+      ve      12            0              0              1              0              1              0
+     mu-      13        0.105              0              1              0              1              0
+     vmu      14            0              0              1              0              1              0
+    tau-      15        1.777    2.26735e-12              0              0              1              0
+    vtau      16            0              0              1              0              1              0
+       G      21            0              0              1              0              1              0
+       P      22            0              0              1              0              1              0
+       Z      23      91.1876         2.4952              0              1              1        91.1876
+      W+      24       80.385         31.275              0              1              1         80.385
+      h0      25          125        0.00407              0              1              1            125
+
+ List of Particle Containers 
+    IDName     kfc     Constituents
+         l      90     {e-,e+,mu-,mu+,tau-,tau+}
+         v      91     {ve,veb,vmu,vmub,vtau,vtaub}
+         j      93     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+         Q      94     {d,db,u,ub,s,sb,c,cb,b,bb}
+         r      99     {d,db,u,ub,s,sb,c,cb,b,bb,G}
+
+Hadron_Init::Init(): Initializing kf table for hadrons.
+Initialized the Fragmentation_Handler.
+Initialized the Soft_Collision_Handler.
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set exclusive cluster mode 1.
+CS_Shower::CS_Shower(): Set color setter mode 0
+CS_Shower::CS_Shower(): Set respect Q2 mode 0
+CS_Shower::CS_Shower(): Set exclusive cluster mode 1.
+CS_Shower::CS_Shower(): Set color setter mode 0
+Initialized the Shower_Handler.
++-----------------------------------------+
+|   X   X   X XXXX  XXX  XXX  XXX         |
+|  X X  XX XX X    X      X  X     X   X  |
+| X   X X X X XXX  X XXX  X  X    XXX XXX |
+| XXXXX X   X X    X   X  X  X     X   X  |
+| X   X X   X XXXX  XXX  XXX  XXX         |
++-----------------------------------------+
+| please cite: JHEP 0202:044,2002         |
++-----------------------------------------+
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Comix: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
++----------------------------------+
+|                                  |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mMM[0m [34mMM[0m I  [33mX[0m [33mX[0m      |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m [34mM[0m [34mM[0m I   [33mX[0m       |
+|     [31mC[0m    [32mO[0m   [32mO[0m [34mM[0m   [34mM[0m I  [33mX[0m [33mX[0m      |
+|      [31mCCC[0m  [32mOOO[0m  [34mM[0m   [34mM[0m I [33mX[0m   [33mX[0m     |
+|                                  |
++==================================+
+|  Color dressed  Matrix Elements  |
+|     http://comix.freacafe.de     |
+|   please cite  JHEP12(2008)039   |
++----------------------------------+
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Amegic: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
+Amegic::Initialize(): Set gauge 1.
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Internal: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
+Matrix_Element_Handler::BuildProcesses(): Looking for processes ................................................................................................................................................ done ( 54 MB, 0s / 0s ).
+Matrix_Element_Handler::InitializeProcesses(): Performing tests 
+  Amplitude::GaugeTest(): Large deviation {
+         2.78843085756e-25
+     vs   2.7884308569e-25
+     =>  2.34269714738e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.04107019651e-25
+     vs  2.04107019669e-25
+     => -8.53466186612e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         6.51876892779e-23
+     vs  6.51876895789e-23
+     =>  -4.6173885826e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.32832253316e-25
+     vs  2.32832252966e-25
+     =>  1.50300127899e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.54875866288e-23
+     vs  1.54875866303e-23
+     => -9.55304724215e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.80120383118e-22
+     vs  1.80120383104e-22
+     =>  7.79676323504e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.25166210001e-26
+     vs  1.25166209153e-26
+     =>  6.78098910356e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.80603820835e-25
+     vs  8.80603820945e-25
+     => -1.24568688697e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.22438384399e-24
+     vs  3.22438384392e-24
+     =>  2.25803820086e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.00649010229e-25
+     vs  2.00649010264e-25
+     =>  -1.7050505452e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.96314199571e-25
+     vs  2.96314199465e-25
+     =>  3.60008467482e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.04501464077e-27
+     vs  6.04501464564e-27
+     => -8.06110844742e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.05646397348e-27
+     vs  2.05646397349e-27
+     => -2.23021601187e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.78876963774e-25
+     vs  2.78876965436e-25
+     => -5.96157201382e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.99521973359e-23
+     vs  3.99521973375e-23
+     => -3.89226428865e-11
+  }
+...
+  Amplitude::GaugeTest(): Large deviation {
+         7.91066246089e-23
+     vs  7.91066246103e-23
+     => -1.76275660735e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.89227618396e-26
+     vs   2.8922761819e-26
+     =>  7.10315584129e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.18753228925e-24
+     vs  5.18753228913e-24
+     =>  2.28901342325e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.74754142555e-24
+     vs  1.74754142559e-24
+     => -2.37045938434e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.26373301975e-26
+     vs  2.26373301693e-26
+     =>  1.24368293442e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.21098533292e-23
+     vs  2.21098533286e-23
+     =>  2.50617304687e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.71739809666e-25
+     vs  5.71739814602e-25
+     => -8.63296023557e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          3.3454729762e-24
+     vs  3.34547297618e-24
+     =>  3.17079695833e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.91695683798e-27
+     vs  4.91695683123e-27
+     =>  1.37155864444e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         9.70612385013e-27
+     vs  9.70612383886e-27
+     =>  1.16153064944e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         2.02492800675e-24
+     vs  2.02492800636e-24
+     =>  1.91888505086e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.11630930086e-22
+     vs   1.1163093007e-22
+     =>  1.46002987478e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.00301249449e-26
+     vs   3.0030124952e-26
+     => -2.35187758157e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.07458028533e-26
+     vs  5.07458029114e-26
+     => -1.14433862386e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.18861437238e-23
+     vs  1.18861437243e-23
+     => -4.00705024717e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.67279975474e-25
+     vs  1.67279975439e-25
+     =>  2.07318384682e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         7.36360423088e-25
+     vs  7.36360423024e-25
+     =>  8.70588046098e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.92932363664e-25
+     vs  1.92932363598e-25
+     =>  3.44085648862e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.09888302528e-24
+     vs   2.0988830254e-24
+     => -5.80744341505e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         4.46175782045e-27
+     vs  4.46175782046e-27
+     => -2.46025422257e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.23927959674e-25
+     vs  8.23927959431e-25
+     =>  2.94212432195e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          2.3505977427e-26
+     vs  2.35059774278e-26
+     => -3.33147953668e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.77997476234e-24
+     vs  2.77997476124e-24
+     =>  3.95294019739e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.77519900647e-25
+     vs  2.77519900607e-25
+     =>  1.45623291203e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.91748346459e-27
+     vs  3.91748346284e-27
+     =>  4.45772085911e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.22609972079e-27
+     vs  1.22609972563e-27
+     => -3.94885546484e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.78766833387e-26
+     vs  6.78766832781e-26
+     =>  8.92384832696e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.29403467362e-23
+     vs  1.29403467389e-23
+     =>  -2.0283730251e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.45807113705e-26
+     vs  5.45807114284e-26
+     => -1.06049180548e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.34750014643e-25
+     vs   6.3475001461e-25
+     =>  5.22912824152e-11
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         5.40148304938e-24
+     vs  5.40148305016e-24
+     => -1.44770972987e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.88882386635e-28
+     vs  5.88882384002e-28
+     =>  4.47236181422e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.87326758817e-25
+     vs  6.87326759033e-25
+     => -3.14266612733e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.69948760935e-25
+     vs   2.6994876072e-25
+     =>  7.96284371773e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.74491056072e-25
+     vs  2.74491056004e-25
+     =>  2.48066012176e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.57625910153e-26
+     vs  4.57625910114e-26
+     =>  8.51752002262e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.21065112272e-23
+     vs  2.21065113412e-23
+     => -5.15472464713e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         3.52028406357e-26
+     vs  3.52028407506e-26
+     =>  -3.2634259739e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+           8.895605578e-27
+     vs  8.89560553957e-27
+     =>  4.32069069412e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         6.83139909344e-27
+     vs  6.83139906671e-27
+     =>  3.91275545297e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         5.84351504297e-24
+     vs  5.84351504324e-24
+     => -4.70277150555e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         7.11676657171e-25
+     vs  7.11676653769e-25
+     =>    4.779370677e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.40664349592e-26
+     vs  5.40664349716e-26
+     => -2.29390728634e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.48132759354e-25
+     vs  5.48132759311e-25
+     =>  7.84339260207e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.51365617668e-26
+     vs  3.51365617199e-26
+     =>  1.33635369437e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.02739730858e-28
+     vs  1.02739730588e-28
+     =>  2.63048316462e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.29024240387e-25
+     vs  2.29024240294e-25
+     =>  4.05840694384e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         2.20895027287e-24
+     vs  2.20895027289e-24
+     => -9.78594982826e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.84042105409e-26
+     vs  3.84042105506e-26
+     => -2.51337395341e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.62130828242e-28
+     vs  2.62130827876e-28
+     =>  1.39583566927e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         2.33011756455e-26
+     vs  2.33011756619e-26
+     => -7.02297664468e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.50810040216e-26
+     vs  1.50810039921e-26
+     =>  1.95545002413e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.37774270229e-24
+     vs   1.3777427045e-24
+     => -1.60873792066e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         6.11530830036e-25
+     vs  6.11530830015e-25
+     =>  3.52857743025e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.14663812909e-26
+     vs  8.14663814356e-26
+     => -1.77627790254e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          4.5222783165e-26
+     vs  4.52227831653e-26
+     => -7.96784860313e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.22049079894e-23
+     vs  2.22049080076e-23
+     => -8.20273737823e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.05122744899e-24
+     vs  3.05122744952e-24
+     => -1.72308722846e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.78945536934e-24
+     vs   5.7894553685e-24
+     =>  1.45214951175e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          1.5128135209e-24
+     vs  1.51281350027e-24
+     =>  1.36359084024e-08
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.84324346956e-27
+     vs  3.84324346792e-27
+     =>  4.27393676006e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.2493587763e-25
+     vs   1.2493587757e-25
+     =>  4.83859841083e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.36807554332e-25
+     vs  8.36807555165e-25
+     => -9.96430049582e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.73164359901e-26
+     vs  1.73164359971e-26
+     => -4.06810696241e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.94662593557e-24
+     vs  1.94662593567e-24
+     => -5.31402699622e-11
+  }
+...
+  Amplitude::GaugeTest(): Large deviation {
+         1.02095198232e-25
+     vs  1.02095198238e-25
+     => -5.65503199823e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.50227550821e-27
+     vs  1.50227550556e-27
+     =>  1.76129555385e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.2126124452e-28
+     vs  1.21261242846e-28
+     =>   1.3802461396e-08
+  }
+...
+  Amplitude::GaugeTest(): Large deviation {
+         2.92931657973e-26
+     vs  2.92931657727e-26
+     =>  8.40378211464e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.22287162596e-24
+     vs  4.22287162978e-24
+     => -9.06232866527e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         4.67295400828e-25
+     vs   4.6729540088e-25
+     => -1.10929043728e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.56728602088e-25
+     vs  1.56728601982e-25
+     =>  6.78846534541e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          9.7070175459e-26
+     vs  9.70701756641e-26
+     => -2.11246875548e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.42051322451e-26
+     vs  2.42051320326e-26
+     =>  8.78009265293e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.45111493281e-25
+     vs  1.45111493334e-25
+     => -3.69477448636e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         9.68797293224e-26
+     vs  9.68797293355e-26
+     => -1.35968014625e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.49503339805e-26
+     vs  3.49503339952e-26
+     => -4.19592027789e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         7.37062654967e-25
+     vs  7.37062655299e-25
+     => -4.50067649815e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.47952526254e-27
+     vs  3.47952529402e-27
+     => -9.04790908862e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.94675230515e-25
+     vs  2.94675230487e-25
+     =>  9.44992972762e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.69112252448e-26
+     vs  2.69112252522e-26
+     => -2.73787881255e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         8.29916136833e-27
+     vs  8.29916135806e-27
+     =>  1.23742616154e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.66113733808e-23
+     vs   1.6611373381e-23
+     => -9.05520103345e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.95977295333e-26
+     vs  1.95977293979e-26
+     =>  6.90722679053e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.85341029265e-26
+     vs  2.85341029268e-26
+     => -1.06118447363e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.45554465567e-26
+     vs  1.45554465301e-26
+     =>  1.83073556315e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.57437072653e-26
+     vs  5.57437073931e-26
+     => -2.29285823661e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.0730577869e-26
+     vs  1.07305778604e-26
+     =>  8.05267630355e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+          1.6846659737e-26
+     vs  1.68466596777e-26
+     =>  3.51765461204e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         7.50887327965e-28
+     vs  7.50887327547e-28
+     =>  5.57840440507e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+          1.9993414756e-24
+     vs  1.99934147475e-24
+     =>  4.26802149178e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         9.85392353074e-25
+     vs  9.85392351839e-25
+     =>  1.25339894019e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.80857834048e-26
+     vs  3.80857834402e-26
+     => -9.29856858178e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.24701838526e-27
+     vs  2.24701836978e-27
+     =>  6.88987711328e-09
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.39303798787e-27
+     vs  1.39303798786e-27
+     =>   6.8935968045e-12
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.20390050425e-27
+     vs  3.20390050906e-27
+     => -1.49918932824e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.83020003751e-23
+     vs  1.83020003691e-23
+     =>  3.27675886425e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.87487478544e-28
+     vs  2.87487478266e-28
+     =>   9.6680086159e-10
+  }
+..
+  Amplitude::GaugeTest(): Large deviation {
+         1.26976492321e-25
+     vs  1.26976492352e-25
+     => -2.45200637572e-10
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         5.51574882743e-26
+     vs  5.51574882726e-26
+     =>  3.19375637048e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         1.10509621618e-23
+     vs  1.10509621608e-23
+     =>   9.6958885365e-11
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         2.55972202449e-27
+     vs  2.55972200728e-27
+     =>  6.72015509906e-09
+  }
+.
+  Amplitude::GaugeTest(): Large deviation {
+         3.16184521304e-26
+     vs  3.16184521046e-26
+     =>  8.17551137899e-10
+  }
+. done ( 54 MB, 0s / 0s ).
+Initialized the Matrix_Element_Handler for the hard processes.
+Initialized the Beam_Remnant_Handler.
+Hadron_Decay_Map::Read:   Initializing HadronDecays.dat. This may take some time.
+Initialized the Hadron_Decay_Handler, Decay model = Hadrons
+ME_Generator_Base::SetPSMasses(): Massive PS flavours for Amisic: (c,cb,b,bb,e-,e+,mu-,mu+,tau-,tau+)
+Simple_Chain::InitializeProcessList(): Init processes ................................................................................................................................................................................ done.
+Grid_Creator::ReadInGrid(): Reading grid Grid_Creator::CreateGrid(): Calculating grid {
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_2__j__j__j__j__MPI' (Amisic)
+Phase_Space_Integrator::Phase_Space_Integrator(): Set n_{it,min} = 25000.
+Starting the calculation at 00:26:15. Lean back and enjoy ... .
+[34m3.93743e+10 pb[0m +- ( [31m1.09029e+09 pb = 2.76904 %[0m ) 25000 ( 38164 -> 65.5 % )
+full optimization:  ( 7s elapsed / 7m 45s left ) [00:26:22]   
+[34m3.90816e+10 pb[0m +- ( [31m7.47302e+08 pb = 1.91216 %[0m ) 50000 ( 63766 -> 97.6 % )
+full optimization:  ( 14s elapsed / 7m 35s left ) [00:26:30]   
+[34m3.92113e+10 pb[0m +- ( [31m5.83855e+08 pb = 1.489 %[0m ) 75000 ( 88792 -> 99.8 % )
+full optimization:  ( 21s elapsed / 7m 27s left ) [00:26:37]   
+[34m3.91728e+10 pb[0m +- ( [31m4.86162e+08 pb = 1.24107 %[0m ) 100000 ( 113792 -> 100 % )
+full optimization:  ( 28s elapsed / 7m 19s left ) [00:26:44]   
+[34m3.93383e+10 pb[0m +- ( [31m4.24684e+08 pb = 1.07957 %[0m ) 125000 ( 138792 -> 100 % )
+full optimization:  ( 35s elapsed / 7m 11s left ) [00:26:51]   
+[34m3.94715e+10 pb[0m +- ( [31m3.78391e+08 pb = 0.958643 %[0m ) 150000 ( 163792 -> 100 % )
+full optimization:  ( 43s elapsed / 7m 3s left ) [00:26:58]   
+[34m3.94602e+10 pb[0m +- ( [31m3.16722e+08 pb = 0.802635 %[0m ) 200000 ( 213792 -> 100 % )
+full optimization:  ( 57s elapsed / 6m 48s left ) [00:27:13]   
+[34m3.9442e+10 pb[0m +- ( [31m2.76347e+08 pb = 0.700643 %[0m ) 250000 ( 263792 -> 100 % )
+full optimization:  ( 1m 11s elapsed / 6m 34s left ) [00:27:27]   
+[34m3.93205e+10 pb[0m +- ( [31m2.46818e+08 pb = 0.627709 %[0m ) 300000 ( 313792 -> 100 % )
+full optimization:  ( 1m 25s elapsed / 6m 19s left ) [00:27:41]   
+[34m3.93642e+10 pb[0m +- ( [31m2.26003e+08 pb = 0.574132 %[0m ) 350000 ( 363792 -> 100 % )
+full optimization:  ( 1m 39s elapsed / 6m 5s left ) [00:27:55]   
+[34m3.93171e+10 pb[0m +- ( [31m2.08466e+08 pb = 0.530217 %[0m ) 400000 ( 413792 -> 100 % )
+full optimization:  ( 1m 53s elapsed / 5m 49s left ) [00:28:09]   
+[34m3.93275e+10 pb[0m +- ( [31m1.94492e+08 pb = 0.494545 %[0m ) 450000 ( 463792 -> 100 % )
+full optimization:  ( 2m 7s elapsed / 5m 35s left ) [00:28:23]   
+[34m3.93623e+10 pb[0m +- ( [31m1.83174e+08 pb = 0.465354 %[0m ) 500000 ( 513792 -> 100 % )
+full optimization:  ( 2m 21s elapsed / 5m 19s left ) [00:28:37]   
+[34m3.93662e+10 pb[0m +- ( [31m1.73469e+08 pb = 0.440654 %[0m ) 550000 ( 563792 -> 100 % )
+full optimization:  ( 2m 35s elapsed / 5m 3s left ) [00:28:51]   
+[34m3.93593e+10 pb[0m +- ( [31m1.65166e+08 pb = 0.419637 %[0m ) 600000 ( 613792 -> 100 % )
+full optimization:  ( 2m 48s elapsed / 4m 49s left ) [00:29:04]   
+[34m3.94242e+10 pb[0m +- ( [31m1.58417e+08 pb = 0.401827 %[0m ) 650000 ( 663792 -> 100 % )
+full optimization:  ( 3m 2s elapsed / 4m 34s left ) [00:29:18]   
+[34m3.94705e+10 pb[0m +- ( [31m1.51966e+08 pb = 0.385012 %[0m ) 700000 ( 713792 -> 100 % )
+full optimization:  ( 3m 16s elapsed / 4m 19s left ) [00:29:32]   
+[34m3.94333e+10 pb[0m +- ( [31m1.46047e+08 pb = 0.370365 %[0m ) 750000 ( 763792 -> 100 % )
+full optimization:  ( 3m 29s elapsed / 4m 5s left ) [00:29:45]   
+[34m3.93733e+10 pb[0m +- ( [31m1.40437e+08 pb = 0.356682 %[0m ) 800000 ( 813792 -> 100 % )
+full optimization:  ( 3m 43s elapsed / 3m 50s left ) [00:29:59]   
+[34m3.93561e+10 pb[0m +- ( [31m1.35734e+08 pb = 0.344887 %[0m ) 850000 ( 863792 -> 100 % )
+full optimization:  ( 3m 57s elapsed / 3m 36s left ) [00:30:13]   
+[34m3.9383e+10 pb[0m +- ( [31m1.31673e+08 pb = 0.334339 %[0m ) 900000 ( 913792 -> 100 % )
+full optimization:  ( 4m 10s elapsed / 3m 22s left ) [00:30:26]   
+[34m3.94261e+10 pb[0m +- ( [31m1.27878e+08 pb = 0.324347 %[0m ) 950000 ( 963792 -> 100 % )
+full optimization:  ( 4m 24s elapsed / 3m 8s left ) [00:30:40]   
+[34m3.94411e+10 pb[0m +- ( [31m1.24359e+08 pb = 0.315303 %[0m ) 1000000 ( 1013792 -> 100 % )
+full optimization:  ( 4m 38s elapsed / 2m 53s left ) [00:30:54]   
+[34m3.94036e+10 pb[0m +- ( [31m1.20993e+08 pb = 0.307061 %[0m ) 1050000 ( 1063792 -> 100 % )
+full optimization:  ( 4m 51s elapsed / 2m 40s left ) [00:31:07]   
+[34m3.93799e+10 pb[0m +- ( [31m1.17819e+08 pb = 0.299185 %[0m ) 1100000 ( 1113792 -> 100 % )
+full optimization:  ( 5m 5s elapsed / 2m 26s left ) [00:31:21]   
+[34m3.94154e+10 pb[0m +- ( [31m1.15199e+08 pb = 0.292268 %[0m ) 1150000 ( 1163792 -> 100 % )
+integration time:  ( 5m 18s elapsed / 2m 12s left ) [00:31:34]   
+[34m3.94502e+10 pb[0m +- ( [31m1.10286e+08 pb = 0.279558 %[0m ) 1250000 ( 1263792 -> 100 % )
+integration time:  ( 5m 47s elapsed / 1m 44s left ) [00:32:03]   
+[34m3.94409e+10 pb[0m +- ( [31m1.0577e+08 pb = 0.268172 %[0m ) 1350000 ( 1363792 -> 100 % )
+integration time:  ( 6m 16s elapsed / 1m 17s left ) [00:32:32]   
+[34m3.94573e+10 pb[0m +- ( [31m1.01816e+08 pb = 0.258041 %[0m ) 1450000 ( 1463792 -> 100 % )
+integration time:  ( 6m 45s elapsed / 48s left ) [00:33:01]   
+[34m3.94553e+10 pb[0m +- ( [31m9.82671e+07 pb = 0.249059 %[0m ) 1550000 ( 1563792 -> 100 % )
+integration time:  ( 7m 13s elapsed / 21s left ) [00:33:29]   
+[1m2_2__j__j__j__j__MPI[0m : [34m[1m3.94553e+10 pb[0m +- ( [31m9.82671e+07 pb = 0.249059 %[0m ) [1m exp. eff: [31m0.489242 %[0m
+Grid_Creator::CreateGridInternal: Initializing grid for MI.
+[?25l   1 % ( 1 s elapsed / 148 s left / 150 s total )      2 % ( 3 s elapsed / 147 s left / 150 s total )      3 % ( 4 s elapsed / 145 s left / 149 s total )      4 % ( 5 s elapsed / 143 s left / 149 s total )      5 % ( 7 s elapsed / 142 s left / 149 s total )      6 % ( 8 s elapsed / 140 s left / 149 s total )      7 % ( 10 s elapsed / 139 s left / 149 s total )      8 % ( 11 s elapsed / 137 s left / 149 s total )      9 % ( 13 s elapsed / 136 s left / 149 s total )      10 % ( 14 s elapsed / 134 s left / 149 s total )      11 % ( 16 s elapsed / 133 s left / 149 s total )      12 % ( 17 s elapsed / 131 s left / 149 s total )      13 % ( 19 s elapsed / 130 s left / 149 s total )      14 % ( 20 s elapsed / 128 s left / 149 s total )      15 % ( 22 s elapsed / 127 s left / 149 s total )      16 % ( 23 s elapsed / 125 s left / 149 s total )      17 % ( 25 s elapsed / 124 s left / 149 s total )      18 % ( 26 s elapsed / 122 s left / 149 s total )      19 % ( 28 s elapsed / 121 s left / 149 s total )      20 % ( 29 s elapsed / 119 s left / 149 s total )      21 % ( 31 s elapsed / 118 s left / 149 s total )      22 % ( 32 s elapsed / 116 s left / 149 s total )      23 % ( 34 s elapsed / 115 s left / 149 s total )      24 % ( 35 s elapsed / 113 s left / 149 s total )      25 % ( 37 s elapsed / 112 s left / 149 s total )      26 % ( 38 s elapsed / 110 s left / 149 s total )      27 % ( 40 s elapsed / 109 s left / 149 s total )      28 % ( 41 s elapsed / 107 s left / 149 s total )      29 % ( 43 s elapsed / 106 s left / 149 s total )      30 % ( 44 s elapsed / 104 s left / 149 s total )      31 % ( 46 s elapsed / 103 s left / 149 s total )      32 % ( 47 s elapsed / 101 s left / 149 s total )      33 % ( 49 s elapsed / 100 s left / 149 s total )      34 % ( 50 s elapsed / 98 s left / 149 s total )      35 % ( 52 s elapsed / 97 s left / 149 s total )      36 % ( 53 s elapsed / 95 s left / 149 s total )      37 % ( 55 s elapsed / 94 s left / 149 s total )      38 % ( 56 s elapsed / 92 s left / 149 s total )      39 % ( 58 s elapsed / 91 s left / 149 s total )      40 % ( 59 s elapsed / 89 s left / 149 s total )      41 % ( 61 s elapsed / 88 s left / 149 s total )      42 % ( 62 s elapsed / 86 s left / 149 s total )      43 % ( 64 s elapsed / 85 s left / 149 s total )      44 % ( 65 s elapsed / 83 s left / 149 s total )      45 % ( 67 s elapsed / 82 s left / 149 s total )      46 % ( 68 s elapsed / 80 s left / 149 s total )      47 % ( 70 s elapsed / 79 s left / 149 s total )      48 % ( 71 s elapsed / 77 s left / 149 s total )      49 % ( 73 s elapsed / 76 s left / 149 s total )      50 % ( 74 s elapsed / 74 s left / 149 s total )      51 % ( 76 s elapsed / 73 s left / 149 s total )      52 % ( 77 s elapsed / 71 s left / 149 s total )      53 % ( 79 s elapsed / 70 s left / 149 s total )      54 % ( 80 s elapsed / 68 s left / 149 s total )      55 % ( 82 s elapsed / 67 s left / 149 s total )      56 % ( 83 s elapsed / 65 s left / 149 s total )      57 % ( 85 s elapsed / 64 s left / 149 s total )      58 % ( 86 s elapsed / 62 s left / 149 s total )      59 % ( 88 s elapsed / 61 s left / 149 s total )      60 % ( 89 s elapsed / 59 s left / 149 s total )      61 % ( 91 s elapsed / 58 s left / 149 s total )      62 % ( 92 s elapsed / 56 s left / 149 s total )      63 % ( 94 s elapsed / 55 s left / 149 s total )      64 % ( 95 s elapsed / 53 s left / 149 s total )      65 % ( 97 s elapsed / 52 s left / 149 s total )      66 % ( 98 s elapsed / 50 s left / 149 s total )      67 % ( 100 s elapsed / 49 s left / 149 s total )      68 % ( 101 s elapsed / 47 s left / 149 s total )      69 % ( 102 s elapsed / 46 s left / 149 s total )      70 % ( 104 s elapsed / 44 s left / 149 s total )      71 % ( 105 s elapsed / 43 s left / 149 s total )      72 % ( 107 s elapsed / 41 s left / 149 s total )      73 % ( 108 s elapsed / 40 s left / 149 s total )      74 % ( 110 s elapsed / 38 s left / 149 s total )      75 % ( 111 s elapsed / 37 s left / 149 s total )      76 % ( 113 s elapsed / 35 s left / 149 s total )      77 % ( 114 s elapsed / 34 s left / 149 s total )      78 % ( 116 s elapsed / 32 s left / 149 s total )      79 % ( 117 s elapsed / 31 s left / 149 s total )      80 % ( 119 s elapsed / 29 s left / 149 s total )      81 % ( 120 s elapsed / 28 s left / 149 s total )      82 % ( 122 s elapsed / 26 s left / 149 s total )      83 % ( 123 s elapsed / 25 s left / 149 s total )      84 % ( 125 s elapsed / 23 s left / 149 s total )      85 % ( 126 s elapsed / 22 s left / 149 s total )      86 % ( 128 s elapsed / 20 s left / 149 s total )      87 % ( 129 s elapsed / 19 s left / 149 s total )      88 % ( 131 s elapsed / 17 s left / 149 s total )      89 % ( 133 s elapsed / 16 s left / 149 s total )      90 % ( 135 s elapsed / 15 s left / 150 s total )      91 % ( 136 s elapsed / 13 s left / 150 s total )      92 % ( 138 s elapsed / 12 s left / 150 s total )      93 % ( 140 s elapsed / 10 s left / 151 s total )      94 % ( 142 s elapsed / 9 s left / 151 s total )      95 % ( 144 s elapsed / 7 s left / 151 s total )      96 % ( 146 s elapsed / 6 s left / 152 s total )      97 % ( 147 s elapsed / 4 s left / 152 s total )      98 % ( 149 s elapsed / 3 s left / 152 s total )      99 % ( 151 s elapsed / 1 s left / 152 s total )   [?25h
+}
+Simple_Chain::CalculateTotal(): Result is {
+   \sigma_{hard} = 39.7116 mb
+   at PT_{min} = 4.68991 GeV
+}
+Profile_Function_Base::CalculateOMean(2.33161): Results are {
+   k           = 7.20275
+   <\tilde{O}> = 0.323711
+}
+Initialized the Multiple_Interactions_Handler (MI_Handler).
+Initialized the Soft_Photon_Handler.
+[31mVariations::InitialiseParametersVector([32m0 variations[31m)[0m[31m{[0m
+  Named variations:
+[31m}[0m
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W-[e-__veb]__W-[e-__veb]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[e-__veb]__W-[e-__veb]__j__j' (Comix)
+[1m2_6__j__j__W-[e-__veb]__W-[e-__veb]__j__j[0m : [34m[1m5.98293e-07 pb[0m +- ( [31m1.37995e-08 pb = 2.30648 %[0m ) [1m exp. eff: [31m0.0182074 %[0m
+  reduce max for 2_6__j__j__W-[e-__veb]__W-[e-__veb]__j__j to 0.844178 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W-[mu-__vmub]__W-[mu-__vmub]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[mu-__vmub]__W-[mu-__vmub]__j__j' (Comix)
+[1m2_6__j__j__W-[mu-__vmub]__W-[mu-__vmub]__j__j[0m : [34m[1m5.86659e-07 pb[0m +- ( [31m1.08214e-08 pb = 1.84458 %[0m ) [1m exp. eff: [31m0.027454 %[0m
+  reduce max for 2_6__j__j__W-[mu-__vmub]__W-[mu-__vmub]__j__j to 0.726026 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W-[tau-__vtaub]__W-[tau-__vtaub]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[tau-__vtaub]__W-[tau-__vtaub]__j__j' (Comix)
+[1m2_6__j__j__W-[tau-__vtaub]__W-[tau-__vtaub]__j__j[0m : [34m[1m5.80384e-07 pb[0m +- ( [31m5.70843e-09 pb = 0.983562 %[0m ) [1m exp. eff: [31m0.0184881 %[0m
+  reduce max for 2_6__j__j__W-[tau-__vtaub]__W-[tau-__vtaub]__j__j to 0.656104 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W-[e-__veb]__W-[mu-__vmub]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[e-__veb]__W-[mu-__vmub]__j__j' (Comix)
+[1m2_6__j__j__W-[e-__veb]__W-[mu-__vmub]__j__j[0m : [34m[1m6.09563e-07 pb[0m +- ( [31m1.87811e-08 pb = 3.08107 %[0m ) [1m exp. eff: [31m0.0187987 %[0m
+  reduce max for 2_6__j__j__W-[e-__veb]__W-[mu-__vmub]__j__j to 0.824909 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W-[e-__veb]__W-[tau-__vtaub]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[e-__veb]__W-[tau-__vtaub]__j__j' (Comix)
+[1m2_6__j__j__W-[e-__veb]__W-[tau-__vtaub]__j__j[0m : [34m[1m6.1906e-07 pb[0m +- ( [31m2.79873e-08 pb = 4.52094 %[0m ) [1m exp. eff: [31m0.00856034 %[0m
+  reduce max for 2_6__j__j__W-[e-__veb]__W-[tau-__vtaub]__j__j to 0.793566 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W-[mu-__vmub]__W-[tau-__vtaub]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W-[mu-__vmub]__W-[tau-__vtaub]__j__j' (Comix)
+[1m2_6__j__j__W-[mu-__vmub]__W-[tau-__vtaub]__j__j[0m : [34m[1m6.13255e-07 pb[0m +- ( [31m2.95053e-08 pb = 4.81126 %[0m ) [1m exp. eff: [31m0.0205727 %[0m
+  reduce max for 2_6__j__j__W-[mu-__vmub]__W-[tau-__vtaub]__j__j to 0.753504 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W+[e+__ve]__W+[e+__ve]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[e+__ve]__W+[e+__ve]__j__j' (Comix)
+[1m2_6__j__j__W+[e+__ve]__W+[e+__ve]__j__j[0m : [34m[1m2.96906e-06 pb[0m +- ( [31m1.18328e-07 pb = 3.98536 %[0m ) [1m exp. eff: [31m0.0266149 %[0m
+  reduce max for 2_6__j__j__W+[e+__ve]__W+[e+__ve]__j__j to 0.782389 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W+[mu+__vmu]__W+[mu+__vmu]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[mu+__vmu]__W+[mu+__vmu]__j__j' (Comix)
+[1m2_6__j__j__W+[mu+__vmu]__W+[mu+__vmu]__j__j[0m : [34m[1m2.82971e-06 pb[0m +- ( [31m4.46822e-08 pb = 1.57904 %[0m ) [1m exp. eff: [31m0.0187943 %[0m
+  reduce max for 2_6__j__j__W+[mu+__vmu]__W+[mu+__vmu]__j__j to 0.869198 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W+[tau+__vtau]__W+[tau+__vtau]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[tau+__vtau]__W+[tau+__vtau]__j__j' (Comix)
+[1m2_6__j__j__W+[tau+__vtau]__W+[tau+__vtau]__j__j[0m : [34m[1m2.91811e-06 pb[0m +- ( [31m7.73455e-08 pb = 2.65053 %[0m ) [1m exp. eff: [31m0.0134875 %[0m
+  reduce max for 2_6__j__j__W+[tau+__vtau]__W+[tau+__vtau]__j__j to 0.949138 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W+[e+__ve]__W+[mu+__vmu]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[e+__ve]__W+[mu+__vmu]__j__j' (Comix)
+[1m2_6__j__j__W+[e+__ve]__W+[mu+__vmu]__j__j[0m : [34m[1m2.83086e-06 pb[0m +- ( [31m2.7774e-08 pb = 0.981115 %[0m ) [1m exp. eff: [31m0.0347189 %[0m
+  reduce max for 2_6__j__j__W+[e+__ve]__W+[mu+__vmu]__j__j to 0.781114 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W+[e+__ve]__W+[tau+__vtau]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[e+__ve]__W+[tau+__vtau]__j__j' (Comix)
+[1m2_6__j__j__W+[e+__ve]__W+[tau+__vtau]__j__j[0m : [34m[1m2.96646e-06 pb[0m +- ( [31m9.96194e-08 pb = 3.35819 %[0m ) [1m exp. eff: [31m0.0188568 %[0m
+  reduce max for 2_6__j__j__W+[e+__ve]__W+[tau+__vtau]__j__j to 0.547286 ( eps = 0.001 ) 
+Read in channels from directory : /home/pku/xiaoj/sherpa/20200622/CMSSW_10_2_20/src/A/B/python/SHERPATMP_ssww_mod5/TMP//Result/Comix/MC_2_6__j__j__W+[mu+__vmu]__W+[tau+__vtau]__j__j
+Process_Group::CalculateTotalXSec(): Calculate xs for '2_6__j__j__W+[mu+__vmu]__W+[tau+__vtau]__j__j' (Comix)
+[1m2_6__j__j__W+[mu+__vmu]__W+[tau+__vtau]__j__j[0m : [34m[1m2.80915e-06 pb[0m +- ( [31m3.62412e-08 pb = 1.29011 %[0m ) [1m exp. eff: [31m0.0232531 %[0m
+  reduce max for 2_6__j__j__W+[mu+__vmu]__W+[tau+__vtau]__j__j to 0.843586 ( eps = 0.001 ) 
+----------------------------------------------------------
+-- SHERPA generates events with the following structure --
+----------------------------------------------------------
+Perturbative       : Signal_Processes
+Perturbative       : Hard_Decays
+Perturbative       : Jet_Evolution:CSS
+Perturbative       : Lepton_FS_QED_Corrections:Photons
+Perturbative       : Multiple_Interactions:Amisic
+Perturbative       : Minimum_Bias:Off
+Hadronization      : Beam_Remnants
+Hadronization      : Hadronization:Ahadic
+Hadronization      : Hadron_Decays
+Unknown            : 
+---------------------------------------------------------
+  Event 1 ( 0s elapsed / 1m 12s left ) -> ETA: Thu Jul 09 00:37  
+  XS = 3.60771e-05 pb +- ( 3.60771e-05 pb = 100 % )  [1A  Event 2 ( 0s elapsed / 43s left ) -> ETA: Thu Jul 09 00:36  
+  XS = 6.03818e-05 pb +- ( 4.26888e-05 pb = 70.69 % )  [1A  Event 3 ( 1s elapsed / 35s left ) -> ETA: Thu Jul 09 00:36  
+  XS = 7.23807e-05 pb +- ( 4.17771e-05 pb = 57.71 % )  [1A  Event 4 ( 1s elapsed / 38s left ) -> ETA: Thu Jul 09 00:36  
+  XS = 6.81013e-05 pb +- ( 3.40404e-05 pb = 49.98 % )  [1A  Event 5 ( 1s elapsed / 33s left ) -> ETA: Thu Jul 09 00:36  
+  XS = 7.66958e-05 pb +- ( 3.42869e-05 pb = 44.7 % )  [1A  Event 6 ( 2s elapsed / 40s left ) -> ETA: Thu Jul 09 00:36  
+  XS = 6.22639e-05 pb +- ( 2.54113e-05 pb = 40.81 % )  [1A  Event 7 ( 2s elapsed / 38s left ) -> ETA: Thu Jul 09 00:36  
+  XS = 6.49143e-05 pb +- ( 2.45272e-05 pb = 37.78 % )  [1A  Event 8 ( 3s elapsed / 35s left ) -> ETA: Thu Jul 09 00:36  
+  XS = 6.92019e-05 pb +- ( 2.44578e-05 pb = 35.34 % )  [1A  Event 9 ( 3s elapsed / 36s left ) -> ETA: Thu Jul 09 00:36  
+  XS = 6.63311e-05 pb +- ( 2.21027e-05 pb = 33.32 % )  [1A  Event 10 ( 3s elapsed / 35s left ) -> ETA: Thu Jul 09 00:36  
+  XS = 6.71629e-05 pb +- ( 2.12312e-05 pb = 31.61 % )  [1AChannel_Basics::SqLam argument -7.63441e-08 <0 in Channel_Basics::sqlam()
+s;s1;s2: 10002.7;10000.1;0.000169018
+  Event 20 ( 12s elapsed / 50s left ) -> ETA: Thu Jul 09 00:37  
+  XS = 4.08683e-05 pb +- ( 9.13634e-06 pb = 22.35 % )  [1A  Event 30 ( 23s elapsed / 55s left ) -> ETA: Thu Jul 09 00:37  
+  XS = 3.20463e-05 pb +- ( 5.84975e-06 pb = 18.25 % )  [1A  Event 40 ( 42s elapsed / 1m 4s left ) -> ETA: Thu Jul 09 00:37  
+  XS = 2.36045e-05 pb +- ( 3.73169e-06 pb = 15.8 % )  [1A  Event 50 ( 49s elapsed / 50s left ) -> ETA: Thu Jul 09 00:37  
+  XS = 2.50647e-05 pb +- ( 3.54417e-06 pb = 14.14 % )  [1A  Event 60 ( 59s elapsed / 40s left ) -> ETA: Thu Jul 09 00:37  
+  XS = 2.53378e-05 pb +- ( 3.27061e-06 pb = 12.9 % )  [1A  Event 70 ( 1m 14s elapsed / 33s left ) -> ETA: Thu Jul 09 00:37  
+  XS = 2.32692e-05 pb +- ( 2.78082e-06 pb = 11.95 % )  [1AChannel_Basics::SqLam argument -4.75232e-08 <0 in Channel_Basics::sqlam()
+s;s1;s2: 10004.6;10002;0.00016911
+  Event 80 ( 1m 28s elapsed / 23s left ) -> ETA: Thu Jul 09 00:37  
+  XS = 2.24201e-05 pb +- ( 2.50632e-06 pb = 11.17 % )  [1A  Event 90 ( 1m 40s elapsed / 12s left ) -> ETA: Thu Jul 09 00:37  
+  XS = 2.23053e-05 pb +- ( 2.35088e-06 pb = 10.53 % )  [1AChannel_Basics::SqLam argument -8.79379e-08 <0 in Channel_Basics::sqlam()
+s;s1;s2: 10002.7;10000.1;0.00016901
+Channel_Basics::SqLam argument -nan <0 in Channel_Basics::sqlam()
+s;s1;s2: -nan;0;0
+Channel_Basics::SqLam argument -nan <0 in Channel_Basics::sqlam()
+s;s1;s2: -nan;0;0
+Channel_Basics::SqLam argument -4.033e-08 <0 in Channel_Basics::sqlam()
+s;s1;s2: 10002.6;10000;0.000169004
+Channel_Basics::SqLam argument -nan <0 in Channel_Basics::sqlam()
+s;s1;s2: -nan;0;0
+Channel_Basics::SqLam argument -nan <0 in Channel_Basics::sqlam()
+s;s1;s2: -nan;0;0
+  Event 100 ( 2m 6s elapsed / 1s left ) -> ETA: Thu Jul 09 00:38  
+  XS = 1.96352e-05 pb +- ( 1.96329e-06 pb = 9.99 % )  [1A  Event 101 ( 127 s total ) = 69059.8 evts/day                    
+In Event_Handler::Finish : Summarizing the run may take some time.
+[1m+-------------------------------------------------------------+
+|                                                             |
+|[0m  [1mTotal XS[0m is [34m[1m1.96958e-05 pb[0m +- ( [31m1.95958e-06 pb = 9.94 %[0m )  [1m|
+|                                                             |
++-------------------------------------------------------------+[0m
+Return_Value::PrintStatistics(): Statistics {
+  Generated events: 101
+  Retried events {
+    From "Hadronization:Ahadic": 1 (121) -> 0.8 %
+    From "Jet_Evolution:CSS": 2 (402) -> 0.4 %
+  }
+  Retried phases {
+    From "Hadron_Decay_Handler::RejectExclusiveChannelsFromFragmentation": 13 (0) -> 13.
+  }
+  Retried methods {
+    From "Decay_Channel::GenerateKinematics": 2 (24279) -> 0 %
+  }
+}
+WARNING: You are using an unsupported development branch.
+------------------------------------------------------------------------
+[1mPlease cite the publications listed in '[31mSherpa_References.tex[0m[1m'.[0m
+  Extract the bibtex list by running 'get_bibtex Sherpa_References.tex'
+  or email the file to 'slaclib2@slac.stanford.edu', subject 'generate'.
+------------------------------------------------------------------------
+Time: 12m on Thu Jul  9 00:38:14 2020
+ (User: 11m 58s, System: 0s, Children User: 0s, Children System: 0s)
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+ <I> MPI (mult. part. int.) grid located in ./MIG_P+P+_13000_LHA[NNPDF31_nnlo_as_0118_mc_hessian_pdfas]_2.db
+ <I> MPI (mult. part. int.) file found: ./MPI_Cross_Sections.dat
