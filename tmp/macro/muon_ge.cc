@@ -24,7 +24,7 @@ public:
         return new Mu_GE(_year);
     }
 
-    void beginEvent(long long) override;
+    //void beginEvent(long long) override;
 
     int getMultiplicity() override { return 1; }
 
@@ -46,7 +46,7 @@ protected:
     static FloatArrayReader *Lepton_phi;
     static DoubleArrayReader *Lepton_newpt;
 
-    void setValues(long long);
+    void setValues();
 
     static std::vector<double> Lepton_respt;
     //UIntValueReader* nGenJet;
@@ -75,29 +75,25 @@ Mu_GE::Mu_GE(int yr) :
         _year{yr} {
 }
 
-void Mu_GE::beginEvent(long long _iEntry) {
-    setValues(_iEntry);
-}
+//void Mu_GE::beginEvent(long long _iEntry) {
+//    setValues(_iEntry);
+//}
 
 unsigned Mu_GE::getNdata() {
     return Lepton_respt.size();
 }
 
 double Mu_GE::evaluate(unsigned iL) {
+    setValues();
     return Lepton_respt[iL];
 }
 
-void Mu_GE::setValues(long long _iEntry) {
-    if (_iEntry == currentEntry)
-        return;
-    if (_iEntry >=10) return;
-    currentEntry = _iEntry;
-
+void Mu_GE::setValues() {
     Lepton_respt.clear();
 
     unsigned nL{*nLepton->Get()};
     Lepton_respt.resize(nL);
-    std::cout<<">>>>>>>>>>>>>>>> ge:"<<_iEntry<<std::endl;
+    std::cout<<">>>>>>>>>>>>>>>> ge:"<<std::endl;
     if ((*run->Get())!=1){ // it's data, just store pf pt
         for (unsigned iL{0}; iL != nL; ++iL) {
             Lepton_respt[iL] = Lepton_newpt->At(iL);

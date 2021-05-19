@@ -22,7 +22,7 @@ public:
         return new Mu_Smear(_year);
     }
 
-    void beginEvent(long long) override;
+    //void beginEvent(long long) override;
 
     int getMultiplicity() override { return 1; }
 
@@ -43,7 +43,7 @@ protected:
     static FloatArrayReader *Lepton_phi;
     static FloatArrayReader *Lepton_rochesterSF;
 
-    void setValues(long long);
+    void setValues();
 
     static std::vector<double> Lepton_newpt;
     //UIntValueReader* nGenJet;
@@ -72,23 +72,20 @@ Mu_Smear::Mu_Smear(int yr) :
         _year{yr}{
 }
 
-void Mu_Smear::beginEvent(long long _iEntry) {
-    setValues(_iEntry);
-}
+//void Mu_Smear::beginEvent(long long _iEntry) {
+//    setValues(_iEntry);
+//}
 
 unsigned Mu_Smear::getNdata() {
     return Lepton_newpt.size();
 }
 
 double Mu_Smear::evaluate(unsigned iL) {
+    setValues();
     return Lepton_newpt[iL];
 }
 
-void Mu_Smear::setValues(long long _iEntry) {
-    if (_iEntry == currentEntry)
-        return;
-    if (_iEntry >=10) return;
-    currentEntry = _iEntry;
+void Mu_Smear::setValues() {
 
     Lepton_newpt.clear();
 
@@ -99,7 +96,6 @@ void Mu_Smear::setValues(long long _iEntry) {
     double p;
     double sigma;
     std::default_random_engine generator;
-    std::cout<<"################ newpt:"<<_iEntry<<std::endl;
     if ((*run->Get())!=1){ // it's data, only remove change Lepton_rochesterSF
         for (unsigned iL{0}; iL != nL; ++iL) {
             Lepton_newpt[iL] = Lepton_pt->At(iL);
@@ -154,7 +150,6 @@ void Mu_Smear::setValues(long long _iEntry) {
                     Lepton_newpt[iL] *= (1 + smearing(generator));
                 }
             }
-            std::cout<<"\t Lepton_pt:"<<Lepton_pt->At(iL)<<"\t Lepton_newpt:"<<Lepton_newpt[iL]<<"\t Lepton_rocsf:"<<Lepton_rochesterSF->At(iL)<<std::endl;
         }
     }
 }
@@ -182,3 +177,4 @@ void Mu_Smear::bindTree_(multidraw::FunctionLibrary &_library) {
         });
     }
 }
+
